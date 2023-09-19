@@ -1,0 +1,32 @@
+.container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.659);
+    backdrop-filter: blur(10px) brightness(70%);
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .dialog_window {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: auto;
+    }
+}
