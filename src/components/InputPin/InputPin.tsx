@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, createRef, useCallback, useRef, useState } from 'react';
+import React, { createRef, useRef, useState } from 'react';
 import styles from './styles.module.scss';
 
 export function InputPin({
@@ -18,40 +18,41 @@ export function InputPin({
 
     function onChange(event: any, position: number) {
 
-        const regex = /^[0-9\b]+$/;
-        const value: string = event.target.value ? event.target.value : ""
+        const regex = /[0-9]+/;
+        const value: string = event.target.value ? event.target.value.replace(" ", "") : ""
 
-        if (value != '' && regex.test(value)) {
+        if (value == '' || !regex.test(value)) return
 
-            const digitCountBefore = state[position] == undefined ? 0 : String(state[position]).length
-            const addedDigitsCount = value.length - digitCountBefore
+        const digitCountBefore = state[position] == undefined ? 0 : String(state[position]).length
+        const addedDigitsCount = value.length - digitCountBefore
 
-            if (addedDigitsCount == 1) {
-                fieldRefs.current[(position + 1) % length].current.focus()
-                setDigit(position, value.charAt(-1))
-            }
-            else {
-                const digits = value.split("")
-
-                if (digitCountBefore == 1) digits.shift()
-
-                let newState = { ...state }
-
-                digits.forEach((digit, position) => {
-                    newState[position % length] = digit
-                    fieldRefs.current[position % length].current.value = digit
-                })
-
-                if (digits.length >= 6) {
-                    fieldRefs.current[length - 1].current.focus()
-                }
-
-                setState(newState)
-            }
+        // One digit was added
+        if (addedDigitsCount == 1) {
+            fieldRefs.current[(position + 1) % length].current.focus()
+            setDigit(position, value.slice(-1))
+            return
         }
+
+
+        const digits = value.split("")
+
+        if (digitCountBefore == 1) digits.shift()
+
+        let newState = { ...state }
+
+        digits.forEach((digit, relativePosition) => {
+            newState[relativePosition % length + position] = digit
+            fieldRefs.current[relativePosition % length + position].current.value = digit
+        })
+
+        if (digits.length >= 6) {
+            fieldRefs.current[length - 1].current.focus()
+        }
+
+        setState(newState)
     }
 
-    function onKeyUp(event: KeyboardEvent<HTMLInputElement>, position: number) {
+    function onKeyUp(event: any, position: number) {
         event.preventDefault()
 
         // Keys: Backspace, Arrow left
@@ -77,23 +78,19 @@ export function InputPin({
         })
     }
 
-    const inputElement = useCallback((element: any) => {
-        if (element) element.focus()
-    }, [])
-
     return (
         <>
             <div className={styles.container}>
                 <input name={name} type="hidden" defaultValue={Object.values(state).join("")} />
                 <div className={styles.input_wrapper}>
-                    {[...Array(length)].map((e, i) => {
+                    {[...Array(length)].map((value, i) => {
                         if (i == 0) {
                             return <input key={i} pattern="[0-9]" value={state[i] ? state[i] : ""} ref={fieldRefs.current[i]} className={styles.input} type="text" onKeyUp={(event) => onKeyUp(event, i)} onInput={(event) => onChange(event, i)} />
                         }
                         return <input key={i} pattern="[0-9]" value={state[i] ? state[i] : ""} ref={fieldRefs.current[i]} className={styles.input} type="text" onKeyUp={(event) => onKeyUp(event, i)} onInput={(event) => onChange(event, i)} />
                     })}
                 </div>
-                <button onClick={resetValues}>Zurücksetzen</button>
+                <button type="button" onClick={resetValues}>Zurücksetzen</button>
             </div>
         </>
     )

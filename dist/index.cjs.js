@@ -274,30 +274,30 @@ function InputPin({ name, length, onFinished = () => { } }) {
     const fieldRefs = React.useRef([]);
     fieldRefs.current = [...Array(length)].map((_, i) => fieldRefs.current[i] ?? React.createRef());
     function onChange(event, position) {
-        const regex = /^[0-9\b]+$/;
-        const value = event.target.value ? event.target.value : "";
-        if (value != '' && regex.test(value)) {
-            const digitCountBefore = state[position] == undefined ? 0 : String(state[position]).length;
-            const addedDigitsCount = value.length - digitCountBefore;
-            if (addedDigitsCount == 1) {
-                fieldRefs.current[(position + 1) % length].current.focus();
-                setDigit(position, value.charAt(-1));
-            }
-            else {
-                const digits = value.split("");
-                if (digitCountBefore == 1)
-                    digits.shift();
-                let newState = { ...state };
-                digits.forEach((digit, position) => {
-                    newState[position % length] = digit;
-                    fieldRefs.current[position % length].current.value = digit;
-                });
-                if (digits.length >= 6) {
-                    fieldRefs.current[length - 1].current.focus();
-                }
-                setState(newState);
-            }
+        const regex = /[0-9]+/;
+        const value = event.target.value ? event.target.value.replace(" ", "") : "";
+        if (value == '' || !regex.test(value))
+            return;
+        const digitCountBefore = state[position] == undefined ? 0 : String(state[position]).length;
+        const addedDigitsCount = value.length - digitCountBefore;
+        // One digit was added
+        if (addedDigitsCount == 1) {
+            fieldRefs.current[(position + 1) % length].current.focus();
+            setDigit(position, value.slice(-1));
+            return;
         }
+        const digits = value.split("");
+        if (digitCountBefore == 1)
+            digits.shift();
+        let newState = { ...state };
+        digits.forEach((digit, relativePosition) => {
+            newState[relativePosition % length + position] = digit;
+            fieldRefs.current[relativePosition % length + position].current.value = digit;
+        });
+        if (digits.length >= 6) {
+            fieldRefs.current[length - 1].current.focus();
+        }
+        setState(newState);
     }
     function onKeyUp(event, position) {
         event.preventDefault();
@@ -320,20 +320,16 @@ function InputPin({ name, length, onFinished = () => { } }) {
             ref.current.value = "";
         });
     }
-    React.useCallback((element) => {
-        if (element)
-            element.focus();
-    }, []);
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: styles$e.container },
             React__default["default"].createElement("input", { name: name, type: "hidden", defaultValue: Object.values(state).join("") }),
-            React__default["default"].createElement("div", { className: styles$e.input_wrapper }, [...Array(length)].map((e, i) => {
+            React__default["default"].createElement("div", { className: styles$e.input_wrapper }, [...Array(length)].map((value, i) => {
                 if (i == 0) {
                     return React__default["default"].createElement("input", { key: i, pattern: "[0-9]", value: state[i] ? state[i] : "", ref: fieldRefs.current[i], className: styles$e.input, type: "text", onKeyUp: (event) => onKeyUp(event, i), onInput: (event) => onChange(event, i) });
                 }
                 return React__default["default"].createElement("input", { key: i, pattern: "[0-9]", value: state[i] ? state[i] : "", ref: fieldRefs.current[i], className: styles$e.input, type: "text", onKeyUp: (event) => onKeyUp(event, i), onInput: (event) => onChange(event, i) });
             })),
-            React__default["default"].createElement("button", { onClick: resetValues }, "Zur\u00FCcksetzen"))));
+            React__default["default"].createElement("button", { type: "button", onClick: resetValues }, "Zur\u00FCcksetzen"))));
 }
 
 var css_248z$d = ".styles-module_container__zcXGF {\n  display: flex;\n  width: 100%;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__Tpth8 {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n}\n.styles-module_input__Tpth8:focus, .styles-module_input__Tpth8:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__Tpth8.styles-module_not_available__CRXjB, .styles-module_input__Tpth8:invalid {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__zcXGF {\n  position: relative;\n}\n\n.styles-module_label__appHO {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__-sKjY {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__Tpth8.styles-module_with_title__L3eGj::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__Tpth8.styles-module_with_title__L3eGj:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__Tpth8:focus + .styles-module_label__appHO .styles-module_label_text__-sKjY,\n.styles-module_input__Tpth8.styles-module_valid__zWcOz + .styles-module_label__appHO .styles-module_label_text__-sKjY {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__Tpth8.styles-module_valid__zWcOz + .styles-module_label__appHO .styles-module_label_text__-sKjY {\n  color: #a8a8a8;\n}";
