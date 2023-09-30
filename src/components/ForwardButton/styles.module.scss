@@ -1,0 +1,21 @@
+.container {
+    margin-right: 8px;
+
+    .button {
+        background: none;
+        padding: none;
+        border: none;
+        width: 40px;
+        height: 40px;
+        transition: 0.2s;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+
+        &:hover {
+            background: rgb(207, 207, 207);
+        }
+    }
+}

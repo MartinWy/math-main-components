@@ -1,0 +1,65 @@
+.container {
+    margin-top: 30px;
+
+    h3 {
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.item_list.has_children {
+    border-top: 1px solid #D0D0D0;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.item_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        padding: 8px 14px;
+        border-radius: 25px;
+        transition: 0.2s ease-in-out;
+
+        &.default:hover {
+            background: rgb(223, 223, 223);
+        }
+
+        &.red:hover {
+            background: rgb(255, 199, 199);
+        }
+    }
+
+    li.item {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .moreText {
+            flex: 1;
+            margin-bottom: 4px;
+            color: #0075FF;
+        }
+
+        .subtitle {
+            color: rgb(162, 162, 162);
+        }
+    }
+
+    li.item:nth-child(even) {
+        background: #F3F3F3;
+    }
+
+    li.item:not(:last-child) {
+        border-bottom: 1px solid #D0D0D0;
+    }
+}

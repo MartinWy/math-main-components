@@ -1,0 +1,4 @@
+import styleInject from '../../../node_modules/style-inject/dist/style-inject.es.js';
+
+var css_248z = ".styles-module_container__RhsQe {\n  margin-right: 8px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0 {\n  background: none;\n  padding: none;\n  border: none;\n  width: 40px;\n  height: 40px;\n  transition: 0.2s;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 20px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0:hover {\n  background: rgb(207, 207, 207);\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0 {\n  flex-direction: row;\n  gap: 5px;\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0:hover {\n  background: none;\n}";
+styleInject(css_248z);

@@ -1,27 +1,39 @@
 {
     "compilerOptions": {
-        "esModuleInterop": true,
-        "strict": true,
-        "skipLibCheck": true,
-        "jsx": "react",
-        "module": "ESNext",
-        "declaration": true,
-        "declarationDir": "types",
-        "sourceMap": true,
-        "outDir": "dist",
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules"
+            }
+        ],
         "moduleResolution": "node",
-        "emitDeclarationOnly": false,
-        "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true
+        "target": "ESnext",
+        "module": "ESNext",
+        "allowJs": true,
+        "checkJs": true,
+        "jsx": "react",
+        "lib": [
+            "DOM",
+            "ESNext"
+        ],
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "baseUrl": "src",
+        "outDir": ".",
+        "declaration": true,
+        "emitDeclarationOnly": true,
     },
     "include": [
-        "src/types/typings.d.ts",
-        "src/**/*"
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/global.d.ts"
     ],
     "exclude": [
-        "dist",
         "node_modules",
-        "src/**/*.test.tsx",
-        "src/**/*.stories.tsx"
+        "dist",
     ]
 }

@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 20px;
+
+    &:hover {
+        color: #0075FF;
+    }
+}

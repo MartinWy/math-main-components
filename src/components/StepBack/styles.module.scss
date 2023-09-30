@@ -1,0 +1,13 @@
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    color: #6F6F6F;
+
+    svg {
+        fill: #6F6F6F;
+    }
+}

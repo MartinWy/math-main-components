@@ -1,0 +1,4 @@
+import styleInject from '../../../node_modules/style-inject/dist/style-inject.es.js';
+
+var css_248z = ".styles-module_container__VreeH {\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J {\n  padding: 10px 18px;\n  background: #F0F0F0;\n  border-radius: 20px;\n  display: flex;\n  flex-direction: row;\n  gap: 5px;\n  align-items: center;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n  color: #565656;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J:hover {\n  background: #e5e5e5;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J.styles-module_selected__sArTD {\n  background: #C6D4F8;\n  color: #0075FF;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J.styles-module_selected__sArTD span {\n  color: #0075FF;\n}";
+styleInject(css_248z);

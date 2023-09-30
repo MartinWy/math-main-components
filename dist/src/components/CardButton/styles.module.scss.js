@@ -1,0 +1,4 @@
+import styleInject from '../../../node_modules/style-inject/dist/style-inject.es.js';
+
+var css_248z = ".styles-module_card__bOd85 {\n  background: #F4F4F4;\n  border: 1px solid #B1B1B1;\n  border-radius: 18px;\n  transition: 0.2s ease;\n  padding: 18px 14px;\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);\n  cursor: pointer;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  padding-top: 30px;\n}\n.styles-module_card__bOd85 svg {\n  width: 35px;\n  height: 35px;\n  fill: grey;\n}\n.styles-module_card__bOd85:hover {\n  transform: scale(1.01);\n  box-shadow: none;\n  background: none;\n}\n.styles-module_card__bOd85 h2 {\n  margin-top: 0;\n  color: grey;\n  font-weight: 400;\n  font-size: 18px;\n}";
+styleInject(css_248z);

@@ -1,0 +1,60 @@
+.container {
+    max-width: 100%;
+    width: 350px;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+
+    &.visible {
+        max-height: 100px;
+        opacity: 1;
+    }
+
+    &.hidden {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+
+.container.rotate .button:hover span {
+    rotate: -45deg;
+}
+
+
+.button {
+    padding: 12px 20px;
+    background: linear-gradient(60deg, #0075FF, #0056b8);
+    background-position-x: right;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    gap: 10px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+
+    span {
+        transition: 0.1s ease-in-out;
+    }
+
+    &:hover {
+        background-position-x: left;
+    }
+
+    &.secondary {
+        background: white;
+        color: #0075FF;
+        border: 1px solid #0075FF;
+
+        svg {
+            fill: #0075FF;
+        }
+    }
+}
