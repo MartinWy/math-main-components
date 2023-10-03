@@ -25,7 +25,7 @@
     .dialog_window {
         background: white;
         border-radius: 20px;
-        padding: 50px;
+        padding: 35px;
         width: 450px;
         display: flex;
         flex-direction: column;
@@ -46,18 +46,30 @@
         .cancel_button {
             border-radius: 12px;
             background: #DADADA;
-            padding: 12px 0px;
+            padding: 14px 0px;
             border: none;
             outline: none;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                background: #cbcbcb;
+            }
         }
 
         .submit_button {
             border-radius: 12px;
             color: white;
             background: #0075FF;
-            padding: 12px 0px;
+            padding: 14px 0px;
             border: none;
             outline: none;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                background: #006ce8;
+            }
         }
     }
 }
