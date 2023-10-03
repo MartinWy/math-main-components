@@ -154,9 +154,9 @@ var css_248z$l = ".styles-module_container__HOoBj {\n  margin-bottom: 30px;\n}\n
 var styles$l = {"container":"styles-module_container__HOoBj"};
 styleInject(css_248z$l);
 
-function FormButton({ text, style = {}, iconName = "", onClick = (event) => { } }) {
+function FormButton({ text, style = {}, iconName = "", type = "submit", onClick = (event) => { } }) {
     return (React__default["default"].createElement("div", { className: styles$l.container, style: style },
-        React__default["default"].createElement("button", { type: "submit", onClick: onClick },
+        React__default["default"].createElement("button", { type: type, onClick: onClick },
             text,
             iconName && React__default["default"].createElement(SvgIcon, { iconName: iconName, fill: "white" }))));
 }
