@@ -1,5 +1,7 @@
+import { DialogData } from "./Dialog"
+
 export interface DialogProps {
-    active?: boolean
-    onClose?: (event: React.MouseEventHandler<HTMLDivElement>) => void
+    data?: DialogData
+    onClose?: (event: React.MouseEventHandler<HTMLDivElement>, data: any) => void
     children: any
 }
