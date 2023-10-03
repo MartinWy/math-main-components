@@ -5,13 +5,15 @@ export function InputNames({
     width = "100%",
     placeholder = { firstName: "", lastName: "" },
     title = { firstName: "Vorname", lastName: "Nachname" },
+    defaultValue = { firstName: "", lastName: "" },
     onInput = (name: string, event: any) => { },
     onInputFirstName = (event: any) => { },
     onInputLastName = (event: any) => { },
 }: {
     width?: string,
-    placeholder?: { firstName: string, lastName: string },
-    title?: { firstName: string, lastName: string },
+    placeholder?: { firstName?: string, lastName?: string },
+    title?: { firstName?: string, lastName?: string },
+    defaultValue?: { firstName?: string, lastName?: string },
     onInput?: (name: string, event: MouseEvent<HTMLInputElement>) => void,
     onInputFirstName?: (event: MouseEvent<HTMLInputElement>) => void,
     onInputLastName?: (event: MouseEvent<HTMLInputElement>) => void
@@ -41,6 +43,7 @@ export function InputNames({
                     type="name"
                     style={{ width: width != "100%" ? "100px" : width }}
                     placeholder={placeholder.firstName}
+                    defaultValue={defaultValue.firstName}
                     onInput={onInput1} />
                 <label htmlFor="text" className={styles.label}>
                     <span className={styles.label_text}>
@@ -55,6 +58,7 @@ export function InputNames({
                     type="name"
                     style={{ width: width != "100%" ? "100px" : width }}
                     placeholder={placeholder.lastName}
+                    defaultValue={defaultValue.lastName}
                     onInput={onInput2} />
                 <label htmlFor="text" className={styles.label}>
                     <span className={styles.label_text}>

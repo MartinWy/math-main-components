@@ -7,11 +7,11 @@ import styles from './styles.module.scss'
 export function Checkbox({
     text,
     name,
-    defaultChecked
+    defaultChecked = false
 }: {
     text: any,
     name: string,
-    defaultChecked: boolean
+    defaultChecked?: boolean
 }) {
 
     return (

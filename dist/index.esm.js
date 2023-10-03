@@ -76,7 +76,7 @@ var css_248z$p = ".styles-module_container__gCCnD {\n  margin-bottom: 20px;\n  w
 var styles$p = {"container":"styles-module_container__gCCnD"};
 styleInject(css_248z$p);
 
-function Checkbox({ text, name, defaultChecked }) {
+function Checkbox({ text, name, defaultChecked = false }) {
     return (React.createElement(React.Fragment, null,
         React.createElement("div", { className: styles$p.container },
             React.createElement("input", { type: "checkbox", name: name, id: name, defaultChecked: defaultChecked }),
@@ -199,7 +199,7 @@ var css_248z$h = ".styles-module_container__IXTeq {\n  display: flex;\n  flex-di
 var styles$h = {"container":"styles-module_container__IXTeq","input":"styles-module_input__flMT5","form":"styles-module_form__chEvQ","label":"styles-module_label__hflX9","label_text":"styles-module_label_text__oXgFI","with_title":"styles-module_with_title__ubN0L","valid":"styles-module_valid__76xYu"};
 styleInject(css_248z$h);
 
-function InputNames({ width = "100%", placeholder = { firstName: "", lastName: "" }, title = { firstName: "Vorname", lastName: "Nachname" }, onInput = (name, event) => { }, onInputFirstName = (event) => { }, onInputLastName = (event) => { }, }) {
+function InputNames({ width = "100%", placeholder = { firstName: "", lastName: "" }, title = { firstName: "Vorname", lastName: "Nachname" }, defaultValue = { firstName: "", lastName: "" }, onInput = (name, event) => { }, onInputFirstName = (event) => { }, onInputLastName = (event) => { }, }) {
     const [value1, setValue1] = useState("");
     const [value2, setValue2] = useState("");
     function onInput1(event) {
@@ -214,11 +214,11 @@ function InputNames({ width = "100%", placeholder = { firstName: "", lastName: "
     }
     return (React.createElement("div", { className: styles$h.container, style: { width: width } },
         React.createElement("div", { className: styles$h.form },
-            React.createElement("input", { className: `${styles$h.input} ${title.firstName != undefined ? styles$h.with_title : styles$h.without_title} ${value1.length > 0 ? styles$h.valid : styles$h.not_valid}`, name: "firstName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.firstName, onInput: onInput1 }),
+            React.createElement("input", { className: `${styles$h.input} ${title.firstName != undefined ? styles$h.with_title : styles$h.without_title} ${value1.length > 0 ? styles$h.valid : styles$h.not_valid}`, name: "firstName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.firstName, defaultValue: defaultValue.firstName, onInput: onInput1 }),
             React.createElement("label", { htmlFor: "text", className: styles$h.label },
                 React.createElement("span", { className: styles$h.label_text }, title.firstName))),
         React.createElement("div", { className: styles$h.form },
-            React.createElement("input", { className: `${styles$h.input} ${title.lastName != undefined ? styles$h.with_title : styles$h.without_title} ${value2.length > 0 ? styles$h.valid : styles$h.not_valid}`, name: "lastName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.lastName, onInput: onInput2 }),
+            React.createElement("input", { className: `${styles$h.input} ${title.lastName != undefined ? styles$h.with_title : styles$h.without_title} ${value2.length > 0 ? styles$h.valid : styles$h.not_valid}`, name: "lastName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.lastName, defaultValue: defaultValue.lastName, onInput: onInput2 }),
             React.createElement("label", { htmlFor: "text", className: styles$h.label },
                 React.createElement("span", { className: styles$h.label_text }, title.lastName)))));
 }
