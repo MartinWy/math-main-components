@@ -127,13 +127,13 @@ var css_248z$m = ".styles-module_container__9-1MH {\n  position: fixed;\n  heigh
 var styles$m = {"container":"styles-module_container__9-1MH","active":"styles-module_active__AXoyo","disabled":"styles-module_disabled__sELpy","dialog_window":"styles-module_dialog_window__0Bn2M"};
 styleInject(css_248z$m);
 
-function Dialog({ active = false, onClose = (event) => { }, children = null }) {
+function Dialog({ data, onClose = (event, data) => { }, children = null }) {
     function onClick(event) {
-        if (event.target.id == 'dialog-backdrop') {
-            onClose(event);
+        if (event.target.id == 'dialog-backdrop' && data) {
+            onClose(event, data.data);
         }
     }
-    return (React.createElement("div", { id: "dialog-backdrop", className: `${styles$m.container} ${active ? styles$m.active : styles$m.disabled}`, onClick: onClick },
+    return (React.createElement("div", { id: "dialog-backdrop", className: `${styles$m.container} ${data?.isActive ? styles$m.active : styles$m.disabled}`, onClick: onClick },
         React.createElement("div", { className: styles$m.dialog_window }, children)));
 }
 
