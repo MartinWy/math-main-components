@@ -200,8 +200,8 @@ var styles$h = {"container":"styles-module_container__IXTeq","input":"styles-mod
 styleInject(css_248z$h);
 
 function InputNames({ width = "100%", placeholder = { firstName: "", lastName: "" }, title = { firstName: "Vorname", lastName: "Nachname" }, defaultValue = { firstName: "", lastName: "" }, onInput = (name, event) => { }, onInputFirstName = (event) => { }, onInputLastName = (event) => { }, }) {
-    const [value1, setValue1] = useState("");
-    const [value2, setValue2] = useState("");
+    const [value1, setValue1] = useState(defaultValue.firstName ? defaultValue.firstName : "");
+    const [value2, setValue2] = useState(defaultValue.lastName ? defaultValue.lastName : "");
     function onInput1(event) {
         setValue1(event.target.value);
         onInputFirstName(event);

@@ -19,8 +19,8 @@ export function InputNames({
     onInputLastName?: (event: MouseEvent<HTMLInputElement>) => void
 }) {
 
-    const [value1, setValue1] = useState("")
-    const [value2, setValue2] = useState("")
+    const [value1, setValue1] = useState(defaultValue.firstName ? defaultValue.firstName : "")
+    const [value2, setValue2] = useState(defaultValue.lastName ? defaultValue.lastName : "")
 
     function onInput1(event: any) {
         setValue1(event.target.value)
