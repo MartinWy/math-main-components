@@ -35,24 +35,29 @@
         cursor: auto;
 
         h1 {
-            font-size: 22px;
+            font-size: 26px;
             font-weight: 500;
             line-height: 1.5;
             margin-top: 20px;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .cancel_button {
-            border-radius: 19px;
+            border-radius: 12px;
             background: #DADADA;
-            padding: 0px 8px;
+            padding: 12px 0px;
+            border: none;
+            outline: none;
         }
 
         .submit_button {
-            border-radius: 19px;
+            border-radius: 12px;
             color: white;
             background: #0075FF;
-            padding: 0px 8px;
+            padding: 12px 0px;
+            border: none;
+            outline: none;
         }
     }
 }

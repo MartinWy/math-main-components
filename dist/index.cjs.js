@@ -131,18 +131,23 @@ function CopyCode({ code, style, onCopy = () => { } }) {
         React__default["default"].createElement("input", { type: "hidden", name: "code", value: code })));
 }
 
-var css_248z$m = ".styles-module_container__9-1MH {\n  position: fixed;\n  height: 100vh;\n  width: 100vw;\n  background: rgba(255, 255, 255, 0.659);\n  backdrop-filter: blur(10px) brightness(70%);\n  left: 0;\n  top: 0;\n  z-index: 10000;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n}\n.styles-module_container__9-1MH.styles-module_active__AXoyo {\n  opacity: 1;\n}\n.styles-module_container__9-1MH.styles-module_disabled__sELpy {\n  pointer-events: none;\n  opacity: 0;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M {\n  background: white;\n  border-radius: 20px;\n  padding: 20px;\n  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n  cursor: auto;\n}";
-var styles$m = {"container":"styles-module_container__9-1MH","active":"styles-module_active__AXoyo","disabled":"styles-module_disabled__sELpy","dialog_window":"styles-module_dialog_window__0Bn2M"};
+var css_248z$m = ".styles-module_container__9-1MH {\n  position: fixed;\n  height: 100vh;\n  width: 100vw;\n  background: rgba(255, 255, 255, 0.659);\n  backdrop-filter: blur(10px) brightness(70%);\n  left: 0;\n  top: 0;\n  z-index: 10000;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n}\n.styles-module_container__9-1MH.styles-module_active__AXoyo {\n  opacity: 1;\n}\n.styles-module_container__9-1MH.styles-module_disabled__sELpy {\n  pointer-events: none;\n  opacity: 0;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M {\n  background: white;\n  border-radius: 20px;\n  padding: 50px;\n  width: 450px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  max-width: 100%;\n  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n  cursor: auto;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M h1 {\n  font-size: 22px;\n  font-weight: 500;\n  line-height: 1.5;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_cancel_button__KhwLS {\n  border-radius: 19px;\n  background: #DADADA;\n  padding: 0px 8px;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_submit_button__xLzux {\n  border-radius: 19px;\n  color: white;\n  background: #0075FF;\n  padding: 0px 8px;\n}";
+var styles$m = {"container":"styles-module_container__9-1MH","active":"styles-module_active__AXoyo","disabled":"styles-module_disabled__sELpy","dialog_window":"styles-module_dialog_window__0Bn2M","cancel_button":"styles-module_cancel_button__KhwLS","submit_button":"styles-module_submit_button__xLzux"};
 styleInject(css_248z$m);
 
-function Dialog({ data, onClose = (event, data) => { }, children = null }) {
+function Dialog({ data, text, onClose = (event, data) => { }, onSubmit = (event, data) => { }, children = null }) {
     function onClick(event) {
-        if (event.target.id == 'dialog-backdrop' && data) {
-            onClose(event, data.data);
+        if (event.target.id == 'dialog-backdrop' || event.target.id == 'cancel-button') {
+            if (data)
+                onClose(event, data.data);
         }
     }
     return (React__default["default"].createElement("div", { id: "dialog-backdrop", className: `${styles$m.container} ${data?.isActive ? styles$m.active : styles$m.disabled}`, onClick: onClick },
-        React__default["default"].createElement("div", { className: styles$m.dialog_window }, children)));
+        React__default["default"].createElement("div", { className: styles$m.dialog_window },
+            children,
+            React__default["default"].createElement("h1", null, text),
+            React__default["default"].createElement("button", { className: styles$m.cancel_button, id: "cancel-button", onClick: onClick }, "Abbrechen"),
+            React__default["default"].createElement("button", { className: styles$m.submit_button, id: "submit-button", onClick: (event) => onSubmit(event, data?.data) }, "Best\u00E4tigen"))));
 }
 
 var css_248z$l = ".styles-module_container__HOoBj {\n  margin-bottom: 30px;\n}\n.styles-module_container__HOoBj button {\n  padding: 12px 18px;\n  border-radius: 40px;\n  border: none;\n  color: white;\n  font-size: 16px;\n  background: #0075FF;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  align-items: center;\n}";
