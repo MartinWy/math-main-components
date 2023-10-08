@@ -19,7 +19,7 @@ export function CardButton({
 
     return (
         <div className={styles.card} onClick={onClickCard}>
-            <SvgIcon iconName={iconName} />
+            <SvgIcon iconName={iconName} size="32px" />
             <h2>{title}</h2>
         </div>
     )
