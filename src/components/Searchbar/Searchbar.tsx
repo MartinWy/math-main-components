@@ -111,7 +111,7 @@ export function Searchbar({
                         <SvgIcon iconName="error" />
                         <h3>{errorTitle}</h3>
                         <p>{errorMessage}</p>
-                        {errorButton.length > 0 && <button onClick={errorAction}>{errorButton}</button>}
+                        {errorButton.length > 0 && <button type="button" onClick={errorAction}>{errorButton}</button>}
                     </div>
                 </div>}
 

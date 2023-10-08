@@ -520,7 +520,7 @@ function Searchbar({ placeholder, title = "Suchen", showNoResults = false, error
                     React.createElement(SvgIcon, { iconName: "error" }),
                     React.createElement("h3", null, errorTitle),
                     React.createElement("p", null, errorMessage),
-                    errorButton.length > 0 && React.createElement("button", { onClick: errorAction }, errorButton))),
+                    errorButton.length > 0 && React.createElement("button", { type: "button", onClick: errorAction }, errorButton))),
             searchResults.length == 0 && showNoResults && value.length == 0 && React.createElement("div", { className: styles$5.results_container },
                 React.createElement("div", { className: styles$5.error },
                     React.createElement(SvgIcon, { iconName: "lightbulb" }),
