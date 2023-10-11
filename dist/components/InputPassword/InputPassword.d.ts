@@ -4,7 +4,7 @@ export declare function InputPassword({ placeholder, title, name, isVisible, wid
     autoComplete?: string;
     title?: string;
     name: string;
-    minLength: number;
+    minLength?: number;
     isVisible?: boolean;
     width?: string;
     forgotLink?: any;

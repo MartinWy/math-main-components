@@ -16,7 +16,7 @@ export function InputPassword({
     autoComplete?: string,
     title?: string,
     name: string,
-    minLength: number,
+    minLength?: number,
     isVisible?: boolean,
     width?: string,
     forgotLink?: any
