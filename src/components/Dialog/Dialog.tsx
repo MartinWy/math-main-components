@@ -34,7 +34,7 @@ export function Dialog({
         <div id="dialog-backdrop" className={`${styles.container} ${data?.isActive ? styles.active : styles.disabled}`} onClick={onClick}>
             <div className={styles.dialog_window}>
                 {children}
-                <h1>{text}</h1>
+                {text && <h1>{text}</h1>}
                 <button className={styles.cancel_button} id="cancel-button" onClick={onClick}>Abbrechen</button>
                 <button className={styles.submit_button} id="submit-button" onClick={(event: any) => onSubmit(event, data?.data)}>Bestätigen</button>
             </div>
