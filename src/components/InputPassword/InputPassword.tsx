@@ -8,6 +8,7 @@ export function InputPassword({
     name,
     isVisible = true,
     width = "100%",
+    minLength = 8,
     autoComplete,
     forgotLink = false
 }: {
@@ -15,6 +16,7 @@ export function InputPassword({
     autoComplete?: string,
     title?: string,
     name: string,
+    minLength: number,
     isVisible?: boolean,
     width?: string,
     forgotLink?: any
@@ -30,7 +32,7 @@ export function InputPassword({
                     <input
                         className={`${styles.input} ${title != undefined ? styles.with_title : styles.without_title} ${value.length > 0 ? styles.valid : styles.not_valid}`}
                         name={name}
-                        minLength={8}
+                        minLength={minLength}
                         autoComplete={autoComplete}
                         placeholder={placeholder}
                         type={hidePassword ? "password" : "text"}
