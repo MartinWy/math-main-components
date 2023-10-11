@@ -76,10 +76,10 @@ var css_248z$p = ".styles-module_container__gCCnD {\n  margin-bottom: 20px;\n  w
 var styles$p = {"container":"styles-module_container__gCCnD"};
 styleInject(css_248z$p);
 
-function Checkbox({ text, name, defaultChecked = false }) {
+function Checkbox({ text, name, defaultChecked = false, onInput = () => { }, }) {
     return (React.createElement(React.Fragment, null,
         React.createElement("div", { className: styles$p.container },
-            React.createElement("input", { type: "checkbox", name: name, id: name, defaultChecked: defaultChecked }),
+            React.createElement("input", { type: "checkbox", onInput: onInput, name: name, id: name, defaultChecked: defaultChecked }),
             React.createElement("label", { htmlFor: name }, text),
             React.createElement(SvgIcon, { iconName: "done", size: "21px" }))));
 }

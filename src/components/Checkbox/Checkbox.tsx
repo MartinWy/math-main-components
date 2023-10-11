@@ -1,5 +1,5 @@
 import { SvgIcon } from 'components/SvgIcon'
-import React from 'react'
+import React, { MouseEvent } from 'react'
 import styles from './styles.module.scss'
 
 
@@ -7,17 +7,19 @@ import styles from './styles.module.scss'
 export function Checkbox({
     text,
     name,
-    defaultChecked = false
+    defaultChecked = false,
+    onInput = () => { },
 }: {
     text: any,
     name: string,
+    onInput?: (event: MouseEvent<HTMLInputElement>) => void,
     defaultChecked?: boolean
 }) {
 
     return (
         <>
             <div className={styles.container}>
-                <input type="checkbox" name={name} id={name} defaultChecked={defaultChecked} />
+                <input type="checkbox" onInput={onInput} name={name} id={name} defaultChecked={defaultChecked} />
                 <label htmlFor={name}>{text}</label>
                 <SvgIcon iconName="done" size="21px" />
             </div>
