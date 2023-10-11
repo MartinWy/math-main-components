@@ -7,18 +7,20 @@ export function FormButton({
     style = {},
     iconName = "",
     type = "submit",
-    onClick = (event: any) => { }
+    background = "#0075FF",
+    onClick = () => { }
 }: {
     text: string,
     style?: CSSProperties,
     iconName?: string,
     type?: "submit" | "button" | "reset",
+    background?: string,
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void
 }) {
 
     return (
         <div className={styles.container} style={style}>
-            <button type={type} onClick={onClick}>
+            <button type={type} onClick={onClick} style={{ background: background }}>
                 {text}
                 {iconName && <SvgIcon iconName={iconName} fill="white" />}
             </button>
