@@ -145,7 +145,7 @@ function Dialog({ data, text, onClose = (event, data) => { }, onSubmit = (event,
     return (React__default["default"].createElement("div", { id: "dialog-backdrop", className: `${styles$m.container} ${data?.isActive ? styles$m.active : styles$m.disabled}`, onClick: onClick },
         React__default["default"].createElement("div", { className: styles$m.dialog_window },
             children,
-            React__default["default"].createElement("h1", null, text),
+            text && React__default["default"].createElement("h1", null, text),
             React__default["default"].createElement("button", { className: styles$m.cancel_button, id: "cancel-button", onClick: onClick }, "Abbrechen"),
             React__default["default"].createElement("button", { className: styles$m.submit_button, id: "submit-button", onClick: (event) => onSubmit(event, data?.data) }, "Best\u00E4tigen"))));
 }
@@ -154,9 +154,9 @@ var css_248z$l = ".styles-module_container__HOoBj {\n  margin-bottom: 30px;\n}\n
 var styles$l = {"container":"styles-module_container__HOoBj"};
 styleInject(css_248z$l);
 
-function FormButton({ text, style = {}, iconName = "", type = "submit", onClick = (event) => { } }) {
+function FormButton({ text, style = {}, iconName = "", type = "submit", background = "#0075FF", onClick = () => { } }) {
     return (React__default["default"].createElement("div", { className: styles$l.container, style: style },
-        React__default["default"].createElement("button", { type: type, onClick: onClick },
+        React__default["default"].createElement("button", { type: type, onClick: onClick, style: { background: background } },
             text,
             iconName && React__default["default"].createElement(SvgIcon, { iconName: iconName, fill: "white" }))));
 }
@@ -255,13 +255,13 @@ var css_248z$f = "@keyframes styles-module_show__OLTZH {\n  from {\n    max-heig
 var styles$f = {"container":"styles-module_container__UdmOO","forgot_label":"styles-module_forgot_label__EeN6a","visible":"styles-module_visible__QROqh","hidden":"styles-module_hidden__hDKDO","input":"styles-module_input__sC2fP","hideButton":"styles-module_hideButton__83mRI","form":"styles-module_form__m866x","label":"styles-module_label__8PuaL","label_text":"styles-module_label_text__FwJ1F","with_title":"styles-module_with_title__dftgq","valid":"styles-module_valid__SM7w5","show":"styles-module_show__OLTZH","hide":"styles-module_hide__LAgaY"};
 styleInject(css_248z$f);
 
-function InputPassword({ placeholder = "", title = "Passwort", name, isVisible = true, width = "100%", autoComplete, forgotLink = false }) {
+function InputPassword({ placeholder = "", title = "Passwort", name, isVisible = true, width = "100%", minLength = 8, autoComplete, forgotLink = false }) {
     const [value, setValue] = React.useState("");
     const [hidePassword, setHidePassword] = React.useState(true);
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: `${styles$f.container} ${isVisible ? styles$f.visible : styles$f.hidden}`, style: { width: width } },
             React__default["default"].createElement("div", { className: styles$f.form },
-                React__default["default"].createElement("input", { className: `${styles$f.input} ${title != undefined ? styles$f.with_title : styles$f.without_title} ${value.length > 0 ? styles$f.valid : styles$f.not_valid}`, name: name, minLength: 8, autoComplete: autoComplete, placeholder: placeholder, type: hidePassword ? "password" : "text", onInput: (event) => setValue(event.target.value) }),
+                React__default["default"].createElement("input", { className: `${styles$f.input} ${title != undefined ? styles$f.with_title : styles$f.without_title} ${value.length > 0 ? styles$f.valid : styles$f.not_valid}`, name: name, minLength: minLength, autoComplete: autoComplete, placeholder: placeholder, type: hidePassword ? "password" : "text", onInput: (event) => setValue(event.target.value) }),
                 React__default["default"].createElement("label", { htmlFor: "text", className: styles$f.label },
                     React__default["default"].createElement("span", { className: styles$f.label_text }, title)),
                 React__default["default"].createElement("button", { title: hidePassword ? "Passwort anzeigen" : "Passwort verstecken", className: styles$f.hideButton, onClick: () => setHidePassword(!hidePassword), type: "button" },
