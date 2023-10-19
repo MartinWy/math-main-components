@@ -366,8 +366,13 @@ var css_248z$b = ".styles-module_container__XCtqW {\n  background: white;\n  bor
 var styles$b = {"container":"styles-module_container__XCtqW","preselected":"styles-module_preselected__WoSbB"};
 styleInject(css_248z$b);
 
-function OptionFieldHorizontal({ title, iconName, preselected = false }) {
-    return (React.createElement("div", { className: [styles$b.container, preselected ? styles$b.preselected : styles$b.not_preselected].join(" ") },
+function OptionFieldHorizontal({ title, iconName, onClick, preselected = false }) {
+    function onClickDiv(event) {
+        event.preventDefault();
+        if (onClick)
+            onClick(event);
+    }
+    return (React.createElement("div", { className: [styles$b.container, preselected ? styles$b.preselected : styles$b.not_preselected].join(" "), onClick: onClickDiv },
         iconName && React.createElement(SvgIcon, { iconName: iconName, size: "32px" }),
         React.createElement("h3", null, title)));
 }
@@ -411,10 +416,12 @@ class RadioOption {
         this.name = name;
     }
 }
-function RadioButtons({ options, group, selected, width = "100%" }) {
+function RadioButtons({ options, group, selected, onClick, width = "100%" }) {
     const [selectedOption, setSelected] = useState(selected);
     function onUpdateSelected(event) {
         setSelected(event.target.value);
+        if (onClick)
+            onClick(event);
     }
     return (React.createElement("div", { className: styles$8.container, style: { width: width } }, options.map((option) => React.createElement("div", { className: styles$8.option, key: option.name },
         selected && selected == option.name ?
