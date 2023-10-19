@@ -16,11 +16,13 @@ export function RadioButtons({
     options,
     group,
     selected,
+    onClick,
     width = "100%"
 }: {
     options: RadioOption[],
     group: string,
     selected?: string,
+    onClick?: (event: any) => void,
     width?: string
 }) {
 
@@ -28,6 +30,7 @@ export function RadioButtons({
 
     function onUpdateSelected(event: any) {
         setSelected(event.target.value)
+        if (onClick) onClick(event)
     }
 
     return (
