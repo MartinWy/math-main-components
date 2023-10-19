@@ -37,6 +37,7 @@ export class TableItemAction {
         this.title = title
         this.iconName = iconName
         this.onClick = onClick
+        this.type = type
     }
 }
 

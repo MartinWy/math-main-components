@@ -53,6 +53,13 @@
         .subtitle {
             color: rgb(162, 162, 162);
         }
+
+        .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     li.item:nth-child(even) {
