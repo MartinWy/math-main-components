@@ -6,6 +6,22 @@
     color: grey;
     padding: 5px 12px;
     border-radius: 20px;
+
+    &:hover {
+
+        span {
+            background: linear-gradient(to right,
+                    #0075FF 30%,
+                    rgb(130, 169, 237) 70%,
+                    #0050ab 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            background-size: 400% auto;
+            animation: textShine 3s ease-in-out infinite alternate;
+        }
+    }
 }
 
 .container a {
@@ -18,8 +34,15 @@
     border-radius: 20px;
     transition: 0.2s ease-in-out;
 
-    &:hover {
-        color: #0075FF;
-        background: rgb(239, 239, 239);
+
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
     }
 }
