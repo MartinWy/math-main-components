@@ -396,7 +396,7 @@ function PrimaryButton({ text, iconName, iconFill = "white", type = "blue", onCl
             onClick(event);
     }
     return (React__default["default"].createElement("div", { className: styles$a.container },
-        React__default["default"].createElement("button", { className: [styles$a.button, styles$a[type], (text && !iconName) ?? styles$a.onlyText, (!text && iconName) ?? styles$a.onlyIcon].join(" "), onClick: onClickButton },
+        React__default["default"].createElement("button", { className: [styles$a.button, styles$a[type], (text && !iconName) ? styles$a.onlyText : "", (!text && iconName) ? styles$a.onlyIcon : ""].join(" "), onClick: onClickButton },
             text,
             iconName && React__default["default"].createElement(SvgIcon, { iconName: iconName, fill: iconFill }))));
 }

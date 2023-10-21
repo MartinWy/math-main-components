@@ -24,7 +24,7 @@ export function PrimaryButton({
 
     return (
         <div className={styles.container}>
-            <button className={[styles.button, styles[type], (text && !iconName) ?? styles.onlyText, (!text && iconName) ?? styles.onlyIcon].join(" ")} onClick={onClickButton}>
+            <button className={[styles.button, styles[type], (text && !iconName) ? styles.onlyText : "", (!text && iconName) ? styles.onlyIcon : ""].join(" ")} onClick={onClickButton}>
                 {text}
                 {iconName && <SvgIcon iconName={iconName} fill={iconFill} />}
             </button>
