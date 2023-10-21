@@ -6,11 +6,13 @@ import styles from './styles.module.scss';
 export function PrimaryButton({
     text,
     iconName,
+    iconFill = "white",
     type = "blue",
     onClick = () => { }
 }: {
-    text: string,
-    iconName: string,
+    text?: string,
+    iconName?: string,
+    iconFill?: string,
     type?: string,
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void
 }) {
@@ -22,7 +24,10 @@ export function PrimaryButton({
 
     return (
         <div className={styles.container}>
-            <button className={`${styles.button} ${styles[type]}`} onClick={onClickButton}>{text}<SvgIcon iconName={iconName} fill="white" /></button>
+            <button className={[styles.button, styles[type], (text && !iconName) ?? styles.onlyText, (!text && iconName) ?? styles.onlyIcon].join(" ")} onClick={onClickButton}>
+                {text}
+                {iconName && <SvgIcon iconName={iconName} fill={iconFill} />}
+            </button>
         </div>
     )
 }

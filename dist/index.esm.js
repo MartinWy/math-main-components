@@ -377,20 +377,20 @@ function OptionFieldHorizontal({ title, iconName, onClick, preselected = false }
         React.createElement("h3", null, title)));
 }
 
-var css_248z$a = ".styles-module_container__oNbrP .styles-module_button__UBk65 {\n  padding: 10px 18px;\n  background: #0075FF;\n  border-radius: 40px;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  font-size: 15px;\n  color: white;\n  align-items: center;\n  border: none;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_red__CHF3e {\n  background: #e40000;\n}";
-var styles$a = {"container":"styles-module_container__oNbrP","button":"styles-module_button__UBk65","red":"styles-module_red__CHF3e"};
+var css_248z$a = ".styles-module_container__oNbrP .styles-module_button__UBk65 {\n  padding: 10px 18px;\n  background: #0075FF;\n  border-radius: 40px;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  font-size: 15px;\n  color: white;\n  align-items: center;\n  border: none;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_onlyIcon__-Niv0 {\n  width: 44px;\n  height: 44px;\n  padding: 0;\n  align-items: center;\n  justify-content: center;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_onlyIcon__-Niv0 span {\n  font-size: 22px;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_red__CHF3e {\n  background: #e40000;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_grey__hdqot {\n  background: #EEEEEE;\n  color: black;\n}";
+var styles$a = {"container":"styles-module_container__oNbrP","button":"styles-module_button__UBk65","onlyIcon":"styles-module_onlyIcon__-Niv0","red":"styles-module_red__CHF3e","grey":"styles-module_grey__hdqot"};
 styleInject(css_248z$a);
 
-function PrimaryButton({ text, iconName, type = "blue", onClick = () => { } }) {
+function PrimaryButton({ text, iconName, iconFill = "white", type = "blue", onClick = () => { } }) {
     function onClickButton(event) {
         event.preventDefault();
         if (onClick)
             onClick(event);
     }
     return (React.createElement("div", { className: styles$a.container },
-        React.createElement("button", { className: `${styles$a.button} ${styles$a[type]}`, onClick: onClickButton },
+        React.createElement("button", { className: [styles$a.button, styles$a[type], (text && !iconName) ?? styles$a.onlyText, (!text && iconName) ?? styles$a.onlyIcon].join(" "), onClick: onClickButton },
             text,
-            React.createElement(SvgIcon, { iconName: iconName, fill: "white" }))));
+            iconName && React.createElement(SvgIcon, { iconName: iconName, fill: iconFill }))));
 }
 
 var css_248z$9 = ".styles-module_container__u4q5n {\n  margin-bottom: 50px;\n}\n\n.styles-module_background__jt-ry {\n  background: #D9D9D9;\n  width: 400px;\n  max-width: 100%;\n  height: 3px;\n  position: relative;\n}\n\n.styles-module_progress__Zj-B7 {\n  background: black;\n  position: absolute;\n  left: 0;\n  top: 0;\n  height: 3px;\n}";
