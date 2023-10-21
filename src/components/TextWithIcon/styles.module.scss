@@ -10,7 +10,7 @@
     &:hover {
 
         span {
-            background: linear-gradient(to right,
+            background: linear-gradient(to top,
                     #0075FF 30%,
                     rgb(130, 169, 237) 70%,
                     #0050ab 80%);
@@ -18,7 +18,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
-            background-size: 400% auto;
+            background-size: auto 400%;
             animation: textShine 3s ease-in-out infinite alternate;
         }
     }

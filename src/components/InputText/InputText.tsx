@@ -9,6 +9,8 @@ export function InputText({
     autoFocus = false,
     type = "text",
     width = "100%",
+    marginBottom,
+
     available = true,
     onInput = (event: MouseEvent<HTMLInputElement>) => { }
 }: {
@@ -19,6 +21,7 @@ export function InputText({
     autoFocus?: boolean,
     type?: string,
     width?: string,
+    marginBottom?: string,
     available?: boolean,
     onInput?: (event: MouseEvent<HTMLInputElement>) => void
 }) {
@@ -31,7 +34,7 @@ export function InputText({
 
     return (
         <>
-            <div className={styles.container} style={{ width }}>
+            <div className={styles.container} style={{ width, marginBottom }}>
                 <input
                     className={`${styles.input} ${title != undefined ? styles.with_title : styles.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles.valid : styles.not_valid} ${available ? styles.available : styles.not_available}`}
                     name={name}

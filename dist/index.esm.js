@@ -333,14 +333,14 @@ var css_248z$d = ".styles-module_container__zcXGF {\n  display: flex;\n  width: 
 var styles$d = {"container":"styles-module_container__zcXGF","input":"styles-module_input__Tpth8","not_available":"styles-module_not_available__CRXjB","label":"styles-module_label__appHO","label_text":"styles-module_label_text__-sKjY","with_title":"styles-module_with_title__L3eGj","valid":"styles-module_valid__zWcOz"};
 styleInject(css_248z$d);
 
-function InputText({ title, name, placeholder = "", defaultValue = "", autoFocus = false, type = "text", width = "100%", available = true, onInput = (event) => { } }) {
+function InputText({ title, name, placeholder = "", defaultValue = "", autoFocus = false, type = "text", width = "100%", marginBottom, available = true, onInput = (event) => { } }) {
     const [value, setValue] = useState(defaultValue);
     const inputElement = useCallback((element) => {
         if (element && autoFocus)
             element.focus();
     }, [autoFocus]);
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$d.container, style: { width } },
+        React.createElement("div", { className: styles$d.container, style: { width, marginBottom } },
             React.createElement("input", { className: `${styles$d.input} ${title != undefined ? styles$d.with_title : styles$d.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$d.valid : styles$d.not_valid} ${available ? styles$d.available : styles$d.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
                     setValue(event.target.value);
                     onInput(event);
@@ -620,7 +620,7 @@ function Table({ items, title = "Titel", actions = [], moreActions }) {
                 action.title)))))));
 }
 
-var css_248z$1 = ".styles-module_container__ItBx0 {\n  display: flex;\n  flex-direction: row;\n  gap: 6px;\n  align-items: center;\n  color: grey;\n  padding: 5px 12px;\n  border-radius: 20px;\n}\n.styles-module_container__ItBx0:hover span {\n  background: linear-gradient(to right, #0075FF 30%, rgb(130, 169, 237) 70%, #0050ab 80%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  text-fill-color: transparent;\n  background-size: 400% auto;\n  animation: styles-module_textShine__ELfW9 3s ease-in-out infinite alternate;\n}\n\n.styles-module_container__ItBx0 a {\n  display: flex;\n  flex-direction: row;\n  gap: 6px;\n  align-items: center;\n  color: grey;\n  padding: 5px 12px;\n  border-radius: 20px;\n  transition: 0.2s ease-in-out;\n}\n\n@keyframes styles-module_textShine__ELfW9 {\n  0% {\n    background-position: 0% 50%;\n  }\n  100% {\n    background-position: 100% 50%;\n  }\n}";
+var css_248z$1 = ".styles-module_container__ItBx0 {\n  display: flex;\n  flex-direction: row;\n  gap: 6px;\n  align-items: center;\n  color: grey;\n  padding: 5px 12px;\n  border-radius: 20px;\n}\n.styles-module_container__ItBx0:hover span {\n  background: linear-gradient(to top, #0075FF 30%, rgb(130, 169, 237) 70%, #0050ab 80%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  text-fill-color: transparent;\n  background-size: auto 400%;\n  animation: styles-module_textShine__ELfW9 3s ease-in-out infinite alternate;\n}\n\n.styles-module_container__ItBx0 a {\n  display: flex;\n  flex-direction: row;\n  gap: 6px;\n  align-items: center;\n  color: grey;\n  padding: 5px 12px;\n  border-radius: 20px;\n  transition: 0.2s ease-in-out;\n}\n\n@keyframes styles-module_textShine__ELfW9 {\n  0% {\n    background-position: 0% 50%;\n  }\n  100% {\n    background-position: 100% 50%;\n  }\n}";
 var styles$1 = {"container":"styles-module_container__ItBx0","textShine":"styles-module_textShine__ELfW9"};
 styleInject(css_248z$1);
 
