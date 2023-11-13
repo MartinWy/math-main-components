@@ -16,12 +16,15 @@ export class SearchChip {
 
 export function SearchChips({
     items,
-    onChange
+    onChange,
+    chipsVisible = 9
 }: {
     items: SearchChip[],
-    onChange?: (chips: SearchChip[]) => void
+    onChange?: (chips: SearchChip[]) => void,
+    chipsVisible: number
 }) {
 
+    const [showAll, setShowAll] = useState<boolean>(false)
     const [chips, setChips] = useState<SearchChip[]>(items)
 
     function onClick(item: SearchChip, index: number) {
@@ -33,12 +36,21 @@ export function SearchChips({
 
     return (
         <div className={styles.container}>
-            {chips.map((item, index) =>
+            {(showAll ? chips : chips.slice(0, chipsVisible)).map((item, index) =>
                 <div key={index} onClick={(e) => onClick(item, index)} className={[styles.chip, item.selected ? styles.selected : styles.not_selected].join(" ")}>
                     <SvgIcon iconName={item.selected ? "close" : "filter_list"} size="20px" />
                     {item.title}
                 </div>
             )}
+            {showAll ?
+                <div className={styles.show_all} onClick={() => setShowAll(false)}>
+                    Weniger anzeigen
+                </div>
+                :
+                <div className={styles.show_all} onClick={() => setShowAll(true)}>
+                    Mehr anzeigen
+                </div>
+            }
         </div>
     )
 }
