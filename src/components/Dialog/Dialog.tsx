@@ -19,8 +19,8 @@ export function Dialog({
     {
         data?: DialogData
         text?: any
-        onClose?: (event: React.MouseEventHandler<HTMLDivElement>, data: any) => void,
-        onSubmit?: (event: React.MouseEventHandler<HTMLButtonElement>, data: any) => void
+        onClose?: (event: React.MouseEvent<HTMLDivElement>, data: any) => void,
+        onSubmit?: (event: React.MouseEvent<HTMLButtonElement>, data: any) => void
         children: any
     }) {
 
