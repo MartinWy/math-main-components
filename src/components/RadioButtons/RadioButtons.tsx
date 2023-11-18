@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { MouseEvent, useState } from 'react';
 import styles from './styles.module.scss';
 
 
@@ -22,14 +22,14 @@ export function RadioButtons({
     options: RadioOption[],
     group: string,
     selected?: string,
-    onClick?: (event: any) => void,
+    onClick?: (event: MouseEvent<HTMLInputElement>) => void,
     width?: string
 }) {
 
     const [selectedOption, setSelected] = useState(selected)
 
-    function onUpdateSelected(event: any) {
-        setSelected(event.target.value)
+    function onUpdateSelected(event: MouseEvent<HTMLInputElement>) {
+        setSelected(event.currentTarget.value)
         if (onClick) onClick(event)
     }
 

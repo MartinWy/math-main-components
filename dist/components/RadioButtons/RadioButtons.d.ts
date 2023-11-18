@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 export declare class RadioOption {
     text: string;
     name: string;
@@ -8,6 +8,6 @@ export declare function RadioButtons({ options, group, selected, onClick, width 
     options: RadioOption[];
     group: string;
     selected?: string;
-    onClick?: (event: any) => void;
+    onClick?: (event: MouseEvent<HTMLInputElement>) => void;
     width?: string;
 }): React.JSX.Element;

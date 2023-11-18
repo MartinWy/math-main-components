@@ -1,5 +1,5 @@
 import { SvgIcon } from 'components/SvgIcon'
-import React from 'react'
+import React, { MouseEvent } from 'react'
 import styles from './styles.module.scss'
 
 export function OptionFieldHorizontal({
@@ -10,11 +10,11 @@ export function OptionFieldHorizontal({
 }: {
     title: string,
     iconName?: string,
-    onClick?: (event: any) => void,
+    onClick?: (event: MouseEvent<HTMLDivElement>) => void,
     preselected?: boolean
 }) {
 
-    function onClickDiv(event: any) {
+    function onClickDiv(event: MouseEvent<HTMLDivElement>) {
         event.preventDefault()
         if (onClick) onClick(event)
     }

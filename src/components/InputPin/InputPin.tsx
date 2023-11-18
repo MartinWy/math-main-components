@@ -1,4 +1,4 @@
-import React, { createRef, useRef, useState } from 'react';
+import React, { FormEvent, KeyboardEvent, createRef, useRef, useState } from 'react';
 import styles from './styles.module.scss';
 
 export function InputPin({
@@ -16,10 +16,10 @@ export function InputPin({
     const fieldRefs = useRef<any>([])
     fieldRefs.current = [...Array(length)].map((_, i) => fieldRefs.current[i] ?? createRef());
 
-    function onChange(event: any, position: number) {
+    function onChange(event: FormEvent<HTMLInputElement>, position: number) {
 
         const regex = /[0-9]+/;
-        const value: string = event.target.value ? event.target.value.replace(" ", "") : ""
+        const value: string = event.currentTarget.value ? event.currentTarget.value.replace(" ", "") : ""
 
         if (value == '' || !regex.test(value)) return
 
@@ -52,7 +52,7 @@ export function InputPin({
         setState(newState)
     }
 
-    function onKeyUp(event: any, position: number) {
+    function onKeyUp(event: KeyboardEvent<HTMLInputElement>, position: number) {
         event.preventDefault()
 
         // Keys: Backspace, Arrow left

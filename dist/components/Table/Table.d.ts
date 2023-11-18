@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 export declare enum TableActionType {
     red = 0,
     default = 1
@@ -14,9 +14,9 @@ export declare class TableItem {
 export declare class TableItemAction {
     title: string;
     iconName: string;
-    onClick: (event: any, item: TableItem, index: number) => void;
+    onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void;
     type: TableActionType;
-    constructor(title: string, iconName: string, type: TableActionType, onClick?: (event: any, item: TableItem, index: number) => void);
+    constructor(title: string, iconName: string, type: TableActionType, onClick?: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void);
 }
 export declare function Table({ items, title, actions, moreActions }: {
     items: TableItem[];

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 export declare function CardButton({ title, iconName, onClick, }: {
     title: string;
     iconName: string;
-    onClick?: (event: any) => {};
+    onClick?: (event: MouseEvent<HTMLDivElement>) => {};
 }): React.JSX.Element;

@@ -10,7 +10,7 @@ export function InputNumber({
     type = "number",
     width = "100%",
     available = true,
-    onInput = (event: any) => { }
+    onInput = (event: MouseEvent<HTMLInputElement>) => { }
 }: {
     title: string,
     name: string,
@@ -39,8 +39,8 @@ export function InputNumber({
                     placeholder={placeholder}
                     ref={inputElement}
                     defaultValue={defaultValue}
-                    onInput={(event: any) => {
-                        setValue(event.target.value)
+                    onInput={(event: MouseEvent<HTMLInputElement>) => {
+                        setValue(event.currentTarget.value)
                         onInput(event)
                     }}
                 />

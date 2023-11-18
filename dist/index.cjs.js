@@ -134,11 +134,11 @@ var css_248z$m = ".styles-module_container__9-1MH {\n  position: fixed;\n  heigh
 var styles$m = {"container":"styles-module_container__9-1MH","active":"styles-module_active__AXoyo","disabled":"styles-module_disabled__sELpy","dialog_window":"styles-module_dialog_window__0Bn2M","cancel_button":"styles-module_cancel_button__KhwLS","submit_button":"styles-module_submit_button__xLzux"};
 styleInject(css_248z$m);
 
-function Dialog({ data, text, onClose = (event, data) => { }, onSubmit = (event, data) => { }, children = null }) {
+function Dialog({ data, text, onClose, onSubmit, children }) {
     function onClick(event) {
-        if (event.target.id == 'dialog-backdrop' || event.target.id == 'cancel-button') {
-            if (data)
-                onClose(event, data.data);
+        if (event.currentTarget.id == 'dialog-backdrop' || event.currentTarget.id == 'cancel-button') {
+            if (onClose)
+                onClose(event, data?.data);
         }
     }
     return (React__default["default"].createElement("div", { id: "dialog-backdrop", className: `${styles$m.container} ${data?.isActive ? styles$m.active : styles$m.disabled}`, onClick: onClick },
@@ -146,7 +146,7 @@ function Dialog({ data, text, onClose = (event, data) => { }, onSubmit = (event,
             children,
             text && React__default["default"].createElement("h1", null, text),
             React__default["default"].createElement("button", { className: styles$m.cancel_button, id: "cancel-button", onClick: onClick }, "Abbrechen"),
-            React__default["default"].createElement("button", { className: styles$m.submit_button, id: "submit-button", onClick: (event) => onSubmit(event, data?.data) }, "Best\u00E4tigen"))));
+            React__default["default"].createElement("button", { className: styles$m.submit_button, id: "submit-button", onClick: (event) => onSubmit && onSubmit(event, data?.data) }, "Best\u00E4tigen"))));
 }
 
 var css_248z$l = ".styles-module_container__HOoBj {\n  margin-bottom: 30px;\n}\n.styles-module_container__HOoBj button {\n  padding: 12px 18px;\n  border-radius: 40px;\n  border: none;\n  color: white;\n  font-size: 16px;\n  background: #0075FF;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  align-items: center;\n}";
@@ -197,7 +197,7 @@ function InputMail({ placeholder = "E-Mail-Adresse", title = "E-Mail-Adresse", n
     const [value, setValue] = React.useState("");
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: styles$i.container, style: { width: width } },
-            React__default["default"].createElement("input", { className: `${styles$i.input} ${title != undefined ? styles$i.with_title : styles$i.without_title} ${value.length > 0 ? styles$i.valid : styles$i.not_valid} ${available ? styles$i.available : styles$i.not_available}`, name: name, placeholder: placeholder, type: "email", onInput: (event) => setValue(event.target.value) }),
+            React__default["default"].createElement("input", { className: `${styles$i.input} ${title != undefined ? styles$i.with_title : styles$i.without_title} ${value.length > 0 ? styles$i.valid : styles$i.not_valid} ${available ? styles$i.available : styles$i.not_available}`, name: name, placeholder: placeholder, type: "email", onInput: (event) => setValue(event.currentTarget.value) }),
             React__default["default"].createElement("label", { htmlFor: "text", className: styles$i.label },
                 React__default["default"].createElement("span", { className: styles$i.label_text }, title)))));
 }
@@ -210,12 +210,12 @@ function InputNames({ width = "100%", placeholder = { firstName: "", lastName: "
     const [value1, setValue1] = React.useState(defaultValue.firstName ? defaultValue.firstName : "");
     const [value2, setValue2] = React.useState(defaultValue.lastName ? defaultValue.lastName : "");
     function onInput1(event) {
-        setValue1(event.target.value);
+        setValue1(event.currentTarget.value);
         onInputFirstName(event);
         onInput("firstName", event);
     }
     function onInput2(event) {
-        setValue2(event.target.value);
+        setValue2(event.currentTarget.value);
         onInputLastName(event);
         onInput("lastName", event);
     }
@@ -243,7 +243,7 @@ function InputNumber({ title, name, placeholder = "", defaultValue = "", autoFoc
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: styles$g.container, style: { width } },
             React__default["default"].createElement("input", { className: `${styles$g.input} ${title != undefined ? styles$g.with_title : styles$g.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$g.valid : styles$g.not_valid} ${available ? styles$g.available : styles$g.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
-                    setValue(event.target.value);
+                    setValue(event.currentTarget.value);
                     onInput(event);
                 } }),
             React__default["default"].createElement("label", { htmlFor: "text", className: styles$g.label },
@@ -260,7 +260,7 @@ function InputPassword({ placeholder = "", title = "Passwort", name, isVisible =
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: `${styles$f.container} ${isVisible ? styles$f.visible : styles$f.hidden}`, style: { width: width } },
             React__default["default"].createElement("div", { className: styles$f.form },
-                React__default["default"].createElement("input", { className: `${styles$f.input} ${title != undefined ? styles$f.with_title : styles$f.without_title} ${value.length > 0 ? styles$f.valid : styles$f.not_valid}`, name: name, minLength: minLength, autoComplete: autoComplete, placeholder: placeholder, type: hidePassword ? "password" : "text", onInput: (event) => setValue(event.target.value) }),
+                React__default["default"].createElement("input", { className: `${styles$f.input} ${title != undefined ? styles$f.with_title : styles$f.without_title} ${value.length > 0 ? styles$f.valid : styles$f.not_valid}`, name: name, minLength: minLength, autoComplete: autoComplete, placeholder: placeholder, type: hidePassword ? "password" : "text", onInput: (event) => setValue(event.currentTarget.value) }),
                 React__default["default"].createElement("label", { htmlFor: "text", className: styles$f.label },
                     React__default["default"].createElement("span", { className: styles$f.label_text }, title)),
                 React__default["default"].createElement("button", { title: hidePassword ? "Passwort anzeigen" : "Passwort verstecken", className: styles$f.hideButton, onClick: () => setHidePassword(!hidePassword), type: "button" },
@@ -279,7 +279,7 @@ function InputPin({ name, length, onFinished = () => { } }) {
     fieldRefs.current = [...Array(length)].map((_, i) => fieldRefs.current[i] ?? React.createRef());
     function onChange(event, position) {
         const regex = /[0-9]+/;
-        const value = event.target.value ? event.target.value.replace(" ", "") : "";
+        const value = event.currentTarget.value ? event.currentTarget.value.replace(" ", "") : "";
         if (value == '' || !regex.test(value))
             return;
         const digitCountBefore = state[position] == undefined ? 0 : String(state[position]).length;
@@ -349,7 +349,7 @@ function InputText({ title, name, placeholder = "", defaultValue = "", autoFocus
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: styles$d.container, style: { width, marginBottom } },
             React__default["default"].createElement("input", { className: `${styles$d.input} ${title != undefined ? styles$d.with_title : styles$d.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$d.valid : styles$d.not_valid} ${available ? styles$d.available : styles$d.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
-                    setValue(event.target.value);
+                    setValue(event.currentTarget.value);
                     onInput(event);
                 } }),
             React__default["default"].createElement("label", { htmlFor: "text", className: styles$d.label },
@@ -426,7 +426,7 @@ class RadioOption {
 function RadioButtons({ options, group, selected, onClick, width = "100%" }) {
     const [selectedOption, setSelected] = React.useState(selected);
     function onUpdateSelected(event) {
-        setSelected(event.target.value);
+        setSelected(event.currentTarget.value);
         if (onClick)
             onClick(event);
     }
@@ -504,17 +504,20 @@ function Searchbar({ placeholder, title = "Suchen", showNoResults = false, error
     const [inputFocused, setFocused] = React.useState(false);
     const [searchResults, setSearchResults] = React.useState(results);
     function onInputChanged(event) {
-        setValue(event.target.value);
+        event.preventDefault();
+        setValue(event.currentTarget.value);
         updateSearch(event);
         onInput(event);
     }
     function updateSearch(event) {
-        if (event.target.value == '' || event.target.value == undefined || event.target.value == null) {
+        event.preventDefault();
+        const value = event.currentTarget.value;
+        if (value == '' || value == undefined || value == null) {
             setSearchResults(results);
         }
         else {
             setSearchResults(results.filter((result) => {
-                return result.title.includes(event.target.value);
+                return result.title.includes(event.currentTarget.value);
             }));
         }
     }

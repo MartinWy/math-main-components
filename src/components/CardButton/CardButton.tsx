@@ -1,5 +1,5 @@
 import { SvgIcon } from 'components/SvgIcon'
-import React from 'react'
+import React, { MouseEvent } from 'react'
 import styles from './styles.module.scss'
 
 export function CardButton({
@@ -9,10 +9,10 @@ export function CardButton({
 }: {
     title: string,
     iconName: string,
-    onClick?: (event: any) => {}
+    onClick?: (event: MouseEvent<HTMLDivElement>) => {}
 }) {
 
-    function onClickCard(event: any) {
+    function onClickCard(event: MouseEvent<HTMLDivElement>) {
         event.preventDefault()
         if (onClick) onClick(event)
     }

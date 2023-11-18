@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 import styles from './styles.module.scss';
 
 
@@ -12,21 +12,21 @@ export interface DialogData {
 export function Dialog({
     data,
     text,
-    onClose = (event: any, data: any) => { },
-    onSubmit = (event: any, data: any) => { },
-    children = null
+    onClose,
+    onSubmit,
+    children
 }:
     {
         data?: DialogData
         text?: any
-        onClose?: (event: React.MouseEvent<HTMLDivElement>, data: any) => void,
-        onSubmit?: (event: React.MouseEvent<HTMLButtonElement>, data: any) => void
+        onClose?: (event: React.MouseEvent<HTMLDivElement | HTMLButtonElement>, data?: any | undefined) => void,
+        onSubmit?: (event: React.MouseEvent<HTMLButtonElement>, data?: any | undefined) => void
         children: any
     }) {
 
-    function onClick(event: any) {
-        if (event.target.id == 'dialog-backdrop' || event.target.id == 'cancel-button') {
-            if (data) onClose(event, data.data)
+    function onClick(event: MouseEvent<HTMLDivElement | HTMLButtonElement>) {
+        if (event.currentTarget.id == 'dialog-backdrop' || event.currentTarget.id == 'cancel-button') {
+            if (onClose) onClose(event, data?.data)
         }
     }
 
@@ -36,7 +36,7 @@ export function Dialog({
                 {children}
                 {text && <h1>{text}</h1>}
                 <button className={styles.cancel_button} id="cancel-button" onClick={onClick}>Abbrechen</button>
-                <button className={styles.submit_button} id="submit-button" onClick={(event: any) => onSubmit(event, data?.data)}>Bestätigen</button>
+                <button className={styles.submit_button} id="submit-button" onClick={(event: MouseEvent<HTMLButtonElement>) => onSubmit && onSubmit(event, data?.data)}>Bestätigen</button>
             </div>
         </div>
     )

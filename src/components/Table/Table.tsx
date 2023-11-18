@@ -1,5 +1,5 @@
 import { SvgIcon } from 'components/SvgIcon';
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import styles from './styles.module.scss';
 
 
@@ -30,10 +30,10 @@ export class TableItemAction {
 
     public title: string
     public iconName: string
-    public onClick: (event: any, item: TableItem, index: number) => void
+    public onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void
     public type: TableActionType = TableActionType.default
 
-    constructor(title: string, iconName: string, type: TableActionType, onClick: (event: any, item: TableItem, index: number) => void = () => { }) {
+    constructor(title: string, iconName: string, type: TableActionType, onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void = () => { }) {
         this.title = title
         this.iconName = iconName
         this.onClick = onClick

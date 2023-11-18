@@ -6,9 +6,9 @@ export function InputNames({
     placeholder = { firstName: "", lastName: "" },
     title = { firstName: "Vorname", lastName: "Nachname" },
     defaultValue = { firstName: "", lastName: "" },
-    onInput = (name: string, event: any) => { },
-    onInputFirstName = (event: any) => { },
-    onInputLastName = (event: any) => { },
+    onInput = (name: string, event: MouseEvent<HTMLInputElement>) => { },
+    onInputFirstName = (event: MouseEvent<HTMLInputElement>) => { },
+    onInputLastName = (event: MouseEvent<HTMLInputElement>) => { },
 }: {
     width?: string,
     placeholder?: { firstName?: string, lastName?: string },
@@ -22,14 +22,14 @@ export function InputNames({
     const [value1, setValue1] = useState(defaultValue.firstName ? defaultValue.firstName : "")
     const [value2, setValue2] = useState(defaultValue.lastName ? defaultValue.lastName : "")
 
-    function onInput1(event: any) {
-        setValue1(event.target.value)
+    function onInput1(event: MouseEvent<HTMLInputElement>) {
+        setValue1(event.currentTarget.value)
         onInputFirstName(event)
         onInput("firstName", event)
     }
 
-    function onInput2(event: any) {
-        setValue2(event.target.value)
+    function onInput2(event: MouseEvent<HTMLInputElement>) {
+        setValue2(event.currentTarget.value)
         onInputLastName(event)
         onInput("lastName", event)
     }

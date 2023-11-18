@@ -11,9 +11,9 @@ export function Searchbar({
     errorButton = "",
     helpTitle = "",
     helpMessage = "",
-    errorAction = (event: any) => { },
-    onInput = (event: any) => { },
-    onClickResult = (event: any, result: any) => { },
+    errorAction = (event: MouseEvent<HTMLButtonElement>) => { },
+    onInput = (event: MouseEvent<HTMLInputElement>) => { },
+    onClickResult = (event: MouseEvent<HTMLLIElement>, result: any) => { },
     withButton = false,
     buttonText = "Suchen",
     suggestions = [],
@@ -42,19 +42,24 @@ export function Searchbar({
     const [inputFocused, setFocused] = useState(false)
     const [searchResults, setSearchResults] = useState(results)
 
-    function onInputChanged(event: any) {
-        setValue(event.target.value)
+    function onInputChanged(event: MouseEvent<HTMLInputElement>) {
+        event.preventDefault()
+        setValue(event.currentTarget.value)
         updateSearch(event)
         onInput(event)
     }
 
-    function updateSearch(event: any) {
-        if (event.target.value == '' || event.target.value == undefined || event.target.value == null) {
+    function updateSearch(event: MouseEvent<HTMLInputElement>) {
+        event.preventDefault()
+
+        const value = event.currentTarget.value
+
+        if (value == '' || value == undefined || value == null) {
             setSearchResults(results)
         }
         else {
             setSearchResults(results.filter((result) => {
-                return result.title.includes(event.target.value)
+                return result.title.includes(event.currentTarget.value)
             }))
         }
     }

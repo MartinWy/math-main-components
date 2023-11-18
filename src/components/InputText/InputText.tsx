@@ -42,8 +42,8 @@ export function InputText({
                     placeholder={placeholder}
                     ref={inputElement}
                     defaultValue={defaultValue}
-                    onInput={(event: any) => {
-                        setValue(event.target.value)
+                    onInput={(event: MouseEvent<HTMLInputElement>) => {
+                        setValue(event.currentTarget.value)
                         onInput(event)
                     }}
                 />
