@@ -25,7 +25,7 @@ export function InputNumber({
 
     const [value, setValue] = useState(defaultValue)
 
-    const inputElement = useCallback((element: any) => {
+    const inputElement = useCallback((element: HTMLInputElement) => {
         if (element && autoFocus) element.focus();
     }, [autoFocus])
 

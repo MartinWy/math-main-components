@@ -1,5 +1,5 @@
 import { SvgIcon } from 'components/SvgIcon'
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import styles from './styles.module.scss'
 
 
@@ -9,7 +9,7 @@ export function CopyCode({
     onCopy = () => { }
 }: {
     code: string,
-    style?: any,
+    style?: CSSProperties,
     onCopy?: () => void
 }) {
 

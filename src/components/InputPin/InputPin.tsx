@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent, createRef, useRef, useState } from 'react';
+import React, { ChangeEvent, KeyboardEvent, RefObject, createRef, useRef, useState } from 'react';
 import styles from './styles.module.scss';
 
 export function InputPin({
@@ -13,7 +13,7 @@ export function InputPin({
 
     const [state, setState] = useState<any>({})
 
-    const fieldRefs = useRef<any>([])
+    const fieldRefs = useRef<RefObject<HTMLInputElement>[]>([])
     fieldRefs.current = [...Array(length)].map((_, i) => fieldRefs.current[i] ?? createRef());
 
     function onChange(event: ChangeEvent<HTMLInputElement>, position: number) {
@@ -28,7 +28,8 @@ export function InputPin({
 
         // One digit was added
         if (addedDigitsCount == 1) {
-            fieldRefs.current[(position + 1) % length].current.focus()
+            const nextFieldRef = fieldRefs.current[(position + 1) % length]
+            if (nextFieldRef.current) nextFieldRef.current.focus()
             setDigit(position, value.slice(-1))
             return
         }
@@ -42,11 +43,14 @@ export function InputPin({
 
         digits.forEach((digit, relativePosition) => {
             newState[relativePosition % length + position] = digit
-            fieldRefs.current[relativePosition % length + position].current.value = digit
+
+            const fieldRef = fieldRefs.current[relativePosition % length + position]
+            if (fieldRef.current) fieldRef.current.value = digit
         })
 
         if (digits.length >= 6) {
-            fieldRefs.current[length - 1].current.focus()
+            const lastFieldRef = fieldRefs.current[length - 1]
+            if (lastFieldRef.current) lastFieldRef.current.focus()
         }
 
         setState(newState)
@@ -57,24 +61,27 @@ export function InputPin({
 
         // Keys: Backspace, Arrow left
         if ([8, 37].includes(event.keyCode)) {
-            fieldRefs.current[(((position) - 1) + length) % length].current.focus()
+            const beforeFieldRef = fieldRefs.current[(((position) - 1) + length) % length]
+            if (beforeFieldRef.current) beforeFieldRef.current.focus()
         }
 
         // Keys: Tab (automatically), Arrow Right
         if ([39].includes(event.keyCode)) {
-            fieldRefs.current[(position + 1) % length].current.focus()
+            const nextFieldRef = fieldRefs.current[(position + 1) % length]
+            if (nextFieldRef.current) nextFieldRef.current.focus()
         }
     }
 
     function setDigit(position: number, digit: string) {
-        fieldRefs.current[position % length].current.value = digit
+        const fieldRef = fieldRefs.current[position % length]
+        if (fieldRef.current) fieldRef.current.value = digit
         setState({ ...state, [position % length]: digit })
     }
 
     function resetValues() {
         setState({})
-        fieldRefs.current.forEach((ref: any) => {
-            ref.current.value = ""
+        fieldRefs.current.forEach((ref: RefObject<HTMLInputElement>) => {
+            if (ref.current) ref.current.value = ""
         })
     }
 

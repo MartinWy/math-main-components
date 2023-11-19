@@ -1,5 +1,5 @@
 import { SvgIcon } from 'components/SvgIcon';
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 
@@ -9,15 +9,15 @@ export enum TableActionType {
 }
 
 
-export class TableItem {
+export class TableItem<DataType> {
 
     public title: string;
     public subtitle: string;
     public moreText: string;
     public iconName: string;
-    public data: any;
+    public data: DataType;
 
-    constructor(title: string, subtitle: string, moreText: string, iconName: string, data: any = {}) {
+    constructor(title: string, subtitle: string, moreText: string, iconName: string, data: DataType) {
         this.title = title;
         this.subtitle = subtitle;
         this.moreText = moreText;
@@ -26,14 +26,14 @@ export class TableItem {
     }
 }
 
-export class TableItemAction {
+export class TableItemAction<DataType> {
 
     public title: string
     public iconName: string
-    public onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void
+    public onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem<DataType>, index: number) => void
     public type: TableActionType = TableActionType.default
 
-    constructor(title: string, iconName: string, type: TableActionType, onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void = () => { }) {
+    constructor(title: string, iconName: string, type: TableActionType, onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem<DataType>, index: number) => void = () => { }) {
         this.title = title
         this.iconName = iconName
         this.onClick = onClick
@@ -42,16 +42,16 @@ export class TableItemAction {
 }
 
 
-export function Table({
+export function Table<DataType>({
     items,
     title = "Titel",
     actions = [],
     moreActions
 }: {
-    items: TableItem[],
+    items: TableItem<DataType>[],
     title: string,
-    actions?: TableItemAction[],
-    moreActions?: any[]
+    actions?: TableItemAction<DataType>[],
+    moreActions?: ((data: DataType, index: number) => ReactNode)[]
 }) {
 
     return (

@@ -2,7 +2,12 @@ import React, { ChangeEvent, MouseEvent, useCallback, useState } from 'react'
 import { SvgIcon } from '../SvgIcon'
 import styles from './styles.module.scss'
 
-export function Searchbar({
+export type SearchResult = {
+    title: string
+    data: unknown
+}
+
+export function Searchbar<Type extends SearchResult>({
     placeholder,
     title = "Suchen",
     showNoResults = false,
@@ -13,7 +18,7 @@ export function Searchbar({
     helpMessage = "",
     errorAction = (event: MouseEvent<HTMLButtonElement>) => { },
     onInput = (event: ChangeEvent<HTMLInputElement>) => { },
-    onClickResult = (event: MouseEvent<HTMLLIElement>, result: any) => { },
+    onClickResult = (event: MouseEvent<HTMLLIElement>, result: Type) => { },
     withButton = false,
     buttonText = "Suchen",
     suggestions = [],
@@ -30,12 +35,12 @@ export function Searchbar({
     helpMessage?: string,
     errorAction?: (event: MouseEvent<HTMLButtonElement>) => void,
     onInput?: (event: ChangeEvent<HTMLInputElement>) => void,
-    onClickResult?: (event: MouseEvent<HTMLLIElement>, result: any) => void,
+    onClickResult?: (event: MouseEvent<HTMLLIElement>, result: Type) => void,
     withButton?: boolean,
     buttonText?: string,
-    suggestions?: any[],
+    suggestions?: string[],
     autoFocus?: boolean,
-    results?: any[]
+    results?: Type[]
 }) {
 
     const [value, setValue] = useState("")
@@ -64,7 +69,7 @@ export function Searchbar({
         }
     }
 
-    const inputElement = useCallback((element: any) => {
+    const inputElement = useCallback((element: HTMLInputElement) => {
         if (element && autoFocus) element.focus();
     }, [autoFocus])
 
