@@ -1,4 +1,4 @@
-import React, { MouseEvent, useCallback, useState } from 'react'
+import React, { ChangeEvent, MouseEvent, useCallback, useState } from 'react'
 import { SvgIcon } from '../SvgIcon'
 import styles from './styles.module.scss'
 
@@ -12,7 +12,7 @@ export function Searchbar({
     helpTitle = "",
     helpMessage = "",
     errorAction = (event: MouseEvent<HTMLButtonElement>) => { },
-    onInput = (event: MouseEvent<HTMLInputElement>) => { },
+    onInput = (event: ChangeEvent<HTMLInputElement>) => { },
     onClickResult = (event: MouseEvent<HTMLLIElement>, result: any) => { },
     withButton = false,
     buttonText = "Suchen",
@@ -29,7 +29,7 @@ export function Searchbar({
     helpTitle?: string,
     helpMessage?: string,
     errorAction?: (event: MouseEvent<HTMLButtonElement>) => void,
-    onInput?: (event: MouseEvent<HTMLInputElement>) => void,
+    onInput?: (event: ChangeEvent<HTMLInputElement>) => void,
     onClickResult?: (event: MouseEvent<HTMLLIElement>, result: any) => void,
     withButton?: boolean,
     buttonText?: string,
@@ -42,24 +42,24 @@ export function Searchbar({
     const [inputFocused, setFocused] = useState(false)
     const [searchResults, setSearchResults] = useState(results)
 
-    function onInputChanged(event: MouseEvent<HTMLInputElement>) {
+    function onInputChanged(event: ChangeEvent<HTMLInputElement>) {
         event.preventDefault()
-        setValue(event.currentTarget.value)
+        setValue(event.target.value)
         updateSearch(event)
         onInput(event)
     }
 
-    function updateSearch(event: MouseEvent<HTMLInputElement>) {
+    function updateSearch(event: ChangeEvent<HTMLInputElement>) {
         event.preventDefault()
 
-        const value = event.currentTarget.value
+        const value = event.target.value
 
         if (value == '' || value == undefined || value == null) {
             setSearchResults(results)
         }
         else {
             setSearchResults(results.filter((result) => {
-                return result.title.includes(event.currentTarget.value)
+                return result.title.includes(event.target.value)
             }))
         }
     }

@@ -1,4 +1,4 @@
-import React, { FormEvent, KeyboardEvent, createRef, useRef, useState } from 'react';
+import React, { ChangeEvent, KeyboardEvent, createRef, useRef, useState } from 'react';
 import styles from './styles.module.scss';
 
 export function InputPin({
@@ -16,10 +16,10 @@ export function InputPin({
     const fieldRefs = useRef<any>([])
     fieldRefs.current = [...Array(length)].map((_, i) => fieldRefs.current[i] ?? createRef());
 
-    function onChange(event: FormEvent<HTMLInputElement>, position: number) {
+    function onChange(event: ChangeEvent<HTMLInputElement>, position: number) {
 
         const regex = /[0-9]+/;
-        const value: string = event.currentTarget.value ? event.currentTarget.value.replace(" ", "") : ""
+        const value: string = event.target.value ? event.target.value.replace(" ", "") : ""
 
         if (value == '' || !regex.test(value)) return
 
@@ -52,7 +52,7 @@ export function InputPin({
         setState(newState)
     }
 
-    function onKeyUp(event: KeyboardEvent<HTMLInputElement>, position: number) {
+    function onKeyUp(event: KeyboardEvent, position: number) {
         event.preventDefault()
 
         // Keys: Backspace, Arrow left
@@ -79,19 +79,17 @@ export function InputPin({
     }
 
     return (
-        <>
-            <div className={styles.container}>
-                <input name={name} type="hidden" defaultValue={Object.values(state).join("")} />
-                <div className={styles.input_wrapper}>
-                    {[...Array(length)].map((value, i) => {
-                        if (i == 0) {
-                            return <input key={i} pattern="[0-9]" value={state[i] ? state[i] : ""} ref={fieldRefs.current[i]} className={styles.input} type="text" onKeyUp={(event) => onKeyUp(event, i)} onInput={(event) => onChange(event, i)} />
-                        }
-                        return <input key={i} pattern="[0-9]" value={state[i] ? state[i] : ""} ref={fieldRefs.current[i]} className={styles.input} type="text" onKeyUp={(event) => onKeyUp(event, i)} onInput={(event) => onChange(event, i)} />
-                    })}
-                </div>
-                <button type="button" onClick={resetValues}>Zurücksetzen</button>
+        <div className={styles.container}>
+            <input name={name} type="hidden" defaultValue={Object.values(state).join("")} />
+            <div className={styles.input_wrapper}>
+                {[...Array(length)].map((value, i) => {
+                    if (i == 0) {
+                        return <input key={i} pattern="[0-9]" value={state[i] ? state[i] : ""} ref={fieldRefs.current[i]} className={styles.input} type="text" onKeyUp={(event: KeyboardEvent) => onKeyUp(event, i)} onInput={(event: ChangeEvent<HTMLInputElement>) => onChange(event, i)} />
+                    }
+                    return <input key={i} pattern="[0-9]" value={state[i] ? state[i] : ""} ref={fieldRefs.current[i]} className={styles.input} type="text" onKeyUp={(event: KeyboardEvent) => onKeyUp(event, i)} onInput={(event: ChangeEvent<HTMLInputElement>) => onChange(event, i)} />
+                })}
             </div>
-        </>
+            <button type="button" onClick={resetValues}>Zurücksetzen</button>
+        </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { ChangeEvent, MouseEvent } from 'react';
 export declare function Searchbar({ placeholder, title, showNoResults, errorTitle, errorMessage, errorButton, helpTitle, helpMessage, errorAction, onInput, onClickResult, withButton, buttonText, suggestions, autoFocus, results }: {
     placeholder: string;
     title?: string;
@@ -9,7 +9,7 @@ export declare function Searchbar({ placeholder, title, showNoResults, errorTitl
     helpTitle?: string;
     helpMessage?: string;
     errorAction?: (event: MouseEvent<HTMLButtonElement>) => void;
-    onInput?: (event: MouseEvent<HTMLInputElement>) => void;
+    onInput?: (event: ChangeEvent<HTMLInputElement>) => void;
     onClickResult?: (event: MouseEvent<HTMLLIElement>, result: any) => void;
     withButton?: boolean;
     buttonText?: string;

@@ -1,5 +1,5 @@
 import { SvgIcon } from 'components/SvgIcon'
-import React, { MouseEvent, useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import styles from './styles.module.scss'
 
 export function InputPassword({
@@ -36,7 +36,7 @@ export function InputPassword({
                         autoComplete={autoComplete}
                         placeholder={placeholder}
                         type={hidePassword ? "password" : "text"}
-                        onInput={(event: MouseEvent<HTMLInputElement>) => setValue(event.currentTarget.value)} />
+                        onInput={(event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value)} />
                     <label htmlFor="text" className={styles.label}>
                         <span className={styles.label_text}>
                             {title}

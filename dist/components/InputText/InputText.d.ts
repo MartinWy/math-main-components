@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { ChangeEvent } from 'react';
 export declare function InputText({ title, name, placeholder, defaultValue, autoFocus, type, width, marginBottom, available, onInput }: {
     title: string;
     name: string;
@@ -9,5 +9,5 @@ export declare function InputText({ title, name, placeholder, defaultValue, auto
     width?: string;
     marginBottom?: string;
     available?: boolean;
-    onInput?: (event: MouseEvent<HTMLInputElement>) => void;
+    onInput?: (event: ChangeEvent<HTMLInputElement>) => void;
 }): React.JSX.Element;

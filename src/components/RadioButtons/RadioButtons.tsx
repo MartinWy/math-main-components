@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styles from './styles.module.scss';
 
 
@@ -22,14 +22,14 @@ export function RadioButtons({
     options: RadioOption[],
     group: string,
     selected?: string,
-    onClick?: (event: MouseEvent<HTMLInputElement>) => void,
+    onClick?: (event: ChangeEvent<HTMLInputElement>) => void,
     width?: string
 }) {
 
     const [selectedOption, setSelected] = useState(selected)
 
-    function onUpdateSelected(event: MouseEvent<HTMLInputElement>) {
-        setSelected(event.currentTarget.value)
+    function onUpdateSelected(event: ChangeEvent<HTMLInputElement>) {
+        setSelected(event.target.value)
         if (onClick) onClick(event)
     }
 
@@ -38,9 +38,9 @@ export function RadioButtons({
             {options.map((option: RadioOption) =>
                 <div className={styles.option} key={option.name}>
                     {selected && selected == option.name ?
-                        <input type="radio" id={option.name} name={group} value={option.name} onClick={onUpdateSelected} defaultChecked />
+                        <input type="radio" id={option.name} name={group} value={option.name} onInput={onUpdateSelected} defaultChecked />
                         :
-                        <input type="radio" id={option.name} name={group} value={option.name} onClick={onUpdateSelected} />
+                        <input type="radio" id={option.name} name={group} value={option.name} onInput={onUpdateSelected} />
                     }
                     <label htmlFor={option.name}>{option.text}</label>
                 </div>

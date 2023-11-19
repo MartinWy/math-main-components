@@ -1,4 +1,4 @@
-import React, { MouseEvent, useCallback, useState } from 'react';
+import React, { ChangeEvent, useCallback, useState } from 'react';
 import styles from './styles.module.scss';
 
 export function InputText({
@@ -12,7 +12,7 @@ export function InputText({
     marginBottom,
 
     available = true,
-    onInput = (event: MouseEvent<HTMLInputElement>) => { }
+    onInput = (event: ChangeEvent<HTMLInputElement>) => { }
 }: {
     title: string,
     name: string,
@@ -23,7 +23,7 @@ export function InputText({
     width?: string,
     marginBottom?: string,
     available?: boolean,
-    onInput?: (event: MouseEvent<HTMLInputElement>) => void
+    onInput?: (event: ChangeEvent<HTMLInputElement>) => void
 }) {
 
     const [value, setValue] = useState(defaultValue)
@@ -42,9 +42,9 @@ export function InputText({
                     placeholder={placeholder}
                     ref={inputElement}
                     defaultValue={defaultValue}
-                    onInput={(event: MouseEvent<HTMLInputElement>) => {
-                        setValue(event.currentTarget.value)
-                        onInput(event)
+                    onInput={(event: ChangeEvent<HTMLInputElement>) => {
+                        setValue(event.target.value)
+                        if (onInput) onInput(event)
                     }}
                 />
                 <label htmlFor="text" className={styles.label}>

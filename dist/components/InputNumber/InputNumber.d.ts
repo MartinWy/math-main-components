@@ -1,4 +1,4 @@
-import React, { HTMLInputTypeAttribute, MouseEvent } from 'react';
+import React, { ChangeEvent, HTMLInputTypeAttribute } from 'react';
 export declare function InputNumber({ title, name, placeholder, defaultValue, autoFocus, type, width, available, onInput }: {
     title: string;
     name: string;
@@ -8,5 +8,5 @@ export declare function InputNumber({ title, name, placeholder, defaultValue, au
     type?: HTMLInputTypeAttribute;
     width?: string;
     available?: boolean;
-    onInput?: (event: MouseEvent<HTMLInputElement>) => void;
+    onInput?: (event: ChangeEvent<HTMLInputElement>) => void;
 }): React.JSX.Element;

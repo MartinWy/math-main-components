@@ -1,4 +1,4 @@
-import React, { HTMLInputTypeAttribute, MouseEvent, useCallback, useState } from 'react';
+import React, { ChangeEvent, HTMLInputTypeAttribute, useCallback, useState } from 'react';
 import styles from './styles.module.scss';
 
 export function InputNumber({
@@ -10,7 +10,7 @@ export function InputNumber({
     type = "number",
     width = "100%",
     available = true,
-    onInput = (event: MouseEvent<HTMLInputElement>) => { }
+    onInput = (event: ChangeEvent<HTMLInputElement>) => { }
 }: {
     title: string,
     name: string,
@@ -20,7 +20,7 @@ export function InputNumber({
     type?: HTMLInputTypeAttribute,
     width?: string,
     available?: boolean,
-    onInput?: (event: MouseEvent<HTMLInputElement>) => void
+    onInput?: (event: ChangeEvent<HTMLInputElement>) => void
 }) {
 
     const [value, setValue] = useState(defaultValue)
@@ -39,8 +39,8 @@ export function InputNumber({
                     placeholder={placeholder}
                     ref={inputElement}
                     defaultValue={defaultValue}
-                    onInput={(event: MouseEvent<HTMLInputElement>) => {
-                        setValue(event.currentTarget.value)
+                    onInput={(event: ChangeEvent<HTMLInputElement>) => {
+                        setValue(event.target.value)
                         onInput(event)
                     }}
                 />

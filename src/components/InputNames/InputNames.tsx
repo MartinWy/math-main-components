@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import styles from './styles.module.scss'
 
 export function InputNames({
@@ -6,30 +6,30 @@ export function InputNames({
     placeholder = { firstName: "", lastName: "" },
     title = { firstName: "Vorname", lastName: "Nachname" },
     defaultValue = { firstName: "", lastName: "" },
-    onInput = (name: string, event: MouseEvent<HTMLInputElement>) => { },
-    onInputFirstName = (event: MouseEvent<HTMLInputElement>) => { },
-    onInputLastName = (event: MouseEvent<HTMLInputElement>) => { },
+    onInput = (name: string, event: ChangeEvent<HTMLInputElement>) => { },
+    onInputFirstName = (event: ChangeEvent<HTMLInputElement>) => { },
+    onInputLastName = (event: ChangeEvent<HTMLInputElement>) => { },
 }: {
     width?: string,
     placeholder?: { firstName?: string, lastName?: string },
     title?: { firstName?: string, lastName?: string },
     defaultValue?: { firstName?: string, lastName?: string },
-    onInput?: (name: string, event: MouseEvent<HTMLInputElement>) => void,
-    onInputFirstName?: (event: MouseEvent<HTMLInputElement>) => void,
-    onInputLastName?: (event: MouseEvent<HTMLInputElement>) => void
+    onInput?: (name: string, event: ChangeEvent<HTMLInputElement>) => void,
+    onInputFirstName?: (event: ChangeEvent<HTMLInputElement>) => void,
+    onInputLastName?: (event: ChangeEvent<HTMLInputElement>) => void
 }) {
 
     const [value1, setValue1] = useState(defaultValue.firstName ? defaultValue.firstName : "")
     const [value2, setValue2] = useState(defaultValue.lastName ? defaultValue.lastName : "")
 
-    function onInput1(event: MouseEvent<HTMLInputElement>) {
-        setValue1(event.currentTarget.value)
+    function onInput1(event: ChangeEvent<HTMLInputElement>) {
+        setValue1(event.target.value)
         onInputFirstName(event)
         onInput("firstName", event)
     }
 
-    function onInput2(event: MouseEvent<HTMLInputElement>) {
-        setValue2(event.currentTarget.value)
+    function onInput2(event: ChangeEvent<HTMLInputElement>) {
+        setValue2(event.target.value)
         onInputLastName(event)
         onInput("lastName", event)
     }
