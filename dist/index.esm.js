@@ -129,7 +129,8 @@ styleInject(css_248z$m);
 function Dialog({ data, text, onClose, onSubmit, children }) {
     function onClick(event) {
         event.preventDefault();
-        const id = event.currentTarget.id;
+        const element = event.target;
+        const id = element.id;
         if (["dialog-backdrop", "cancel-button"].includes(id)) {
             if (onClose)
                 onClose(event, data?.data);

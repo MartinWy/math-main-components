@@ -27,7 +27,8 @@ export function Dialog({
     function onClick(event: MouseEvent<HTMLDivElement | HTMLButtonElement>) {
         event.preventDefault()
 
-        const id = event.currentTarget.id
+        const element = event.target as HTMLButtonElement | HTMLDivElement
+        const id = element.id
 
         if (["dialog-backdrop", "cancel-button"].includes(id)) {
             if (onClose) onClose(event, data?.data)
