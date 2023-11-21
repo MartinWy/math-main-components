@@ -84,11 +84,10 @@ var styles$p = {"container":"styles-module_container__gCCnD"};
 styleInject(css_248z$p);
 
 function Checkbox({ text, name, defaultChecked = false, onInput = () => { }, }) {
-    return (React__default["default"].createElement(React__default["default"].Fragment, null,
-        React__default["default"].createElement("div", { className: styles$p.container },
-            React__default["default"].createElement("input", { type: "checkbox", onInput: onInput, name: name, id: name, defaultChecked: defaultChecked }),
-            React__default["default"].createElement("label", { htmlFor: name }, text),
-            React__default["default"].createElement(SvgIcon, { iconName: "done", size: "21px" }))));
+    return (React__default["default"].createElement("div", { className: styles$p.container },
+        React__default["default"].createElement("input", { type: "checkbox", onInput: onInput, name: name, id: name, defaultChecked: defaultChecked }),
+        React__default["default"].createElement("label", { htmlFor: name }, text),
+        React__default["default"].createElement(SvgIcon, { iconName: "done", size: "21px" })));
 }
 
 var css_248z$o = ".styles-module_container__OqDNA {\n  display: flex;\n  flex-direction: row;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(1) {\n  background: #F0F0F0;\n  border-color: #F0F0F0;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(2) {\n  background: #E0E0E0;\n  border-color: #E0E0E0;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(3) {\n  background: #CBCBCB;\n  border-color: #CBCBCB;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:first-child {\n  border-top-left-radius: 20px;\n  border-bottom-left-radius: 20px;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:last-child {\n  border-top-right-radius: 20px;\n  border-bottom-right-radius: 20px;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI {\n  border: 1px solid transparent;\n  padding: 11px 18px;\n  font-size: 14px;\n  cursor: pointer;\n  transition: 0.2s ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI.styles-module_selected__AXIA- {\n  background: #C6D4F8;\n  border-color: #0075FF;\n  color: #0075FF;\n}";
@@ -289,7 +288,9 @@ function InputPin({ name, length, onFinished = () => { } }) {
         const addedDigitsCount = value.length - digitCountBefore;
         // One digit was added
         if (addedDigitsCount == 1) {
-            fieldRefs.current[(position + 1) % length].current.focus();
+            const nextFieldRef = fieldRefs.current[(position + 1) % length];
+            if (nextFieldRef.current)
+                nextFieldRef.current.focus();
             setDigit(position, value.slice(-1));
             return;
         }
@@ -299,10 +300,14 @@ function InputPin({ name, length, onFinished = () => { } }) {
         let newState = { ...state };
         digits.forEach((digit, relativePosition) => {
             newState[relativePosition % length + position] = digit;
-            fieldRefs.current[relativePosition % length + position].current.value = digit;
+            const fieldRef = fieldRefs.current[relativePosition % length + position];
+            if (fieldRef.current)
+                fieldRef.current.value = digit;
         });
         if (digits.length >= 6) {
-            fieldRefs.current[length - 1].current.focus();
+            const lastFieldRef = fieldRefs.current[length - 1];
+            if (lastFieldRef.current)
+                lastFieldRef.current.focus();
         }
         setState(newState);
     }
@@ -310,21 +315,28 @@ function InputPin({ name, length, onFinished = () => { } }) {
         event.preventDefault();
         // Keys: Backspace, Arrow left
         if ([8, 37].includes(event.keyCode)) {
-            fieldRefs.current[(((position) - 1) + length) % length].current.focus();
+            const beforeFieldRef = fieldRefs.current[(((position) - 1) + length) % length];
+            if (beforeFieldRef.current)
+                beforeFieldRef.current.focus();
         }
         // Keys: Tab (automatically), Arrow Right
         if ([39].includes(event.keyCode)) {
-            fieldRefs.current[(position + 1) % length].current.focus();
+            const nextFieldRef = fieldRefs.current[(position + 1) % length];
+            if (nextFieldRef.current)
+                nextFieldRef.current.focus();
         }
     }
     function setDigit(position, digit) {
-        fieldRefs.current[position % length].current.value = digit;
+        const fieldRef = fieldRefs.current[position % length];
+        if (fieldRef.current)
+            fieldRef.current.value = digit;
         setState({ ...state, [position % length]: digit });
     }
     function resetValues() {
         setState({});
         fieldRefs.current.forEach((ref) => {
-            ref.current.value = "";
+            if (ref.current)
+                ref.current.value = "";
         });
     }
     return (React__default["default"].createElement("div", { className: styles$e.container },
@@ -599,7 +611,7 @@ class TableItem {
     moreText;
     iconName;
     data;
-    constructor(title, subtitle, moreText, iconName, data = {}) {
+    constructor(title, subtitle, moreText, iconName, data) {
         this.title = title;
         this.subtitle = subtitle;
         this.moreText = moreText;

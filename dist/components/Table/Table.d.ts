@@ -1,26 +1,26 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, ReactNode } from 'react';
 export declare enum TableActionType {
     red = 0,
     default = 1
 }
-export declare class TableItem {
+export declare class TableItem<DataType> {
     title: string;
     subtitle: string;
     moreText: string;
     iconName: string;
-    data: any;
-    constructor(title: string, subtitle: string, moreText: string, iconName: string, data?: any);
+    data: DataType;
+    constructor(title: string, subtitle: string, moreText: string, iconName: string, data: DataType);
 }
-export declare class TableItemAction {
+export declare class TableItemAction<DataType> {
     title: string;
     iconName: string;
-    onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void;
+    onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem<DataType>, index: number) => void;
     type: TableActionType;
-    constructor(title: string, iconName: string, type: TableActionType, onClick?: (event: MouseEvent<HTMLDivElement>, item: TableItem, index: number) => void);
+    constructor(title: string, iconName: string, type: TableActionType, onClick?: (event: MouseEvent<HTMLDivElement>, item: TableItem<DataType>, index: number) => void);
 }
-export declare function Table({ items, title, actions, moreActions }: {
-    items: TableItem[];
+export declare function Table<DataType>({ items, title, actions, moreActions }: {
+    items: TableItem<DataType>[];
     title: string;
-    actions?: TableItemAction[];
-    moreActions?: any[];
+    actions?: TableItemAction<DataType>[];
+    moreActions?: ((data: DataType, index: number) => ReactNode)[];
 }): React.JSX.Element;

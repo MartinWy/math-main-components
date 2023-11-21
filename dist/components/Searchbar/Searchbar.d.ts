@@ -1,5 +1,9 @@
 import React, { ChangeEvent, MouseEvent } from 'react';
-export declare function Searchbar({ placeholder, title, showNoResults, errorTitle, errorMessage, errorButton, helpTitle, helpMessage, errorAction, onInput, onClickResult, withButton, buttonText, suggestions, autoFocus, results }: {
+export type SearchResult = {
+    title: string;
+    data: unknown;
+};
+export declare function Searchbar<Type extends SearchResult>({ placeholder, title, showNoResults, errorTitle, errorMessage, errorButton, helpTitle, helpMessage, errorAction, onInput, onClickResult, withButton, buttonText, suggestions, autoFocus, results }: {
     placeholder: string;
     title?: string;
     showNoResults?: boolean;
@@ -10,10 +14,10 @@ export declare function Searchbar({ placeholder, title, showNoResults, errorTitl
     helpMessage?: string;
     errorAction?: (event: MouseEvent<HTMLButtonElement>) => void;
     onInput?: (event: ChangeEvent<HTMLInputElement>) => void;
-    onClickResult?: (event: MouseEvent<HTMLLIElement>, result: any) => void;
+    onClickResult?: (event: MouseEvent<HTMLLIElement>, result: Type) => void;
     withButton?: boolean;
     buttonText?: string;
-    suggestions?: any[];
+    suggestions?: string[];
     autoFocus?: boolean;
-    results?: any[];
+    results?: Type[];
 }): React.JSX.Element;
