@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.47",
+    "version": "0.0.48",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
@@ -41,5 +41,9 @@
         "build:js": "rollup -c",
         "build:types": "tsc --emitDeclarationOnly --outDir dist"
     },
-    "dependencies": {}
+    "dependencies": {
+        "@sanity/types": "^3.20.1",
+        "sanity": "^3.20.1",
+        "stripe": "^14.5.0"
+    }
 }
