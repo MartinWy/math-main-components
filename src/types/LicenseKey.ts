@@ -7,7 +7,7 @@ export interface LicenseKey {
     productId: string
     pricePayedEuro: number
     valid: boolean
-    quantity: boolean
+    quantity: number
     key: string // encrypted
     createdAt: string
     redeemedOn: string
