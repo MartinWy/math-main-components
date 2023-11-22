@@ -1016,4 +1016,32 @@ function UsageCard({ title, subtitle, ratio = 0, loading }) {
                 ], lineWidth: 15, totalValue: 1 }))));
 }
 
-export { Accordeon, AuthButton, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, Dialog, FormButton, FormText, ForwardButton, Gap, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, OptionField, OptionFieldHorizontal, PrimaryButton, ProgressBar, RadioButtons, RadioOption, RedirectButton, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, TableActionType, TableItem, TableItemAction, TextWithIcon, UsageCard };
+var CourseAnnouncementAssetType;
+(function (CourseAnnouncementAssetType) {
+    CourseAnnouncementAssetType["file"] = "file";
+    CourseAnnouncementAssetType["calculator"] = "calculator";
+    CourseAnnouncementAssetType["video"] = "video";
+    CourseAnnouncementAssetType["material"] = "material";
+    CourseAnnouncementAssetType["ebook"] = "ebook";
+    CourseAnnouncementAssetType["test"] = "test";
+    CourseAnnouncementAssetType["link"] = "link"; // simple external link url
+})(CourseAnnouncementAssetType || (CourseAnnouncementAssetType = {}));
+
+var S3FileCategory;
+(function (S3FileCategory) {
+    S3FileCategory["movies"] = "movies";
+    S3FileCategory["materials"] = "materials";
+    S3FileCategory["ebooks"] = "ebooks";
+    S3FileCategory["default"] = "file";
+})(S3FileCategory || (S3FileCategory = {}));
+
+var ManagerPermission;
+(function (ManagerPermission) {
+    ManagerPermission["content"] = "content";
+    ManagerPermission["subsription"] = "subscription";
+    ManagerPermission["manager"] = "manager";
+    ManagerPermission["license"] = "license";
+    ManagerPermission["file"] = "file";
+})(ManagerPermission || (ManagerPermission = {}));
+
+export { Accordeon, AuthButton, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, CourseAnnouncementAssetType, Dialog, FormButton, FormText, ForwardButton, Gap, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, ManagerPermission, OptionField, OptionFieldHorizontal, PrimaryButton, ProgressBar, RadioButtons, RadioOption, RedirectButton, S3FileCategory, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, TableActionType, TableItem, TableItemAction, TextWithIcon, UsageCard };

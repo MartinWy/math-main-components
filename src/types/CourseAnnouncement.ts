@@ -1,5 +1,5 @@
 import { Course } from "./Course"
-import { CourseAnnouncementAsset } from "./CourseAnnouncementAssset"
+import { CourseAnnouncementAsset } from "./CourseAnnouncementAsset"
 import { User } from "./User"
 
 
