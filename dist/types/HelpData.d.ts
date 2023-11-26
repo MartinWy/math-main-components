@@ -1,5 +1,5 @@
 export interface HelpData {
-    id: string;
+    _id: string;
     title: string;
     content: any;
     openButtonText: string;

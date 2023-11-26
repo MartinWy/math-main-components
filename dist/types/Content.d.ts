@@ -1,5 +1,6 @@
 import { PortableTextBlock } from "sanity";
 export interface Content {
+    _id: string;
     priority: number;
     title: string;
     subtitle: string;

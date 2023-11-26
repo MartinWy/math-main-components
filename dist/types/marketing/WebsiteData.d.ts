@@ -1,4 +1,5 @@
 export interface WebsiteData {
+    _id: string;
     heroDescription: string;
     heroTitle: string;
     title: string;
