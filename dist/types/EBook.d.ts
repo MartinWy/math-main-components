@@ -1,6 +1,6 @@
 import { PortableTextBlock } from "sanity";
 import { Category } from "./Category";
-export interface EBook {
+export interface Ebook {
     _id: string;
     title: string;
     previewImage: {
