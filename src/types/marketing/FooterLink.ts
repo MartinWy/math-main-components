@@ -1,6 +1,8 @@
 
+/* Type from Sanit.io - math-main-sanity */
 
 export interface FooterLink {
+    _id: string
     title: string
     link: string
     priority: number

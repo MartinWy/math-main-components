@@ -1,5 +1,7 @@
 
 
+/* Type from Sanit.io - math-main-sanity */
+
 export interface Product {
     _id: string
     title: string

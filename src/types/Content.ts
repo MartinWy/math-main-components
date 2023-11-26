@@ -1,7 +1,10 @@
 import { PortableTextBlock } from "sanity"
 
 
+/* Type from Sanit.io - math-main-sanity */
+
 export interface Content {
+    _id: string
     priority: number
     title: string
     subtitle: string

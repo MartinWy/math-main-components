@@ -1,6 +1,9 @@
 
 
+/* Type from Sanit.io - math-main-sanity */
+
 export interface WebsiteData {
+    _id: string
     heroDescription: string
     heroTitle: string
     title: string

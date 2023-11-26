@@ -1,5 +1,6 @@
 
 
+/* Type from Sanit.io - math-main-sanity */
 
 export interface Feature {
     _id: string

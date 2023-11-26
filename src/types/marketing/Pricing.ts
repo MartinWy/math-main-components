@@ -1,6 +1,7 @@
 import { Product } from "../Product"
 import { ProductFeature } from "../ProductFeature"
 
+/* Type from Sanit.io - math-main-sanity */
 
 export interface Pricing {
     _id: string

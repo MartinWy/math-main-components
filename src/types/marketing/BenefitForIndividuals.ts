@@ -1,5 +1,7 @@
 
 
+/* Type from Sanit.io - math-main-sanity */
+
 export interface BenefitForIndividuals {
     _id: string,
     priority: number,
