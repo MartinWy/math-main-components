@@ -14,6 +14,7 @@ export interface Movie {
     fileId: string;
     fileExpire?: string;
     fileUrl?: string;
+    shortDescription: string;
     description: PortableTextBlock[];
     categories: Category[];
 }
