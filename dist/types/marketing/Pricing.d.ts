@@ -1,5 +1,4 @@
 import { Product } from "../Product";
-import { ProductFeature } from "../ProductFeature";
 export interface Pricing {
     _id: string;
     title: string;
@@ -8,7 +7,6 @@ export interface Pricing {
     subtitle: string;
     slogan: string;
     recommended: boolean;
-    features: ProductFeature[];
     buttonText: string;
     product: Product;
 }

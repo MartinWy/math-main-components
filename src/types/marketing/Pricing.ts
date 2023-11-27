@@ -1,5 +1,4 @@
 import { Product } from "../Product"
-import { ProductFeature } from "../ProductLimit"
 
 /* Type from Sanit.io - math-main-sanity */
 
@@ -11,7 +10,6 @@ export interface Pricing {
     subtitle: string
     slogan: string
     recommended: boolean
-    features: ProductFeature[]
     buttonText: string
     product: Product
 }

@@ -59,7 +59,7 @@ export * from './types/Organization';
 export * from './types/OrganizationMember';
 export * from './types/Page';
 export * from './types/Product';
-export * from './types/ProductFeature';
+export * from './types/ProductLimit';
 export * from './types/Subscription';
 export * from './types/UploadSignature';
 export * from './types/Usage';
