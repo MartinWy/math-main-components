@@ -2,6 +2,9 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
+import { Ebook } from "./Ebook"
+import { ProductLimit } from "./ProductLimit"
+
 export interface Product {
     _id: string
     title: string
@@ -14,7 +17,11 @@ export interface Product {
     minQuantity: number
     createdAt: string
     updatedAt: string
-    features: any
+    accessMaterials: boolean
+    accessMovies: boolean
+    accessCalculators: boolean
+    limits: ProductLimit[]
+    ebooks: Ebook[]
     stripePriceId: string
     stripeProductId: string
 }

@@ -1,5 +1,5 @@
 import { Product } from "../Product"
-import { ProductFeature } from "../ProductFeature"
+import { ProductFeature } from "../ProductLimit"
 
 /* Type from Sanit.io - math-main-sanity */
 

@@ -4,9 +4,18 @@ import { Product } from "./Product"
 import { User } from "./User"
 
 export interface SubscriptionFeature {
-    limit: number
+    type: "accessMovies" | "accessMaterials" | "accessCalculators"
+    available: boolean
+}
+
+export interface SubscriptionLimit {
+    type: "maxAmountOfCourses" | "maxTestsPerDay" | "maxAmountOfTestPapers"
     isUnlimited: boolean
-    type: string
+    limit: number
+}
+
+export interface SubscriptionEbook {
+    id: string
 }
 
 
@@ -18,7 +27,6 @@ export interface Subscription {
     productId: string
     user?: User
     userId: string
-    features?: SubscriptionFeature[]
     currentPeriodPaid: boolean
     lastPeriodPaid: boolean
     cancelAtPeriodEnd: boolean
