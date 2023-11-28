@@ -25,8 +25,6 @@ export function Dialog({
     }) {
 
     function onClick(event: MouseEvent<HTMLDivElement | HTMLButtonElement>) {
-        event.preventDefault()
-
         const element = event.target as HTMLButtonElement | HTMLDivElement
         const id = element.id
 

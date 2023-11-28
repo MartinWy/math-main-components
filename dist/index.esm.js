@@ -75,9 +75,9 @@ var css_248z$p = ".styles-module_container__gCCnD {\n  margin-bottom: 20px;\n  w
 var styles$p = {"container":"styles-module_container__gCCnD"};
 styleInject(css_248z$p);
 
-function Checkbox({ text, name, checked, defaultChecked = false, onChange = () => { }, }) {
+function Checkbox({ text, name, checked, defaultChecked = false, onInput = () => { }, }) {
     return (React.createElement("div", { className: styles$p.container },
-        React.createElement("input", { type: "checkbox", onChange: onChange, name: name, id: name, checked: checked, defaultChecked: defaultChecked }),
+        React.createElement("input", { type: "checkbox", onInput: onInput, name: name, id: name, checked: checked, defaultChecked: defaultChecked }),
         React.createElement("label", { htmlFor: name }, text),
         React.createElement(SvgIcon, { iconName: "done", size: "21px" })));
 }
@@ -127,7 +127,6 @@ styleInject(css_248z$m);
 
 function Dialog({ data, text, onClose, onSubmit, children }) {
     function onClick(event) {
-        event.preventDefault();
         const element = event.target;
         const id = element.id;
         if (["dialog-backdrop", "cancel-button"].includes(id)) {

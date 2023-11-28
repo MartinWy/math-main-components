@@ -14,6 +14,7 @@ export interface SubscriptionLimit {
 export interface SubscriptionEbook {
     id: string;
 }
+export type SubscriptionStatus = "active" | "trialing" | "canceled" | "unpaid";
 export interface Subscription {
     id: string;
     organization?: Organization;
@@ -27,7 +28,7 @@ export interface Subscription {
     cancelAtPeriodEnd: boolean;
     currentPeriodStart: string;
     currentPeriodEnd: string;
-    status: string;
+    status: SubscriptionStatus;
     quantity: number;
     newQuantity: number;
     trialEnd: string;

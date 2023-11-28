@@ -18,6 +18,8 @@ export interface SubscriptionEbook {
     id: string
 }
 
+export type SubscriptionStatus = "active" | "trialing" | "canceled" | "unpaid"
+
 
 export interface Subscription {
     id: string
@@ -32,7 +34,7 @@ export interface Subscription {
     cancelAtPeriodEnd: boolean
     currentPeriodStart: string // utc time
     currentPeriodEnd: string // utc time
-    status: string // "active" OR "trialing" OR "canceled" OR "unpaid"
+    status: SubscriptionStatus // "active" OR "trialing" OR "canceled" OR "unpaid"
     quantity: number
     newQuantity: number
     trialEnd: string
