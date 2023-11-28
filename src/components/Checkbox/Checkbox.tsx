@@ -8,17 +8,17 @@ export function Checkbox({
     text,
     name,
     defaultChecked = false,
-    onInput = () => { },
+    onClick = () => { },
 }: {
     text: ReactNode,
     name: string,
-    onInput?: (event: ChangeEvent<HTMLInputElement>) => void,
+    onClick?: (event: ChangeEvent<HTMLInputElement>) => void,
     defaultChecked?: boolean
 }) {
 
     return (
         <div className={styles.container}>
-            <input type="checkbox" onInput={onInput} name={name} id={name} defaultChecked={defaultChecked} />
+            <input type="checkbox" onChange={onClick} name={name} id={name} defaultChecked={defaultChecked} />
             <label htmlFor={name}>{text}</label>
             <SvgIcon iconName="done" size="21px" />
         </div>
