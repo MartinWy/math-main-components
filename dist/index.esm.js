@@ -32,33 +32,33 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$s = ".styles-module_container__3IVfB {\n  margin-top: 40px;\n  background: white;\n  border-radius: 30px;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 16px 20px;\n  color: grey;\n  background: #F1F1F1;\n  border-radius: 30px;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n  transition: 0.2s ease-in-out;\n  gap: 10px;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb span {\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb h3 {\n  margin: 0;\n  font-weight: 400;\n  font-size: 16px;\n  user-select: none;\n  -webkit-user-select: none;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb:hover {\n  background: #e2e2e2;\n}\n.styles-module_container__3IVfB.styles-module_active__soD8R {\n  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;\n}\n.styles-module_container__3IVfB.styles-module_active__soD8R .styles-module_head__xFYQb span {\n  rotate: 180deg;\n}\n.styles-module_container__3IVfB .styles-module_content__XAf02 {\n  transition: all 0.3s ease-in-out;\n  line-height: 1.5;\n}\n.styles-module_container__3IVfB.styles-module_not_active__JcVLz .styles-module_content__XAf02 {\n  height: 0;\n  max-height: 0;\n  overflow: hidden;\n  opacity: 0;\n}\n.styles-module_container__3IVfB.styles-module_active__soD8R .styles-module_content__XAf02 {\n  max-height: auto;\n  overflow: visible;\n  opacity: 1;\n  padding: 10px 0px;\n}";
-var styles$s = {"container":"styles-module_container__3IVfB","head":"styles-module_head__xFYQb","active":"styles-module_active__soD8R","content":"styles-module_content__XAf02","not_active":"styles-module_not_active__JcVLz"};
-styleInject(css_248z$s);
+var css_248z$u = ".styles-module_container__3IVfB {\n  margin-top: 40px;\n  background: white;\n  border-radius: 30px;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 16px 20px;\n  color: grey;\n  background: #F1F1F1;\n  border-radius: 30px;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n  transition: 0.2s ease-in-out;\n  gap: 10px;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb span {\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb h3 {\n  margin: 0;\n  font-weight: 400;\n  font-size: 16px;\n  user-select: none;\n  -webkit-user-select: none;\n}\n.styles-module_container__3IVfB .styles-module_head__xFYQb:hover {\n  background: #e2e2e2;\n}\n.styles-module_container__3IVfB.styles-module_active__soD8R {\n  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;\n}\n.styles-module_container__3IVfB.styles-module_active__soD8R .styles-module_head__xFYQb span {\n  rotate: 180deg;\n}\n.styles-module_container__3IVfB .styles-module_content__XAf02 {\n  transition: all 0.3s ease-in-out;\n  line-height: 1.5;\n}\n.styles-module_container__3IVfB.styles-module_not_active__JcVLz .styles-module_content__XAf02 {\n  height: 0;\n  max-height: 0;\n  overflow: hidden;\n  opacity: 0;\n}\n.styles-module_container__3IVfB.styles-module_active__soD8R .styles-module_content__XAf02 {\n  max-height: auto;\n  overflow: visible;\n  opacity: 1;\n  padding: 10px 0px;\n}";
+var styles$u = {"container":"styles-module_container__3IVfB","head":"styles-module_head__xFYQb","active":"styles-module_active__soD8R","content":"styles-module_content__XAf02","not_active":"styles-module_not_active__JcVLz"};
+styleInject(css_248z$u);
 
 function Accordeon({ title, children }) {
     const [isActive, setActive] = useState(false);
-    return (React.createElement("div", { className: [styles$s.container, isActive ? styles$s.active : styles$s.not_active].join(" ") },
-        React.createElement("div", { className: styles$s.head, onClick: () => setActive(!isActive) },
+    return (React.createElement("div", { className: [styles$u.container, isActive ? styles$u.active : styles$u.not_active].join(" ") },
+        React.createElement("div", { className: styles$u.head, onClick: () => setActive(!isActive) },
             React.createElement(SvgIcon, { iconName: "expand_more" }),
             React.createElement("h3", null, title)),
-        React.createElement("div", { className: styles$s.content }, children)));
+        React.createElement("div", { className: styles$u.content }, children)));
 }
 
-var css_248z$r = ".styles-module_container__4978M {\n  max-width: 100%;\n  width: 350px;\n  transition: all 0.2s ease-in-out;\n  box-sizing: border-box;\n}\n.styles-module_container__4978M.styles-module_visible__uvQwq {\n  max-height: 100px;\n  opacity: 1;\n}\n.styles-module_container__4978M.styles-module_hidden__Oruyx {\n  overflow: hidden;\n  max-height: 0;\n  opacity: 0;\n}\n\n.styles-module_container__4978M.styles-module_rotate__mmYPQ .styles-module_button__BWOOi:hover span {\n  rotate: -45deg;\n}\n\n.styles-module_button__BWOOi {\n  padding: 12px 20px;\n  background: linear-gradient(60deg, #0075FF, #0056b8);\n  background-position-x: right;\n  color: white;\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  align-items: center;\n  justify-content: center;\n  border-radius: 14px;\n  border: none;\n  cursor: pointer;\n  font-size: 16px;\n  gap: 10px;\n  position: relative;\n  transition: all 0.5s ease-in-out;\n}\n.styles-module_button__BWOOi span {\n  transition: 0.1s ease-in-out;\n}\n.styles-module_button__BWOOi:hover {\n  background-position-x: left;\n}\n.styles-module_button__BWOOi.styles-module_secondary__Eoik3 {\n  background: white;\n  color: #0075FF;\n  border: 1px solid #0075FF;\n}\n.styles-module_button__BWOOi.styles-module_secondary__Eoik3 svg {\n  fill: #0075FF;\n}";
-var styles$r = {"container":"styles-module_container__4978M","visible":"styles-module_visible__uvQwq","hidden":"styles-module_hidden__Oruyx","rotate":"styles-module_rotate__mmYPQ","button":"styles-module_button__BWOOi","secondary":"styles-module_secondary__Eoik3"};
-styleInject(css_248z$r);
+var css_248z$t = ".styles-module_container__4978M {\n  max-width: 100%;\n  width: 350px;\n  transition: all 0.2s ease-in-out;\n  box-sizing: border-box;\n}\n.styles-module_container__4978M.styles-module_visible__uvQwq {\n  max-height: 100px;\n  opacity: 1;\n}\n.styles-module_container__4978M.styles-module_hidden__Oruyx {\n  overflow: hidden;\n  max-height: 0;\n  opacity: 0;\n}\n\n.styles-module_container__4978M.styles-module_rotate__mmYPQ .styles-module_button__BWOOi:hover span {\n  rotate: -45deg;\n}\n\n.styles-module_button__BWOOi {\n  padding: 12px 20px;\n  background: linear-gradient(60deg, #0075FF, #0056b8);\n  background-position-x: right;\n  color: white;\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  align-items: center;\n  justify-content: center;\n  border-radius: 14px;\n  border: none;\n  cursor: pointer;\n  font-size: 16px;\n  gap: 10px;\n  position: relative;\n  transition: all 0.5s ease-in-out;\n}\n.styles-module_button__BWOOi span {\n  transition: 0.1s ease-in-out;\n}\n.styles-module_button__BWOOi:hover {\n  background-position-x: left;\n}\n.styles-module_button__BWOOi.styles-module_secondary__Eoik3 {\n  background: white;\n  color: #0075FF;\n  border: 1px solid #0075FF;\n}\n.styles-module_button__BWOOi.styles-module_secondary__Eoik3 svg {\n  fill: #0075FF;\n}";
+var styles$t = {"container":"styles-module_container__4978M","visible":"styles-module_visible__uvQwq","hidden":"styles-module_hidden__Oruyx","rotate":"styles-module_rotate__mmYPQ","button":"styles-module_button__BWOOi","secondary":"styles-module_secondary__Eoik3"};
+styleInject(css_248z$t);
 
 function AuthButton({ text, type = "submit", theme = "primary", iconName = "arrow_forward", isVisible = true, onClick }) {
-    return (React.createElement("div", { className: [styles$r.container, isVisible ? styles$r.visible : styles$r.hidden, ["arrow_forward"].includes(iconName) ? styles$r.rotate : null].join(" ") },
-        React.createElement("button", { type: type, className: `${styles$r.button} ${styles$r[theme]}`, onClick: onClick },
+    return (React.createElement("div", { className: [styles$t.container, isVisible ? styles$t.visible : styles$t.hidden, ["arrow_forward"].includes(iconName) ? styles$t.rotate : null].join(" ") },
+        React.createElement("button", { type: type, className: `${styles$t.button} ${styles$t[theme]}`, onClick: onClick },
             text,
             React.createElement(SvgIcon, { iconName: iconName }))));
 }
 
-var css_248z$q = ".styles-module_card__bOd85 {\n  background: #F4F4F4;\n  border: 1px solid #B1B1B1;\n  border-radius: 18px;\n  transition: 0.2s ease;\n  padding: 18px 14px;\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);\n  cursor: pointer;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  padding-top: 30px;\n}\n.styles-module_card__bOd85 span {\n  color: grey;\n}\n.styles-module_card__bOd85:hover {\n  transform: scale(1.01);\n  box-shadow: none;\n  background: none;\n}\n.styles-module_card__bOd85 h2 {\n  margin-top: 0;\n  color: grey;\n  font-weight: 400;\n  font-size: 18px;\n}";
-var styles$q = {"card":"styles-module_card__bOd85"};
-styleInject(css_248z$q);
+var css_248z$s = ".styles-module_card__bOd85 {\n  background: #F4F4F4;\n  border: 1px solid #B1B1B1;\n  border-radius: 18px;\n  transition: 0.2s ease;\n  padding: 18px 14px;\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);\n  cursor: pointer;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  padding-top: 30px;\n}\n.styles-module_card__bOd85 span {\n  color: grey;\n}\n.styles-module_card__bOd85:hover {\n  transform: scale(1.01);\n  box-shadow: none;\n  background: none;\n}\n.styles-module_card__bOd85 h2 {\n  margin-top: 0;\n  color: grey;\n  font-weight: 400;\n  font-size: 18px;\n}";
+var styles$s = {"card":"styles-module_card__bOd85"};
+styleInject(css_248z$s);
 
 function CardButton({ title, iconName, onClick, }) {
     function onClickCard(event) {
@@ -66,25 +66,25 @@ function CardButton({ title, iconName, onClick, }) {
         if (onClick)
             onClick(event);
     }
-    return (React.createElement("div", { className: styles$q.card, onClick: onClickCard },
+    return (React.createElement("div", { className: styles$s.card, onClick: onClickCard },
         React.createElement(SvgIcon, { iconName: iconName, size: "32px" }),
         React.createElement("h2", null, title)));
 }
 
-var css_248z$p = ".styles-module_container__gCCnD {\n  margin-bottom: 20px;\n  width: 343px;\n  color: grey;\n}\n.styles-module_container__gCCnD [type=checkbox] {\n  position: relative;\n  left: 15px;\n  top: -4px;\n  z-index: 0;\n  appearance: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-left: -3.5px;\n}\n.styles-module_container__gCCnD [type=checkbox] + label {\n  position: absolute;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n}\n.styles-module_container__gCCnD [type=checkbox] + label::before {\n  width: 17px;\n  height: 17px;\n  border-radius: 5px;\n  border: 2px solid #a8a8a8;\n  display: block;\n  content: \"\";\n  float: left;\n  margin-right: 8px;\n  z-index: 5;\n  position: relative;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__gCCnD span {\n  position: absolute;\n  opacity: 1;\n  color: white;\n  z-index: 100;\n  user-select: none;\n  pointer-events: none;\n  -webkit-user-select: none;\n  font-weight: 300;\n}\n.styles-module_container__gCCnD [type=checkbox]:checked + label::before {\n  background-color: #0075FF;\n  border-color: #0075FF;\n}\n.styles-module_container__gCCnD [type=checkbox]:hover:not(:checked) + label::before {\n  background-color: #ecedee;\n  border-color: #ecedee;\n}";
-var styles$p = {"container":"styles-module_container__gCCnD"};
-styleInject(css_248z$p);
+var css_248z$r = ".styles-module_container__gCCnD {\n  margin-bottom: 20px;\n  width: 343px;\n  color: grey;\n}\n.styles-module_container__gCCnD [type=checkbox] {\n  position: relative;\n  left: 15px;\n  top: -4px;\n  z-index: 0;\n  appearance: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-left: -3.5px;\n}\n.styles-module_container__gCCnD [type=checkbox] + label {\n  position: absolute;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n}\n.styles-module_container__gCCnD [type=checkbox] + label::before {\n  width: 17px;\n  height: 17px;\n  border-radius: 5px;\n  border: 2px solid #a8a8a8;\n  display: block;\n  content: \"\";\n  float: left;\n  margin-right: 8px;\n  z-index: 5;\n  position: relative;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__gCCnD span {\n  position: absolute;\n  opacity: 1;\n  color: white;\n  z-index: 100;\n  user-select: none;\n  pointer-events: none;\n  -webkit-user-select: none;\n  font-weight: 300;\n}\n.styles-module_container__gCCnD [type=checkbox]:checked + label::before {\n  background-color: #0075FF;\n  border-color: #0075FF;\n}\n.styles-module_container__gCCnD [type=checkbox]:hover:not(:checked) + label::before {\n  background-color: #ecedee;\n  border-color: #ecedee;\n}";
+var styles$r = {"container":"styles-module_container__gCCnD"};
+styleInject(css_248z$r);
 
 function Checkbox({ text, name, checked, defaultChecked = false, onInput = () => { }, }) {
-    return (React.createElement("div", { className: styles$p.container },
+    return (React.createElement("div", { className: styles$r.container },
         React.createElement("input", { type: "checkbox", onInput: onInput, name: name, id: name, checked: checked, defaultChecked: defaultChecked }),
         React.createElement("label", { htmlFor: name }, text),
         React.createElement(SvgIcon, { iconName: "done", size: "21px" })));
 }
 
-var css_248z$o = ".styles-module_container__OqDNA {\n  display: flex;\n  flex-direction: row;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(1) {\n  background: #F0F0F0;\n  border-color: #F0F0F0;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(2) {\n  background: #E0E0E0;\n  border-color: #E0E0E0;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(3) {\n  background: #CBCBCB;\n  border-color: #CBCBCB;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:first-child {\n  border-top-left-radius: 20px;\n  border-bottom-left-radius: 20px;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:last-child {\n  border-top-right-radius: 20px;\n  border-bottom-right-radius: 20px;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI {\n  border: 1px solid transparent;\n  padding: 11px 18px;\n  font-size: 14px;\n  cursor: pointer;\n  transition: 0.2s ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI.styles-module_selected__AXIA- {\n  background: #C6D4F8;\n  border-color: #0075FF;\n  color: #0075FF;\n}";
-var styles$o = {"container":"styles-module_container__OqDNA","item":"styles-module_item__1SMCI","selected":"styles-module_selected__AXIA-"};
-styleInject(css_248z$o);
+var css_248z$q = ".styles-module_container__OqDNA {\n  display: flex;\n  flex-direction: row;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(1) {\n  background: #F0F0F0;\n  border-color: #F0F0F0;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(2) {\n  background: #E0E0E0;\n  border-color: #E0E0E0;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:nth-child(3) {\n  background: #CBCBCB;\n  border-color: #CBCBCB;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:first-child {\n  border-top-left-radius: 20px;\n  border-bottom-left-radius: 20px;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI:last-child {\n  border-top-right-radius: 20px;\n  border-bottom-right-radius: 20px;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI {\n  border: 1px solid transparent;\n  padding: 11px 18px;\n  font-size: 14px;\n  cursor: pointer;\n  transition: 0.2s ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n}\n.styles-module_container__OqDNA .styles-module_item__1SMCI.styles-module_selected__AXIA- {\n  background: #C6D4F8;\n  border-color: #0075FF;\n  color: #0075FF;\n}";
+var styles$q = {"container":"styles-module_container__OqDNA","item":"styles-module_item__1SMCI","selected":"styles-module_selected__AXIA-"};
+styleInject(css_248z$q);
 
 class ChooseRoleItem {
     title;
@@ -102,12 +102,12 @@ function ChooseRole({ roles, defaultSelected, readOnly = false, onChange }) {
         setSelected(newRole);
         onChange(newRole);
     }
-    return (React.createElement("div", { className: styles$o.container }, roles.map((item, index) => React.createElement("div", { key: index, className: [styles$o.item, selected == item.value ? styles$o.selected : styles$o.not_selected].join(" "), onClick: () => onUpdate(item.value) }, item.title))));
+    return (React.createElement("div", { className: styles$q.container }, roles.map((item, index) => React.createElement("div", { key: index, className: [styles$q.item, selected == item.value ? styles$q.selected : styles$q.not_selected].join(" "), onClick: () => onUpdate(item.value) }, item.title))));
 }
 
-var css_248z$n = ".styles-module_container__yV6C8 {\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  align-items: center;\n  cursor: pointer;\n  padding: 8px 14px;\n  border-radius: 30px;\n  transition: 0.2s ease-in-out;\n  margin-bottom: 20px;\n}\n.styles-module_container__yV6C8:hover {\n  color: #0075FF;\n}";
-var styles$n = {"container":"styles-module_container__yV6C8"};
-styleInject(css_248z$n);
+var css_248z$p = ".styles-module_container__yV6C8 {\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  align-items: center;\n  cursor: pointer;\n  padding: 8px 14px;\n  border-radius: 30px;\n  transition: 0.2s ease-in-out;\n  margin-bottom: 20px;\n}\n.styles-module_container__yV6C8:hover {\n  color: #0075FF;\n}";
+var styles$p = {"container":"styles-module_container__yV6C8"};
+styleInject(css_248z$p);
 
 function CopyCode({ code, style, onCopy = () => { } }) {
     function onClick() {
@@ -115,15 +115,15 @@ function CopyCode({ code, style, onCopy = () => { } }) {
         if (onCopy)
             onCopy();
     }
-    return (React.createElement("div", { className: styles$n.container, onClick: onClick, style: style },
+    return (React.createElement("div", { className: styles$p.container, onClick: onClick, style: style },
         React.createElement(SvgIcon, { iconName: "content_copy" }),
         React.createElement("span", null, code),
         React.createElement("input", { type: "hidden", name: "code", value: code })));
 }
 
-var css_248z$m = ".styles-module_container__9-1MH {\n  position: fixed;\n  height: 100vh;\n  width: 100vw;\n  background: rgba(255, 255, 255, 0.659);\n  backdrop-filter: blur(10px) brightness(70%);\n  left: 0;\n  top: 0;\n  z-index: 10000;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n}\n.styles-module_container__9-1MH.styles-module_active__AXoyo {\n  opacity: 1;\n}\n.styles-module_container__9-1MH.styles-module_disabled__sELpy {\n  pointer-events: none;\n  opacity: 0;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M {\n  background: white;\n  border-radius: 20px;\n  padding: 35px;\n  width: 450px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  max-width: 100%;\n  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n  cursor: auto;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M h1 {\n  font-size: 26px;\n  font-weight: 500;\n  line-height: 1.5;\n  margin-top: 20px;\n  margin-bottom: 20px;\n  text-align: center;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_cancel_button__KhwLS {\n  border-radius: 12px;\n  background: #DADADA;\n  padding: 14px 0px;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_cancel_button__KhwLS:hover {\n  background: #cbcbcb;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_submit_button__xLzux {\n  border-radius: 12px;\n  color: white;\n  background: #0075FF;\n  padding: 14px 0px;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_submit_button__xLzux:hover {\n  background: #006ce8;\n}";
-var styles$m = {"container":"styles-module_container__9-1MH","active":"styles-module_active__AXoyo","disabled":"styles-module_disabled__sELpy","dialog_window":"styles-module_dialog_window__0Bn2M","cancel_button":"styles-module_cancel_button__KhwLS","submit_button":"styles-module_submit_button__xLzux"};
-styleInject(css_248z$m);
+var css_248z$o = ".styles-module_container__9-1MH {\n  position: fixed;\n  height: 100vh;\n  width: 100vw;\n  background: rgba(255, 255, 255, 0.659);\n  backdrop-filter: blur(10px) brightness(70%);\n  left: 0;\n  top: 0;\n  z-index: 10000;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n}\n.styles-module_container__9-1MH.styles-module_active__AXoyo {\n  opacity: 1;\n}\n.styles-module_container__9-1MH.styles-module_disabled__sELpy {\n  pointer-events: none;\n  opacity: 0;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M {\n  background: white;\n  border-radius: 20px;\n  padding: 35px;\n  width: 450px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  max-width: 100%;\n  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n  cursor: auto;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M h1 {\n  font-size: 26px;\n  font-weight: 500;\n  line-height: 1.5;\n  margin-top: 20px;\n  margin-bottom: 20px;\n  text-align: center;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_cancel_button__KhwLS {\n  border-radius: 12px;\n  background: #DADADA;\n  padding: 14px 0px;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_cancel_button__KhwLS:hover {\n  background: #cbcbcb;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_submit_button__xLzux {\n  border-radius: 12px;\n  color: white;\n  background: #0075FF;\n  padding: 14px 0px;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__9-1MH .styles-module_dialog_window__0Bn2M .styles-module_submit_button__xLzux:hover {\n  background: #006ce8;\n}";
+var styles$o = {"container":"styles-module_container__9-1MH","active":"styles-module_active__AXoyo","disabled":"styles-module_disabled__sELpy","dialog_window":"styles-module_dialog_window__0Bn2M","cancel_button":"styles-module_cancel_button__KhwLS","submit_button":"styles-module_submit_button__xLzux"};
+styleInject(css_248z$o);
 
 function Dialog({ data, text, onClose, onSubmit, children }) {
     function onClick(event) {
@@ -134,38 +134,38 @@ function Dialog({ data, text, onClose, onSubmit, children }) {
                 onClose(event, data?.data);
         }
     }
-    return (React.createElement("div", { id: "dialog-backdrop", className: `${styles$m.container} ${data?.isActive ? styles$m.active : styles$m.disabled}`, onClick: onClick },
-        React.createElement("div", { className: styles$m.dialog_window },
+    return (React.createElement("div", { id: "dialog-backdrop", className: `${styles$o.container} ${data?.isActive ? styles$o.active : styles$o.disabled}`, onClick: onClick },
+        React.createElement("div", { className: styles$o.dialog_window },
             children,
             text && React.createElement("h1", null, text),
-            React.createElement("button", { className: styles$m.cancel_button, id: "cancel-button", onClick: onClick }, "Abbrechen"),
-            React.createElement("button", { className: styles$m.submit_button, id: "submit-button", onClick: (event) => onSubmit && onSubmit(event, data?.data) }, "Best\u00E4tigen"))));
+            React.createElement("button", { className: styles$o.cancel_button, id: "cancel-button", onClick: onClick }, "Abbrechen"),
+            React.createElement("button", { className: styles$o.submit_button, id: "submit-button", onClick: (event) => onSubmit && onSubmit(event, data?.data) }, "Best\u00E4tigen"))));
 }
 
-var css_248z$l = ".styles-module_container__HOoBj {\n  margin-bottom: 30px;\n}\n.styles-module_container__HOoBj button {\n  padding: 12px 18px;\n  border-radius: 40px;\n  border: none;\n  color: white;\n  font-size: 16px;\n  background: #0075FF;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  align-items: center;\n}";
-var styles$l = {"container":"styles-module_container__HOoBj"};
-styleInject(css_248z$l);
+var css_248z$n = ".styles-module_container__HOoBj {\n  margin-bottom: 30px;\n}\n.styles-module_container__HOoBj button {\n  padding: 12px 18px;\n  border-radius: 40px;\n  border: none;\n  color: white;\n  font-size: 16px;\n  background: #0075FF;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  align-items: center;\n}";
+var styles$n = {"container":"styles-module_container__HOoBj"};
+styleInject(css_248z$n);
 
 function FormButton({ text, style = {}, iconName = "", type = "submit", background = "#0075FF", onClick = () => { } }) {
-    return (React.createElement("div", { className: styles$l.container, style: style },
+    return (React.createElement("div", { className: styles$n.container, style: style },
         React.createElement("button", { type: type, onClick: onClick, style: { background: background } },
             text,
             iconName && React.createElement(SvgIcon, { iconName: iconName, fill: "white" }))));
 }
 
-var css_248z$k = ".styles-module_container__9wYEm {\n  margin-bottom: 30px;\n  width: 100%;\n}\n.styles-module_container__9wYEm h1,\n.styles-module_container__9wYEm h2,\n.styles-module_container__9wYEm h3,\n.styles-module_container__9wYEm h4,\n.styles-module_container__9wYEm h5 {\n  margin: 0;\n  font-weight: 400;\n  color: black;\n}\n.styles-module_container__9wYEm h3 {\n  margin-top: 5px;\n}";
-var styles$k = {"container":"styles-module_container__9wYEm"};
-styleInject(css_248z$k);
+var css_248z$m = ".styles-module_container__9wYEm {\n  margin-bottom: 30px;\n  width: 100%;\n}\n.styles-module_container__9wYEm h1,\n.styles-module_container__9wYEm h2,\n.styles-module_container__9wYEm h3,\n.styles-module_container__9wYEm h4,\n.styles-module_container__9wYEm h5 {\n  margin: 0;\n  font-weight: 400;\n  color: black;\n}\n.styles-module_container__9wYEm h3 {\n  margin-top: 5px;\n}";
+var styles$m = {"container":"styles-module_container__9wYEm"};
+styleInject(css_248z$m);
 
 function FormText({ title, value, style }) {
-    return (React.createElement("div", { className: styles$k.container, style: style },
+    return (React.createElement("div", { className: styles$m.container, style: style },
         React.createElement("h5", null, title),
         React.createElement("h3", null, value)));
 }
 
-var css_248z$j = ".styles-module_container__C99XV {\n  margin-right: 8px;\n}\n.styles-module_container__C99XV .styles-module_button__pGYkF {\n  background: none;\n  padding: none;\n  border: none;\n  width: 40px;\n  height: 40px;\n  transition: 0.2s;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 20px;\n}\n.styles-module_container__C99XV .styles-module_button__pGYkF:hover {\n  background: rgb(207, 207, 207);\n}";
-var styles$j = {"container":"styles-module_container__C99XV","button":"styles-module_button__pGYkF"};
-styleInject(css_248z$j);
+var css_248z$l = ".styles-module_container__C99XV {\n  margin-right: 8px;\n}\n.styles-module_container__C99XV .styles-module_button__pGYkF {\n  background: none;\n  padding: none;\n  border: none;\n  width: 40px;\n  height: 40px;\n  transition: 0.2s;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 20px;\n}\n.styles-module_container__C99XV .styles-module_button__pGYkF:hover {\n  background: rgb(207, 207, 207);\n}";
+var styles$l = {"container":"styles-module_container__C99XV","button":"styles-module_button__pGYkF"};
+styleInject(css_248z$l);
 
 function ForwardButton({ onClick }) {
     function onClickButton(event) {
@@ -173,8 +173,8 @@ function ForwardButton({ onClick }) {
         if (onClick)
             onClick(event);
     }
-    return (React.createElement("div", { className: styles$j.container },
-        React.createElement("button", { onClick: onClickButton, className: styles$j.button },
+    return (React.createElement("div", { className: styles$l.container },
+        React.createElement("button", { onClick: onClickButton, className: styles$l.button },
             React.createElement(SvgIcon, { iconName: "arrow_back" }))));
 }
 
@@ -182,22 +182,43 @@ function Gap({ size }) {
     return (React.createElement("div", { style: { height: size } }));
 }
 
-var css_248z$i = ".styles-module_input__-GKhx {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n}\n.styles-module_input__-GKhx:focus, .styles-module_input__-GKhx:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__-GKhx.styles-module_not_available__XD1kR, .styles-module_input__-GKhx:invalid {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__--4rV {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 20px;\n}\n\n.styles-module_label__mGzwP {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__d0eMb {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__-GKhx.styles-module_with_title__CGOEs::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__-GKhx.styles-module_with_title__CGOEs:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__-GKhx:focus + .styles-module_label__mGzwP .styles-module_label_text__d0eMb,\n.styles-module_input__-GKhx.styles-module_valid__uj8g- + .styles-module_label__mGzwP .styles-module_label_text__d0eMb {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__-GKhx.styles-module_valid__uj8g- + .styles-module_label__mGzwP .styles-module_label_text__d0eMb {\n  color: #a8a8a8;\n}";
-var styles$i = {"input":"styles-module_input__-GKhx","not_available":"styles-module_not_available__XD1kR","container":"styles-module_container__--4rV","label":"styles-module_label__mGzwP","label_text":"styles-module_label_text__d0eMb","with_title":"styles-module_with_title__CGOEs","valid":"styles-module_valid__uj8g-"};
-styleInject(css_248z$i);
+var css_248z$k = ".styles-module_container__Jr7LQ {\n  display: flex;\n  width: 100%;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__v-hUz {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n  min-height: 50px;\n  line-height: 1.7;\n}\n.styles-module_input__v-hUz:focus, .styles-module_input__v-hUz:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__v-hUz.styles-module_not_available__6xu3Y, .styles-module_input__v-hUz:invalid {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__Jr7LQ {\n  position: relative;\n}\n\n.styles-module_label__SSsD3 {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__EOAq5 {\n  position: absolute;\n  top: 20px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__v-hUz.styles-module_with_title__HWcCH::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__v-hUz.styles-module_with_title__HWcCH:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__v-hUz:focus + .styles-module_label__SSsD3 .styles-module_label_text__EOAq5,\n.styles-module_input__v-hUz.styles-module_valid__6geu9 + .styles-module_label__SSsD3 .styles-module_label_text__EOAq5 {\n  transform: translateY(-50%);\n  left: 15px;\n  font-size: 14px;\n  top: 0;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__v-hUz.styles-module_valid__6geu9 + .styles-module_label__SSsD3 .styles-module_label_text__EOAq5 {\n  color: #a8a8a8;\n}";
+var styles$k = {"container":"styles-module_container__Jr7LQ","input":"styles-module_input__v-hUz","not_available":"styles-module_not_available__6xu3Y","label":"styles-module_label__SSsD3","label_text":"styles-module_label_text__EOAq5","with_title":"styles-module_with_title__HWcCH","valid":"styles-module_valid__6geu9"};
+styleInject(css_248z$k);
+
+function InputArea({ title, name, placeholder = "", defaultValue = "", autoFocus = false, width = "100%", height = "100px", available = true, onInput }) {
+    const [value, setValue] = useState(defaultValue);
+    const inputElement = useCallback((element) => {
+        if (element && autoFocus)
+            element.focus();
+    }, [autoFocus]);
+    return (React.createElement(React.Fragment, null,
+        React.createElement("div", { className: styles$k.container, style: { width } },
+            React.createElement("textarea", { className: `${styles$k.input} ${title != undefined ? styles$k.with_title : styles$k.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$k.valid : styles$k.not_valid} ${available ? styles$k.available : styles$k.not_available}`, name: name, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, style: { minHeight: height, maxHeight: height }, onInput: (event) => {
+                    setValue(event.target.value);
+                    if (onInput)
+                        onInput(event);
+                } }),
+            React.createElement("label", { htmlFor: "text", className: styles$k.label },
+                React.createElement("span", { className: styles$k.label_text }, title)))));
+}
+
+var css_248z$j = ".styles-module_input__-GKhx {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n}\n.styles-module_input__-GKhx:focus, .styles-module_input__-GKhx:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__-GKhx.styles-module_not_available__XD1kR, .styles-module_input__-GKhx:invalid {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__--4rV {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 20px;\n}\n\n.styles-module_label__mGzwP {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__d0eMb {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__-GKhx.styles-module_with_title__CGOEs::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__-GKhx.styles-module_with_title__CGOEs:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__-GKhx:focus + .styles-module_label__mGzwP .styles-module_label_text__d0eMb,\n.styles-module_input__-GKhx.styles-module_valid__uj8g- + .styles-module_label__mGzwP .styles-module_label_text__d0eMb {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__-GKhx.styles-module_valid__uj8g- + .styles-module_label__mGzwP .styles-module_label_text__d0eMb {\n  color: #a8a8a8;\n}";
+var styles$j = {"input":"styles-module_input__-GKhx","not_available":"styles-module_not_available__XD1kR","container":"styles-module_container__--4rV","label":"styles-module_label__mGzwP","label_text":"styles-module_label_text__d0eMb","with_title":"styles-module_with_title__CGOEs","valid":"styles-module_valid__uj8g-"};
+styleInject(css_248z$j);
 
 function InputMail({ placeholder = "E-Mail-Adresse", title = "E-Mail-Adresse", name = "email", width = "100%", available = true }) {
     const [value, setValue] = useState("");
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$i.container, style: { width: width } },
-            React.createElement("input", { className: `${styles$i.input} ${title != undefined ? styles$i.with_title : styles$i.without_title} ${value.length > 0 ? styles$i.valid : styles$i.not_valid} ${available ? styles$i.available : styles$i.not_available}`, name: name, placeholder: placeholder, type: "email", onInput: (event) => setValue(event.target.value) }),
-            React.createElement("label", { htmlFor: "text", className: styles$i.label },
-                React.createElement("span", { className: styles$i.label_text }, title)))));
+        React.createElement("div", { className: styles$j.container, style: { width: width } },
+            React.createElement("input", { className: `${styles$j.input} ${title != undefined ? styles$j.with_title : styles$j.without_title} ${value.length > 0 ? styles$j.valid : styles$j.not_valid} ${available ? styles$j.available : styles$j.not_available}`, name: name, placeholder: placeholder, type: "email", onInput: (event) => setValue(event.target.value) }),
+            React.createElement("label", { htmlFor: "text", className: styles$j.label },
+                React.createElement("span", { className: styles$j.label_text }, title)))));
 }
 
-var css_248z$h = ".styles-module_container__IXTeq {\n  display: flex;\n  flex-direction: row;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__flMT5 {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n}\n.styles-module_input__flMT5:focus, .styles-module_input__flMT5:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_form__chEvQ {\n  position: relative;\n  flex: 1;\n  display: flex;\n}\n\n.styles-module_label__hflX9 {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__oXgFI {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__flMT5.styles-module_with_title__ubN0L::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__flMT5.styles-module_with_title__ubN0L:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__flMT5:focus + .styles-module_label__hflX9 .styles-module_label_text__oXgFI,\n.styles-module_input__flMT5.styles-module_valid__76xYu + .styles-module_label__hflX9 .styles-module_label_text__oXgFI {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__flMT5.styles-module_valid__76xYu + .styles-module_label__hflX9 .styles-module_label_text__oXgFI {\n  color: #a8a8a8;\n}";
-var styles$h = {"container":"styles-module_container__IXTeq","input":"styles-module_input__flMT5","form":"styles-module_form__chEvQ","label":"styles-module_label__hflX9","label_text":"styles-module_label_text__oXgFI","with_title":"styles-module_with_title__ubN0L","valid":"styles-module_valid__76xYu"};
-styleInject(css_248z$h);
+var css_248z$i = ".styles-module_container__IXTeq {\n  display: flex;\n  flex-direction: row;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__flMT5 {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n}\n.styles-module_input__flMT5:focus, .styles-module_input__flMT5:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_form__chEvQ {\n  position: relative;\n  flex: 1;\n  display: flex;\n}\n\n.styles-module_label__hflX9 {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__oXgFI {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__flMT5.styles-module_with_title__ubN0L::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__flMT5.styles-module_with_title__ubN0L:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__flMT5:focus + .styles-module_label__hflX9 .styles-module_label_text__oXgFI,\n.styles-module_input__flMT5.styles-module_valid__76xYu + .styles-module_label__hflX9 .styles-module_label_text__oXgFI {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__flMT5.styles-module_valid__76xYu + .styles-module_label__hflX9 .styles-module_label_text__oXgFI {\n  color: #a8a8a8;\n}";
+var styles$i = {"container":"styles-module_container__IXTeq","input":"styles-module_input__flMT5","form":"styles-module_form__chEvQ","label":"styles-module_label__hflX9","label_text":"styles-module_label_text__oXgFI","with_title":"styles-module_with_title__ubN0L","valid":"styles-module_valid__76xYu"};
+styleInject(css_248z$i);
 
 function InputNames({ width = "100%", placeholder = { firstName: "", lastName: "" }, title = { firstName: "Vorname", lastName: "Nachname" }, defaultValue = { firstName: "", lastName: "" }, onInput = (name, event) => { }, onInputFirstName = (event) => { }, onInputLastName = (event) => { }, }) {
     const [value1, setValue1] = useState(defaultValue.firstName ? defaultValue.firstName : "");
@@ -212,20 +233,20 @@ function InputNames({ width = "100%", placeholder = { firstName: "", lastName: "
         onInputLastName(event);
         onInput("lastName", event);
     }
-    return (React.createElement("div", { className: styles$h.container, style: { width: width } },
-        React.createElement("div", { className: styles$h.form },
-            React.createElement("input", { className: `${styles$h.input} ${title.firstName != undefined ? styles$h.with_title : styles$h.without_title} ${value1.length > 0 ? styles$h.valid : styles$h.not_valid}`, name: "firstName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.firstName, defaultValue: defaultValue.firstName, onInput: onInput1 }),
-            React.createElement("label", { htmlFor: "text", className: styles$h.label },
-                React.createElement("span", { className: styles$h.label_text }, title.firstName))),
-        React.createElement("div", { className: styles$h.form },
-            React.createElement("input", { className: `${styles$h.input} ${title.lastName != undefined ? styles$h.with_title : styles$h.without_title} ${value2.length > 0 ? styles$h.valid : styles$h.not_valid}`, name: "lastName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.lastName, defaultValue: defaultValue.lastName, onInput: onInput2 }),
-            React.createElement("label", { htmlFor: "text", className: styles$h.label },
-                React.createElement("span", { className: styles$h.label_text }, title.lastName)))));
+    return (React.createElement("div", { className: styles$i.container, style: { width: width } },
+        React.createElement("div", { className: styles$i.form },
+            React.createElement("input", { className: `${styles$i.input} ${title.firstName != undefined ? styles$i.with_title : styles$i.without_title} ${value1.length > 0 ? styles$i.valid : styles$i.not_valid}`, name: "firstName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.firstName, defaultValue: defaultValue.firstName, onInput: onInput1 }),
+            React.createElement("label", { htmlFor: "text", className: styles$i.label },
+                React.createElement("span", { className: styles$i.label_text }, title.firstName))),
+        React.createElement("div", { className: styles$i.form },
+            React.createElement("input", { className: `${styles$i.input} ${title.lastName != undefined ? styles$i.with_title : styles$i.without_title} ${value2.length > 0 ? styles$i.valid : styles$i.not_valid}`, name: "lastName", type: "name", style: { width: width != "100%" ? "100px" : width }, placeholder: placeholder.lastName, defaultValue: defaultValue.lastName, onInput: onInput2 }),
+            React.createElement("label", { htmlFor: "text", className: styles$i.label },
+                React.createElement("span", { className: styles$i.label_text }, title.lastName)))));
 }
 
-var css_248z$g = ".styles-module_container__Xk2HY {\n  display: flex;\n  width: 100%;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__ReFFR {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n  width: 100%;\n}\n.styles-module_input__ReFFR:focus, .styles-module_input__ReFFR:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__ReFFR.styles-module_not_available__mZ5-1 {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__Xk2HY {\n  position: relative;\n}\n\n.styles-module_label__4n2Ai {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__NsKJU {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__ReFFR.styles-module_with_title__vMb1v::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__ReFFR.styles-module_with_title__vMb1v:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__ReFFR:focus + .styles-module_label__4n2Ai .styles-module_label_text__NsKJU,\n.styles-module_input__ReFFR.styles-module_valid__NyP0J + .styles-module_label__4n2Ai .styles-module_label_text__NsKJU {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__ReFFR.styles-module_valid__NyP0J + .styles-module_label__4n2Ai .styles-module_label_text__NsKJU {\n  color: #a8a8a8;\n}";
-var styles$g = {"container":"styles-module_container__Xk2HY","input":"styles-module_input__ReFFR","not_available":"styles-module_not_available__mZ5-1","label":"styles-module_label__4n2Ai","label_text":"styles-module_label_text__NsKJU","with_title":"styles-module_with_title__vMb1v","valid":"styles-module_valid__NyP0J"};
-styleInject(css_248z$g);
+var css_248z$h = ".styles-module_container__Xk2HY {\n  display: flex;\n  width: 100%;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__ReFFR {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n  width: 100%;\n}\n.styles-module_input__ReFFR:focus, .styles-module_input__ReFFR:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__ReFFR.styles-module_not_available__mZ5-1 {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__Xk2HY {\n  position: relative;\n}\n\n.styles-module_label__4n2Ai {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__NsKJU {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__ReFFR.styles-module_with_title__vMb1v::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__ReFFR.styles-module_with_title__vMb1v:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__ReFFR:focus + .styles-module_label__4n2Ai .styles-module_label_text__NsKJU,\n.styles-module_input__ReFFR.styles-module_valid__NyP0J + .styles-module_label__4n2Ai .styles-module_label_text__NsKJU {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__ReFFR.styles-module_valid__NyP0J + .styles-module_label__4n2Ai .styles-module_label_text__NsKJU {\n  color: #a8a8a8;\n}";
+var styles$h = {"container":"styles-module_container__Xk2HY","input":"styles-module_input__ReFFR","not_available":"styles-module_not_available__mZ5-1","label":"styles-module_label__4n2Ai","label_text":"styles-module_label_text__NsKJU","with_title":"styles-module_with_title__vMb1v","valid":"styles-module_valid__NyP0J"};
+styleInject(css_248z$h);
 
 function InputNumber({ title, name, placeholder = "", defaultValue = "", autoFocus = false, type = "number", width = "100%", available = true, onInput = (event) => { } }) {
     const [value, setValue] = useState(defaultValue);
@@ -234,37 +255,37 @@ function InputNumber({ title, name, placeholder = "", defaultValue = "", autoFoc
             element.focus();
     }, [autoFocus]);
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$g.container, style: { width } },
-            React.createElement("input", { className: `${styles$g.input} ${title != undefined ? styles$g.with_title : styles$g.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$g.valid : styles$g.not_valid} ${available ? styles$g.available : styles$g.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
+        React.createElement("div", { className: styles$h.container, style: { width } },
+            React.createElement("input", { className: `${styles$h.input} ${title != undefined ? styles$h.with_title : styles$h.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$h.valid : styles$h.not_valid} ${available ? styles$h.available : styles$h.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
                     setValue(event.target.value);
                     onInput(event);
                 } }),
-            React.createElement("label", { htmlFor: "text", className: styles$g.label },
-                React.createElement("span", { className: styles$g.label_text }, title)))));
+            React.createElement("label", { htmlFor: "text", className: styles$h.label },
+                React.createElement("span", { className: styles$h.label_text }, title)))));
 }
 
-var css_248z$f = "@keyframes styles-module_show__OLTZH {\n  from {\n    max-heigth: 0px;\n    height: 0px;\n  }\n}\n@keyframes styles-module_hide__LAgaY {\n  from {\n    max-heigth: 0px;\n    height: 0px;\n  }\n  to {\n    max-height: fit-content;\n  }\n}\n.styles-module_container__UdmOO {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n  margin-bottom: 30px;\n  transition: all 0.2s ease-in-out;\n  box-sizing: border-box;\n}\n.styles-module_container__UdmOO .styles-module_forgot_label__EeN6a {\n  font-size: 12px;\n  color: grey;\n}\n.styles-module_container__UdmOO.styles-module_visible__QROqh {\n  max-height: 100px;\n  opacity: 1;\n}\n.styles-module_container__UdmOO.styles-module_hidden__hDKDO {\n  overflow: hidden;\n  max-height: 0;\n  opacity: 0;\n}\n\n.styles-module_input__sC2fP {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-top-left-radius: 12px;\n  border-bottom-left-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  border-right: none;\n  outline: none;\n  transition: all 0.2s ease;\n  flex: 1;\n}\n.styles-module_input__sC2fP:focus, .styles-module_input__sC2fP:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n.styles-module_hideButton__83mRI {\n  outline: none;\n  display: flex;\n  align-items: center;\n  padding: 10px;\n  border: 1.5px solid #a8a8a8;\n  border-left: none;\n  background: none;\n  border-top-right-radius: 12px;\n  border-bottom-right-radius: 12px;\n  cursor: pointer;\n}\n.styles-module_hideButton__83mRI span {\n  color: grey;\n}\n\n/* animated title */\n.styles-module_form__m866x {\n  position: relative;\n  display: flex;\n}\n\n.styles-module_label__8PuaL {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__FwJ1F {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__sC2fP.styles-module_with_title__dftgq::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__sC2fP.styles-module_with_title__dftgq:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__sC2fP:focus + .styles-module_label__8PuaL .styles-module_label_text__FwJ1F,\n.styles-module_input__sC2fP.styles-module_valid__SM7w5 + .styles-module_label__8PuaL .styles-module_label_text__FwJ1F {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__sC2fP.styles-module_valid__SM7w5 + .styles-module_label__8PuaL .styles-module_label_text__FwJ1F {\n  color: #a8a8a8;\n}";
-var styles$f = {"container":"styles-module_container__UdmOO","forgot_label":"styles-module_forgot_label__EeN6a","visible":"styles-module_visible__QROqh","hidden":"styles-module_hidden__hDKDO","input":"styles-module_input__sC2fP","hideButton":"styles-module_hideButton__83mRI","form":"styles-module_form__m866x","label":"styles-module_label__8PuaL","label_text":"styles-module_label_text__FwJ1F","with_title":"styles-module_with_title__dftgq","valid":"styles-module_valid__SM7w5","show":"styles-module_show__OLTZH","hide":"styles-module_hide__LAgaY"};
-styleInject(css_248z$f);
+var css_248z$g = "@keyframes styles-module_show__OLTZH {\n  from {\n    max-heigth: 0px;\n    height: 0px;\n  }\n}\n@keyframes styles-module_hide__LAgaY {\n  from {\n    max-heigth: 0px;\n    height: 0px;\n  }\n  to {\n    max-height: fit-content;\n  }\n}\n.styles-module_container__UdmOO {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n  margin-bottom: 30px;\n  transition: all 0.2s ease-in-out;\n  box-sizing: border-box;\n}\n.styles-module_container__UdmOO .styles-module_forgot_label__EeN6a {\n  font-size: 12px;\n  color: grey;\n}\n.styles-module_container__UdmOO.styles-module_visible__QROqh {\n  max-height: 100px;\n  opacity: 1;\n}\n.styles-module_container__UdmOO.styles-module_hidden__hDKDO {\n  overflow: hidden;\n  max-height: 0;\n  opacity: 0;\n}\n\n.styles-module_input__sC2fP {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-top-left-radius: 12px;\n  border-bottom-left-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  border-right: none;\n  outline: none;\n  transition: all 0.2s ease;\n  flex: 1;\n}\n.styles-module_input__sC2fP:focus, .styles-module_input__sC2fP:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n.styles-module_hideButton__83mRI {\n  outline: none;\n  display: flex;\n  align-items: center;\n  padding: 10px;\n  border: 1.5px solid #a8a8a8;\n  border-left: none;\n  background: none;\n  border-top-right-radius: 12px;\n  border-bottom-right-radius: 12px;\n  cursor: pointer;\n}\n.styles-module_hideButton__83mRI span {\n  color: grey;\n}\n\n/* animated title */\n.styles-module_form__m866x {\n  position: relative;\n  display: flex;\n}\n\n.styles-module_label__8PuaL {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__FwJ1F {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__sC2fP.styles-module_with_title__dftgq::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__sC2fP.styles-module_with_title__dftgq:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__sC2fP:focus + .styles-module_label__8PuaL .styles-module_label_text__FwJ1F,\n.styles-module_input__sC2fP.styles-module_valid__SM7w5 + .styles-module_label__8PuaL .styles-module_label_text__FwJ1F {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__sC2fP.styles-module_valid__SM7w5 + .styles-module_label__8PuaL .styles-module_label_text__FwJ1F {\n  color: #a8a8a8;\n}";
+var styles$g = {"container":"styles-module_container__UdmOO","forgot_label":"styles-module_forgot_label__EeN6a","visible":"styles-module_visible__QROqh","hidden":"styles-module_hidden__hDKDO","input":"styles-module_input__sC2fP","hideButton":"styles-module_hideButton__83mRI","form":"styles-module_form__m866x","label":"styles-module_label__8PuaL","label_text":"styles-module_label_text__FwJ1F","with_title":"styles-module_with_title__dftgq","valid":"styles-module_valid__SM7w5","show":"styles-module_show__OLTZH","hide":"styles-module_hide__LAgaY"};
+styleInject(css_248z$g);
 
 function InputPassword({ placeholder = "", title = "Passwort", name, isVisible = true, width = "100%", minLength = 8, autoComplete, forgotLink = false }) {
     const [value, setValue] = useState("");
     const [hidePassword, setHidePassword] = useState(true);
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: `${styles$f.container} ${isVisible ? styles$f.visible : styles$f.hidden}`, style: { width: width } },
-            React.createElement("div", { className: styles$f.form },
-                React.createElement("input", { className: `${styles$f.input} ${title != undefined ? styles$f.with_title : styles$f.without_title} ${value.length > 0 ? styles$f.valid : styles$f.not_valid}`, name: name, minLength: minLength, autoComplete: autoComplete, placeholder: placeholder, type: hidePassword ? "password" : "text", onInput: (event) => setValue(event.target.value) }),
-                React.createElement("label", { htmlFor: "text", className: styles$f.label },
-                    React.createElement("span", { className: styles$f.label_text }, title)),
-                React.createElement("button", { title: hidePassword ? "Passwort anzeigen" : "Passwort verstecken", className: styles$f.hideButton, onClick: () => setHidePassword(!hidePassword), type: "button" },
+        React.createElement("div", { className: `${styles$g.container} ${isVisible ? styles$g.visible : styles$g.hidden}`, style: { width: width } },
+            React.createElement("div", { className: styles$g.form },
+                React.createElement("input", { className: `${styles$g.input} ${title != undefined ? styles$g.with_title : styles$g.without_title} ${value.length > 0 ? styles$g.valid : styles$g.not_valid}`, name: name, minLength: minLength, autoComplete: autoComplete, placeholder: placeholder, type: hidePassword ? "password" : "text", onInput: (event) => setValue(event.target.value) }),
+                React.createElement("label", { htmlFor: "text", className: styles$g.label },
+                    React.createElement("span", { className: styles$g.label_text }, title)),
+                React.createElement("button", { title: hidePassword ? "Passwort anzeigen" : "Passwort verstecken", className: styles$g.hideButton, onClick: () => setHidePassword(!hidePassword), type: "button" },
                     React.createElement(SvgIcon, { iconName: hidePassword ? "visibility" : "visibility_off" }))),
             forgotLink &&
-                React.createElement("div", { className: styles$f.forgot_container }, forgotLink))));
+                React.createElement("div", { className: styles$g.forgot_container }, forgotLink))));
 }
 
-var css_248z$e = ".styles-module_container__--NO0 {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  justify-content: center;\n  align-items: center;\n  user-select: none;\n  margin-bottom: 20px;\n}\n.styles-module_container__--NO0 button {\n  background: transparent;\n  color: #0075FF;\n  border: none;\n  font-size: 14px;\n  cursor: pointer;\n}\n\n.styles-module_input_wrapper__LPIk1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  gap: 10px;\n}\n\n.styles-module_input__84v36 {\n  padding: 14px 10px;\n  width: 30px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  text-align: center;\n  font-size: 18px;\n}\n.styles-module_input__84v36:focus, .styles-module_input__84v36:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n.styles-module_input__84v36:nth-child(3) {\n  margin-right: 25px;\n}\n\n.styles-module_input__84v36::placeholder,\n.styles-module_input__84v36:-ms-input-placeholder,\n.styles-module_input__84v36::-ms-input-placeholder {\n  letter-spacing: 0px !important;\n}";
-var styles$e = {"container":"styles-module_container__--NO0","input_wrapper":"styles-module_input_wrapper__LPIk1","input":"styles-module_input__84v36"};
-styleInject(css_248z$e);
+var css_248z$f = ".styles-module_container__--NO0 {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  justify-content: center;\n  align-items: center;\n  user-select: none;\n  margin-bottom: 20px;\n}\n.styles-module_container__--NO0 button {\n  background: transparent;\n  color: #0075FF;\n  border: none;\n  font-size: 14px;\n  cursor: pointer;\n}\n\n.styles-module_input_wrapper__LPIk1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  gap: 10px;\n}\n\n.styles-module_input__84v36 {\n  padding: 14px 10px;\n  width: 30px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  text-align: center;\n  font-size: 18px;\n}\n.styles-module_input__84v36:focus, .styles-module_input__84v36:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n.styles-module_input__84v36:nth-child(3) {\n  margin-right: 25px;\n}\n\n.styles-module_input__84v36::placeholder,\n.styles-module_input__84v36:-ms-input-placeholder,\n.styles-module_input__84v36::-ms-input-placeholder {\n  letter-spacing: 0px !important;\n}";
+var styles$f = {"container":"styles-module_container__--NO0","input_wrapper":"styles-module_input_wrapper__LPIk1","input":"styles-module_input__84v36"};
+styleInject(css_248z$f);
 
 function InputPin({ name, length, onFinished = () => { } }) {
     const [state, setState] = useState({});
@@ -330,20 +351,20 @@ function InputPin({ name, length, onFinished = () => { } }) {
                 ref.current.value = "";
         });
     }
-    return (React.createElement("div", { className: styles$e.container },
+    return (React.createElement("div", { className: styles$f.container },
         React.createElement("input", { name: name, type: "hidden", defaultValue: Object.values(state).join("") }),
-        React.createElement("div", { className: styles$e.input_wrapper }, [...Array(length)].map((value, i) => {
+        React.createElement("div", { className: styles$f.input_wrapper }, [...Array(length)].map((value, i) => {
             if (i == 0) {
-                return React.createElement("input", { key: i, pattern: "[0-9]", value: state[i] ? state[i] : "", ref: fieldRefs.current[i], className: styles$e.input, type: "text", onKeyUp: (event) => onKeyUp(event, i), onInput: (event) => onChange(event, i) });
+                return React.createElement("input", { key: i, pattern: "[0-9]", value: state[i] ? state[i] : "", ref: fieldRefs.current[i], className: styles$f.input, type: "text", onKeyUp: (event) => onKeyUp(event, i), onInput: (event) => onChange(event, i) });
             }
-            return React.createElement("input", { key: i, pattern: "[0-9]", value: state[i] ? state[i] : "", ref: fieldRefs.current[i], className: styles$e.input, type: "text", onKeyUp: (event) => onKeyUp(event, i), onInput: (event) => onChange(event, i) });
+            return React.createElement("input", { key: i, pattern: "[0-9]", value: state[i] ? state[i] : "", ref: fieldRefs.current[i], className: styles$f.input, type: "text", onKeyUp: (event) => onKeyUp(event, i), onInput: (event) => onChange(event, i) });
         })),
         React.createElement("button", { type: "button", onClick: resetValues }, "Zur\u00FCcksetzen")));
 }
 
-var css_248z$d = ".styles-module_container__zcXGF {\n  display: flex;\n  width: 100%;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__Tpth8 {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n}\n.styles-module_input__Tpth8:focus, .styles-module_input__Tpth8:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__Tpth8.styles-module_not_available__CRXjB, .styles-module_input__Tpth8:invalid {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__zcXGF {\n  position: relative;\n}\n\n.styles-module_label__appHO {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__-sKjY {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__Tpth8.styles-module_with_title__L3eGj::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__Tpth8.styles-module_with_title__L3eGj:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__Tpth8:focus + .styles-module_label__appHO .styles-module_label_text__-sKjY,\n.styles-module_input__Tpth8.styles-module_valid__zWcOz + .styles-module_label__appHO .styles-module_label_text__-sKjY {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__Tpth8.styles-module_valid__zWcOz + .styles-module_label__appHO .styles-module_label_text__-sKjY {\n  color: #a8a8a8;\n}";
-var styles$d = {"container":"styles-module_container__zcXGF","input":"styles-module_input__Tpth8","not_available":"styles-module_not_available__CRXjB","label":"styles-module_label__appHO","label_text":"styles-module_label_text__-sKjY","with_title":"styles-module_with_title__L3eGj","valid":"styles-module_valid__zWcOz"};
-styleInject(css_248z$d);
+var css_248z$e = ".styles-module_container__zcXGF {\n  display: flex;\n  width: 100%;\n  margin-bottom: 20px;\n}\n\n.styles-module_input__Tpth8 {\n  padding: 14px 20px;\n  font-size: 16px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  flex: 1;\n}\n.styles-module_input__Tpth8:focus, .styles-module_input__Tpth8:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n.styles-module_input__Tpth8.styles-module_not_available__CRXjB, .styles-module_input__Tpth8:invalid {\n  border-color: #e50000;\n  box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.2509803922);\n}\n\n/* animated title */\n.styles-module_container__zcXGF {\n  position: relative;\n}\n\n.styles-module_label__appHO {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__-sKjY {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__Tpth8.styles-module_with_title__L3eGj::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__Tpth8.styles-module_with_title__L3eGj:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__Tpth8:focus + .styles-module_label__appHO .styles-module_label_text__-sKjY,\n.styles-module_input__Tpth8.styles-module_valid__zWcOz + .styles-module_label__appHO .styles-module_label_text__-sKjY {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__Tpth8.styles-module_valid__zWcOz + .styles-module_label__appHO .styles-module_label_text__-sKjY {\n  color: #a8a8a8;\n}";
+var styles$e = {"container":"styles-module_container__zcXGF","input":"styles-module_input__Tpth8","not_available":"styles-module_not_available__CRXjB","label":"styles-module_label__appHO","label_text":"styles-module_label_text__-sKjY","with_title":"styles-module_with_title__L3eGj","valid":"styles-module_valid__zWcOz"};
+styleInject(css_248z$e);
 
 function InputText({ title, name, placeholder = "", defaultValue = "", autoFocus = false, type = "text", width = "100%", marginBottom, available = true, onInput = (event) => { } }) {
     const [value, setValue] = useState(defaultValue);
@@ -352,32 +373,32 @@ function InputText({ title, name, placeholder = "", defaultValue = "", autoFocus
             element.focus();
     }, [autoFocus]);
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$d.container, style: { width, marginBottom } },
-            React.createElement("input", { className: `${styles$d.input} ${title != undefined ? styles$d.with_title : styles$d.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$d.valid : styles$d.not_valid} ${available ? styles$d.available : styles$d.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
+        React.createElement("div", { className: styles$e.container, style: { width, marginBottom } },
+            React.createElement("input", { className: `${styles$e.input} ${title != undefined ? styles$e.with_title : styles$e.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$e.valid : styles$e.not_valid} ${available ? styles$e.available : styles$e.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
                     setValue(event.target.value);
                     if (onInput)
                         onInput(event);
                 } }),
-            React.createElement("label", { htmlFor: "text", className: styles$d.label },
-                React.createElement("span", { className: styles$d.label_text }, title)))));
+            React.createElement("label", { htmlFor: "text", className: styles$e.label },
+                React.createElement("span", { className: styles$e.label_text }, title)))));
 }
 
-var css_248z$c = ".styles-module_box__Z0iod {\n  background: #F4F4F4;\n  width: 400px;\n  max-width: 100%;\n  border-radius: 22px;\n  border: 1px solid rgb(199, 199, 199);\n  display: flex;\n  flex-direction: row;\n  padding: 18px;\n  gap: 18px;\n  cursor: pointer;\n  margin-bottom: 20px;\n  transition: 0.2s ease;\n  color: black;\n}\n.styles-module_box__Z0iod:hover {\n  /*.right_side {\n      h4, p {\n          color: #0075FF;\n      }\n  }*/\n  background-color: white;\n  transform: scale(1.01);\n  /* border-color: #0075FF; */\n}\n.styles-module_box__Z0iod .styles-module_left_side__8ObGs {\n  width: 40px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 5px;\n}\n.styles-module_box__Z0iod .styles-module_right_side__Ypp0D {\n  flex: 1;\n}\n.styles-module_box__Z0iod .styles-module_right_side__Ypp0D p {\n  color: #6F6F6F;\n  margin: 0;\n  text-align: left;\n  font-size: 1.1rem;\n  line-height: 1.6;\n}\n.styles-module_box__Z0iod .styles-module_right_side__Ypp0D h4 {\n  margin: 0;\n  text-align: left;\n  font-size: 1.3rem;\n  margin-bottom: 16px;\n  margin-top: 5px;\n  color: black;\n}";
-var styles$c = {"box":"styles-module_box__Z0iod","left_side":"styles-module_left_side__8ObGs","right_side":"styles-module_right_side__Ypp0D"};
-styleInject(css_248z$c);
+var css_248z$d = ".styles-module_box__Z0iod {\n  background: #F4F4F4;\n  width: 400px;\n  max-width: 100%;\n  border-radius: 22px;\n  border: 1px solid rgb(199, 199, 199);\n  display: flex;\n  flex-direction: row;\n  padding: 18px;\n  gap: 18px;\n  cursor: pointer;\n  margin-bottom: 20px;\n  transition: 0.2s ease;\n  color: black;\n}\n.styles-module_box__Z0iod:hover {\n  /*.right_side {\n      h4, p {\n          color: #0075FF;\n      }\n  }*/\n  background-color: white;\n  transform: scale(1.01);\n  /* border-color: #0075FF; */\n}\n.styles-module_box__Z0iod .styles-module_left_side__8ObGs {\n  width: 40px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 5px;\n}\n.styles-module_box__Z0iod .styles-module_right_side__Ypp0D {\n  flex: 1;\n}\n.styles-module_box__Z0iod .styles-module_right_side__Ypp0D p {\n  color: #6F6F6F;\n  margin: 0;\n  text-align: left;\n  font-size: 1.1rem;\n  line-height: 1.6;\n}\n.styles-module_box__Z0iod .styles-module_right_side__Ypp0D h4 {\n  margin: 0;\n  text-align: left;\n  font-size: 1.3rem;\n  margin-bottom: 16px;\n  margin-top: 5px;\n  color: black;\n}";
+var styles$d = {"box":"styles-module_box__Z0iod","left_side":"styles-module_left_side__8ObGs","right_side":"styles-module_right_side__Ypp0D"};
+styleInject(css_248z$d);
 
 function OptionField({ headline, description, iconName }) {
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$c.box },
-            React.createElement("div", { className: styles$c.left_side }, iconName && React.createElement(SvgIcon, { iconName: iconName })),
-            React.createElement("div", { className: styles$c.right_side },
+        React.createElement("div", { className: styles$d.box },
+            React.createElement("div", { className: styles$d.left_side }, iconName && React.createElement(SvgIcon, { iconName: iconName })),
+            React.createElement("div", { className: styles$d.right_side },
                 React.createElement("h4", null, headline),
                 React.createElement("p", null, description)))));
 }
 
-var css_248z$b = ".styles-module_container__XCtqW {\n  background: white;\n  border-radius: 12px;\n  padding: 30px;\n  margin-bottom: 30px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 18px;\n  color: black;\n  border: 1px solid #B1B1B1;\n  transition: 0.2s ease-in-out;\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);\n  cursor: pointer;\n}\n.styles-module_container__XCtqW:hover {\n  background: #f0f0f0;\n  border-color: #888888;\n}\n.styles-module_container__XCtqW h3 {\n  font-weight: 500;\n  margin: 0;\n}\n\n.styles-module_container__XCtqW.styles-module_preselected__WoSbB {\n  border: 1px solid black;\n}";
-var styles$b = {"container":"styles-module_container__XCtqW","preselected":"styles-module_preselected__WoSbB"};
-styleInject(css_248z$b);
+var css_248z$c = ".styles-module_container__XCtqW {\n  background: white;\n  border-radius: 12px;\n  padding: 30px;\n  margin-bottom: 30px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 18px;\n  color: black;\n  border: 1px solid #B1B1B1;\n  transition: 0.2s ease-in-out;\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);\n  cursor: pointer;\n}\n.styles-module_container__XCtqW:hover {\n  background: #f0f0f0;\n  border-color: #888888;\n}\n.styles-module_container__XCtqW h3 {\n  font-weight: 500;\n  margin: 0;\n}\n\n.styles-module_container__XCtqW.styles-module_preselected__WoSbB {\n  border: 1px solid black;\n}";
+var styles$c = {"container":"styles-module_container__XCtqW","preselected":"styles-module_preselected__WoSbB"};
+styleInject(css_248z$c);
 
 function OptionFieldHorizontal({ title, iconName, onClick, preselected = false }) {
     function onClickDiv(event) {
@@ -385,14 +406,14 @@ function OptionFieldHorizontal({ title, iconName, onClick, preselected = false }
         if (onClick)
             onClick(event);
     }
-    return (React.createElement("div", { className: [styles$b.container, preselected ? styles$b.preselected : styles$b.not_preselected].join(" "), onClick: onClickDiv },
+    return (React.createElement("div", { className: [styles$c.container, preselected ? styles$c.preselected : styles$c.not_preselected].join(" "), onClick: onClickDiv },
         iconName && React.createElement(SvgIcon, { iconName: iconName, size: "32px" }),
         React.createElement("h3", null, title)));
 }
 
-var css_248z$a = ".styles-module_container__oNbrP .styles-module_button__UBk65 {\n  padding: 10px 18px;\n  background: #0075FF;\n  border-radius: 40px;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  font-size: 15px;\n  color: white;\n  align-items: center;\n  border: none;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_onlyIcon__-Niv0 {\n  width: 44px;\n  height: 44px;\n  padding: 0;\n  align-items: center;\n  justify-content: center;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_onlyIcon__-Niv0 span {\n  font-size: 22px !important;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_red__CHF3e {\n  background: #e40000;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_grey__hdqot {\n  background: #EEEEEE;\n  color: black;\n}";
-var styles$a = {"container":"styles-module_container__oNbrP","button":"styles-module_button__UBk65","onlyIcon":"styles-module_onlyIcon__-Niv0","red":"styles-module_red__CHF3e","grey":"styles-module_grey__hdqot"};
-styleInject(css_248z$a);
+var css_248z$b = ".styles-module_container__oNbrP .styles-module_button__UBk65 {\n  padding: 10px 18px;\n  background: #0075FF;\n  border-radius: 40px;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  font-size: 15px;\n  color: white;\n  align-items: center;\n  border: none;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_onlyIcon__-Niv0 {\n  width: 44px;\n  height: 44px;\n  padding: 0;\n  align-items: center;\n  justify-content: center;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_onlyIcon__-Niv0 span {\n  font-size: 22px !important;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_red__CHF3e {\n  background: #e40000;\n}\n.styles-module_container__oNbrP .styles-module_button__UBk65.styles-module_grey__hdqot {\n  background: #EEEEEE;\n  color: black;\n}";
+var styles$b = {"container":"styles-module_container__oNbrP","button":"styles-module_button__UBk65","onlyIcon":"styles-module_onlyIcon__-Niv0","red":"styles-module_red__CHF3e","grey":"styles-module_grey__hdqot"};
+styleInject(css_248z$b);
 
 function PrimaryButton({ text, iconName, iconFill = "white", type = "blue", onClick = () => { } }) {
     function onClickButton(event) {
@@ -400,26 +421,26 @@ function PrimaryButton({ text, iconName, iconFill = "white", type = "blue", onCl
         if (onClick)
             onClick(event);
     }
-    return (React.createElement("div", { className: styles$a.container },
-        React.createElement("button", { className: [styles$a.button, styles$a[type], (text && !iconName) ? styles$a.onlyText : "", (!text && iconName) ? styles$a.onlyIcon : ""].join(" "), onClick: onClickButton },
+    return (React.createElement("div", { className: styles$b.container },
+        React.createElement("button", { className: [styles$b.button, styles$b[type], (text && !iconName) ? styles$b.onlyText : "", (!text && iconName) ? styles$b.onlyIcon : ""].join(" "), onClick: onClickButton },
             text,
             iconName && React.createElement(SvgIcon, { iconName: iconName, fill: iconFill }))));
 }
 
-var css_248z$9 = ".styles-module_container__u4q5n {\n  margin-bottom: 50px;\n}\n\n.styles-module_background__jt-ry {\n  background: #D9D9D9;\n  width: 400px;\n  max-width: 100%;\n  height: 3px;\n  position: relative;\n}\n\n.styles-module_progress__Zj-B7 {\n  background: black;\n  position: absolute;\n  left: 0;\n  top: 0;\n  height: 3px;\n}";
-var styles$9 = {"container":"styles-module_container__u4q5n","background":"styles-module_background__jt-ry","progress":"styles-module_progress__Zj-B7"};
-styleInject(css_248z$9);
+var css_248z$a = ".styles-module_container__u4q5n {\n  margin-bottom: 50px;\n}\n\n.styles-module_background__jt-ry {\n  background: #D9D9D9;\n  width: 400px;\n  max-width: 100%;\n  height: 3px;\n  position: relative;\n}\n\n.styles-module_progress__Zj-B7 {\n  background: black;\n  position: absolute;\n  left: 0;\n  top: 0;\n  height: 3px;\n}";
+var styles$a = {"container":"styles-module_container__u4q5n","background":"styles-module_background__jt-ry","progress":"styles-module_progress__Zj-B7"};
+styleInject(css_248z$a);
 
 function ProgressBar({ length, progress }) {
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$9.container },
-            React.createElement("div", { className: styles$9.background },
-                React.createElement("div", { className: styles$9.progress, style: { width: `${progress / length * 100}%` } })))));
+        React.createElement("div", { className: styles$a.container },
+            React.createElement("div", { className: styles$a.background },
+                React.createElement("div", { className: styles$a.progress, style: { width: `${progress / length * 100}%` } })))));
 }
 
-var css_248z$8 = ".styles-module_container__Grkzw {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  color: grey;\n  margin-bottom: 20px;\n}\n.styles-module_container__Grkzw [type=radio] {\n  position: relative;\n  left: 15px;\n  top: -4px;\n  z-index: 0;\n  appearance: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-left: -3.5px;\n}\n.styles-module_container__Grkzw [type=radio] + label {\n  position: absolute;\n  cursor: pointer;\n}\n.styles-module_container__Grkzw [type=radio] + label::before {\n  width: 15px;\n  height: 15px;\n  border-radius: 20px;\n  border: 2px solid #a8a8a8;\n  display: block;\n  content: \"\";\n  float: left;\n  margin-right: 8px;\n  z-index: 5;\n  position: relative;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__Grkzw [type=radio]:checked + label::before {\n  box-shadow: inset 0px 0px 0px 3px #fff;\n  background-color: #0075FF;\n  border-color: #0075FF;\n}\n.styles-module_container__Grkzw [type=radio]:hover:not(:checked) + label::before {\n  box-shadow: inset 0px 0px 0px 3px #fff;\n  background-color: #bdbdbd;\n  border-color: #bdbdbd;\n}";
-var styles$8 = {"container":"styles-module_container__Grkzw"};
-styleInject(css_248z$8);
+var css_248z$9 = ".styles-module_container__Grkzw {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  color: grey;\n  margin-bottom: 20px;\n}\n.styles-module_container__Grkzw [type=radio] {\n  position: relative;\n  left: 15px;\n  top: -4px;\n  z-index: 0;\n  appearance: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-left: -3.5px;\n}\n.styles-module_container__Grkzw [type=radio] + label {\n  position: absolute;\n  cursor: pointer;\n}\n.styles-module_container__Grkzw [type=radio] + label::before {\n  width: 15px;\n  height: 15px;\n  border-radius: 20px;\n  border: 2px solid #a8a8a8;\n  display: block;\n  content: \"\";\n  float: left;\n  margin-right: 8px;\n  z-index: 5;\n  position: relative;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__Grkzw [type=radio]:checked + label::before {\n  box-shadow: inset 0px 0px 0px 3px #fff;\n  background-color: #0075FF;\n  border-color: #0075FF;\n}\n.styles-module_container__Grkzw [type=radio]:hover:not(:checked) + label::before {\n  box-shadow: inset 0px 0px 0px 3px #fff;\n  background-color: #bdbdbd;\n  border-color: #bdbdbd;\n}";
+var styles$9 = {"container":"styles-module_container__Grkzw"};
+styleInject(css_248z$9);
 
 class RadioOption {
     text;
@@ -436,7 +457,7 @@ function RadioButtons({ options, group, selected, onClick, width = "100%" }) {
         if (onClick)
             onClick(event);
     }
-    return (React.createElement("div", { className: styles$8.container, style: { width: width } }, options.map((option) => React.createElement("div", { className: styles$8.option, key: option.name },
+    return (React.createElement("div", { className: styles$9.container, style: { width: width } }, options.map((option) => React.createElement("div", { className: styles$9.option, key: option.name },
         selected && selected == option.name ?
             React.createElement("input", { type: "radio", id: option.name, name: group, value: option.name, onInput: onUpdateSelected, defaultChecked: true })
             :
@@ -444,9 +465,9 @@ function RadioButtons({ options, group, selected, onClick, width = "100%" }) {
         React.createElement("label", { htmlFor: option.name }, option.text)))));
 }
 
-var css_248z$7 = ".styles-module_container__RhsQe {\n  margin-right: 8px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0 {\n  background: none;\n  padding: none;\n  border: none;\n  width: 40px;\n  height: 40px;\n  transition: 0.2s;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 20px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0:hover {\n  background: rgb(207, 207, 207);\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0 {\n  flex-direction: row;\n  gap: 5px;\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0:hover {\n  background: none;\n}";
-var styles$7 = {"container":"styles-module_container__RhsQe","button":"styles-module_button__HuX-0","middle":"styles-module_middle__xg7RF"};
-styleInject(css_248z$7);
+var css_248z$8 = ".styles-module_container__RhsQe {\n  margin-right: 8px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0 {\n  background: none;\n  padding: none;\n  border: none;\n  width: 40px;\n  height: 40px;\n  transition: 0.2s;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 20px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0:hover {\n  background: rgb(207, 207, 207);\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0 {\n  flex-direction: row;\n  gap: 5px;\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0:hover {\n  background: none;\n}";
+var styles$8 = {"container":"styles-module_container__RhsQe","button":"styles-module_button__HuX-0","middle":"styles-module_middle__xg7RF"};
+styleInject(css_248z$8);
 
 function RedirectButton({ type = "forward", onClick }) {
     function onClickButton(event) {
@@ -461,16 +482,16 @@ function RedirectButton({ type = "forward", onClick }) {
             case "middle": return "arrow_back";
         }
     };
-    return (React.createElement("div", { className: [styles$7.container, styles$7[type]].join(" ") },
-        React.createElement("button", { onClick: onClickButton, className: styles$7.button },
+    return (React.createElement("div", { className: [styles$8.container, styles$8[type]].join(" ") },
+        React.createElement("button", { onClick: onClickButton, className: styles$8.button },
             React.createElement(SvgIcon, { iconName: getIcon() }),
             ["middle"].includes(type) &&
                 React.createElement("span", null, "Zur\u00FCck"))));
 }
 
-var css_248z$6 = ".styles-module_container__VreeH {\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J,\n.styles-module_container__VreeH .styles-module_show_all__HKn-s {\n  padding: 10px 18px;\n  background: #F0F0F0;\n  border-radius: 20px;\n  display: flex;\n  flex-direction: row;\n  gap: 5px;\n  align-items: center;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n  color: #565656;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J:hover {\n  background: #e5e5e5;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J.styles-module_selected__sArTD {\n  background: #C6D4F8;\n  color: #0075FF;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J.styles-module_selected__sArTD span {\n  color: #0075FF;\n}";
-var styles$6 = {"container":"styles-module_container__VreeH","chip":"styles-module_chip__EvZ4J","show_all":"styles-module_show_all__HKn-s","selected":"styles-module_selected__sArTD"};
-styleInject(css_248z$6);
+var css_248z$7 = ".styles-module_container__VreeH {\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J,\n.styles-module_container__VreeH .styles-module_show_all__HKn-s {\n  padding: 10px 18px;\n  background: #F0F0F0;\n  border-radius: 20px;\n  display: flex;\n  flex-direction: row;\n  gap: 5px;\n  align-items: center;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n  color: #565656;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J:hover {\n  background: #e5e5e5;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J.styles-module_selected__sArTD {\n  background: #C6D4F8;\n  color: #0075FF;\n}\n.styles-module_container__VreeH .styles-module_chip__EvZ4J.styles-module_selected__sArTD span {\n  color: #0075FF;\n}";
+var styles$7 = {"container":"styles-module_container__VreeH","chip":"styles-module_chip__EvZ4J","show_all":"styles-module_show_all__HKn-s","selected":"styles-module_selected__sArTD"};
+styleInject(css_248z$7);
 
 class SearchChip {
     title;
@@ -491,19 +512,19 @@ function SearchChips({ items, onChange, chipsVisible = 9 }) {
         if (onChange)
             onChange(newChips);
     }
-    return (React.createElement("div", { className: styles$6.container },
-        (showAll ? chips : chips.slice(0, chipsVisible)).map((item, index) => React.createElement("div", { key: index, onClick: (e) => onClick(item, index), className: [styles$6.chip, item.selected ? styles$6.selected : styles$6.not_selected].join(" ") },
+    return (React.createElement("div", { className: styles$7.container },
+        (showAll ? chips : chips.slice(0, chipsVisible)).map((item, index) => React.createElement("div", { key: index, onClick: (e) => onClick(item, index), className: [styles$7.chip, item.selected ? styles$7.selected : styles$7.not_selected].join(" ") },
             React.createElement(SvgIcon, { iconName: item.selected ? "close" : "filter_list", size: "20px" }),
             item.title)),
         showAll ?
-            React.createElement("div", { className: styles$6.show_all, onClick: () => setShowAll(false) }, "Weniger anzeigen")
+            React.createElement("div", { className: styles$7.show_all, onClick: () => setShowAll(false) }, "Weniger anzeigen")
             :
-                React.createElement("div", { className: styles$6.show_all, onClick: () => setShowAll(true) }, "Mehr anzeigen")));
+                React.createElement("div", { className: styles$7.show_all, onClick: () => setShowAll(true) }, "Mehr anzeigen")));
 }
 
-var css_248z$5 = ".styles-module_container__k4Z26 {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  margin-top: 30px;\n  margin-bottom: 25px;\n  gap: 10px;\n  position: relative;\n}\n.styles-module_container__k4Z26 button {\n  background: #BFD5FF;\n  padding: 0px 18px;\n  border: none;\n  font-size: 14px;\n  border-radius: 10px;\n  cursor: pointer;\n  color: #0075FF;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ-,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om {\n  display: none;\n  position: absolute;\n  top: 60px;\n  background: white;\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);\n  width: 100%;\n  border-radius: 14px;\n  border: 1px solid #C3C3C3;\n  z-index: 1000;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ-:hover,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om:hover {\n  display: block;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- ul,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- ul li,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li {\n  padding: 16px 20px;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- ul li:not(:last-child),\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li:not(:last-child) {\n  border-bottom: 1px solid #C3C3C3;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X {\n  padding: 35px 0px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 15px;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X p,\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X h3,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X p,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X h3 {\n  margin: 0;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X p,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X p {\n  color: grey;\n  padding: 0px 30px;\n  line-height: 1.5;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li {\n  display: flex;\n  flex-direction: row;\n  padding: 10px 20px;\n  align-items: center;\n}\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li span {\n  flex: 1;\n}\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om button {\n  padding: 10px 16px;\n}\n\n.styles-module_input__wOJmG {\n  padding: 14px 20px;\n  font-size: 16px;\n  width: 300px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  width: 100%;\n}\n.styles-module_input__wOJmG:focus, .styles-module_input__wOJmG:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n.styles-module_form__mWTCu.styles-module_focus__-6H1f + .styles-module_suggestions_container__pceQ-,\n.styles-module_form__mWTCu.styles-module_focus__-6H1f + .styles-module_results_container__OY4Om {\n  display: block;\n}\n\n/* animated text field */\n.styles-module_form__mWTCu {\n  position: relative;\n  width: 100%;\n}\n\n.styles-module_label__A41g9 {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__NQHTC {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__wOJmG.styles-module_with_title__rnN-t::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__wOJmG.styles-module_with_title__rnN-t:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__wOJmG:focus + .styles-module_label__A41g9 .styles-module_label_text__NQHTC,\n.styles-module_input__wOJmG.styles-module_valid__AAK-6 + .styles-module_label__A41g9 .styles-module_label_text__NQHTC {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__wOJmG.styles-module_valid__AAK-6 + .styles-module_label__A41g9 .styles-module_label_text__NQHTC {\n  color: #a8a8a8;\n}";
-var styles$5 = {"container":"styles-module_container__k4Z26","suggestions_container":"styles-module_suggestions_container__pceQ-","results_container":"styles-module_results_container__OY4Om","error":"styles-module_error__2Ov4X","input":"styles-module_input__wOJmG","form":"styles-module_form__mWTCu","focus":"styles-module_focus__-6H1f","label":"styles-module_label__A41g9","label_text":"styles-module_label_text__NQHTC","with_title":"styles-module_with_title__rnN-t","valid":"styles-module_valid__AAK-6"};
-styleInject(css_248z$5);
+var css_248z$6 = ".styles-module_container__k4Z26 {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  margin-top: 30px;\n  margin-bottom: 25px;\n  gap: 10px;\n  position: relative;\n}\n.styles-module_container__k4Z26 button {\n  background: #BFD5FF;\n  padding: 0px 18px;\n  border: none;\n  font-size: 14px;\n  border-radius: 10px;\n  cursor: pointer;\n  color: #0075FF;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ-,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om {\n  display: none;\n  position: absolute;\n  top: 60px;\n  background: white;\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);\n  width: 100%;\n  border-radius: 14px;\n  border: 1px solid #C3C3C3;\n  z-index: 1000;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ-:hover,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om:hover {\n  display: block;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- ul,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- ul li,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li {\n  padding: 16px 20px;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- ul li:not(:last-child),\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li:not(:last-child) {\n  border-bottom: 1px solid #C3C3C3;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X {\n  padding: 35px 0px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 15px;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X p,\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X h3,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X p,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X h3 {\n  margin: 0;\n}\n.styles-module_container__k4Z26 .styles-module_suggestions_container__pceQ- .styles-module_error__2Ov4X p,\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om .styles-module_error__2Ov4X p {\n  color: grey;\n  padding: 0px 30px;\n  line-height: 1.5;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li {\n  display: flex;\n  flex-direction: row;\n  padding: 10px 20px;\n  align-items: center;\n}\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om ul li span {\n  flex: 1;\n}\n.styles-module_container__k4Z26 .styles-module_results_container__OY4Om button {\n  padding: 10px 16px;\n}\n\n.styles-module_input__wOJmG {\n  padding: 14px 20px;\n  font-size: 16px;\n  width: 300px;\n  border-radius: 12px;\n  border: 1.5px solid #a8a8a8;\n  outline: none;\n  transition: 0.2s ease;\n  width: 100%;\n}\n.styles-module_input__wOJmG:focus, .styles-module_input__wOJmG:active {\n  border-color: #0075FF;\n  box-shadow: 0px 0px 3px 3px rgba(0, 87, 255, 0.2509803922);\n}\n\n.styles-module_form__mWTCu.styles-module_focus__-6H1f + .styles-module_suggestions_container__pceQ-,\n.styles-module_form__mWTCu.styles-module_focus__-6H1f + .styles-module_results_container__OY4Om {\n  display: block;\n}\n\n/* animated text field */\n.styles-module_form__mWTCu {\n  position: relative;\n  width: 100%;\n}\n\n.styles-module_label__A41g9 {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.styles-module_label_text__NQHTC {\n  position: absolute;\n  bottom: 16px;\n  left: 12px;\n  transition: 0.3s ease;\n  font-size: 16px;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  opacity: initial;\n  background: white;\n  color: grey;\n  padding-right: 8px;\n  padding-left: 8px;\n}\n\n.styles-module_input__wOJmG.styles-module_with_title__rnN-t::placeholder {\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  color: grey;\n}\n\n.styles-module_input__wOJmG.styles-module_with_title__rnN-t:focus::placeholder {\n  opacity: 1;\n}\n\n.styles-module_input__wOJmG:focus + .styles-module_label__A41g9 .styles-module_label_text__NQHTC,\n.styles-module_input__wOJmG.styles-module_valid__AAK-6 + .styles-module_label__A41g9 .styles-module_label_text__NQHTC {\n  transform: translateY(-150%);\n  left: 15px;\n  font-size: 14px;\n  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.9411764706), hsla(0, 0%, 100%, 0.951));\n  color: #0063d4;\n}\n\n.styles-module_input__wOJmG.styles-module_valid__AAK-6 + .styles-module_label__A41g9 .styles-module_label_text__NQHTC {\n  color: #a8a8a8;\n}";
+var styles$6 = {"container":"styles-module_container__k4Z26","suggestions_container":"styles-module_suggestions_container__pceQ-","results_container":"styles-module_results_container__OY4Om","error":"styles-module_error__2Ov4X","input":"styles-module_input__wOJmG","form":"styles-module_form__mWTCu","focus":"styles-module_focus__-6H1f","label":"styles-module_label__A41g9","label_text":"styles-module_label_text__NQHTC","with_title":"styles-module_with_title__rnN-t","valid":"styles-module_valid__AAK-6"};
+styleInject(css_248z$6);
 
 function Searchbar({ placeholder, title = "Suchen", showNoResults = false, errorTitle = "Keine Ergebnisse gefunden", errorMessage = "", errorButton = "", helpTitle = "", helpMessage = "", errorAction = (event) => { }, onInput = (event) => { }, onClickResult = (event, result) => { }, withButton = false, buttonText = "Suchen", suggestions = [], autoFocus = false, results = [] }) {
     const [value, setValue] = useState("");
@@ -532,34 +553,34 @@ function Searchbar({ placeholder, title = "Suchen", showNoResults = false, error
             element.focus();
     }, [autoFocus]);
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$5.container },
-            React.createElement("div", { className: `${styles$5.form} ${inputFocused ? styles$5.focus : styles$5.not_focused}` },
-                React.createElement("input", { onFocus: () => setFocused(true), onBlur: () => setFocused(false), className: `${styles$5.input} ${title != undefined ? styles$5.with_title : styles$5.without_title} ${value.length > 0 ? styles$5.valid : styles$5.not_valid}`, placeholder: placeholder, type: "search", ref: inputElement, onInput: onInputChanged }),
-                React.createElement("label", { htmlFor: "text", className: styles$5.label },
-                    React.createElement("span", { className: styles$5.label_text }, title))),
+        React.createElement("div", { className: styles$6.container },
+            React.createElement("div", { className: `${styles$6.form} ${inputFocused ? styles$6.focus : styles$6.not_focused}` },
+                React.createElement("input", { onFocus: () => setFocused(true), onBlur: () => setFocused(false), className: `${styles$6.input} ${title != undefined ? styles$6.with_title : styles$6.without_title} ${value.length > 0 ? styles$6.valid : styles$6.not_valid}`, placeholder: placeholder, type: "search", ref: inputElement, onInput: onInputChanged }),
+                React.createElement("label", { htmlFor: "text", className: styles$6.label },
+                    React.createElement("span", { className: styles$6.label_text }, title))),
             withButton && React.createElement("button", { type: "button" }, buttonText),
-            suggestions.length > 0 && React.createElement("div", { className: styles$5.suggestions_container },
+            suggestions.length > 0 && React.createElement("div", { className: styles$6.suggestions_container },
                 React.createElement("ul", null, suggestions.map((suggestion, index) => React.createElement("li", { key: index }, suggestion)))),
-            searchResults.length > 0 && React.createElement("div", { className: styles$5.results_container },
+            searchResults.length > 0 && React.createElement("div", { className: styles$6.results_container },
                 React.createElement("ul", null, searchResults.map((result, index) => React.createElement("li", { key: index, onClick: (event) => onClickResult(event, result) },
                     React.createElement("span", null, result.title),
                     React.createElement("button", { type: "button" }, buttonText))))),
-            searchResults.length == 0 && showNoResults && value.length > 0 && React.createElement("div", { className: styles$5.results_container },
-                React.createElement("div", { className: styles$5.error },
+            searchResults.length == 0 && showNoResults && value.length > 0 && React.createElement("div", { className: styles$6.results_container },
+                React.createElement("div", { className: styles$6.error },
                     React.createElement(SvgIcon, { iconName: "error" }),
                     React.createElement("h3", null, errorTitle),
                     React.createElement("p", null, errorMessage),
                     errorButton.length > 0 && React.createElement("button", { type: "button", onClick: errorAction }, errorButton))),
-            searchResults.length == 0 && showNoResults && value.length == 0 && React.createElement("div", { className: styles$5.results_container },
-                React.createElement("div", { className: styles$5.error },
+            searchResults.length == 0 && showNoResults && value.length == 0 && React.createElement("div", { className: styles$6.results_container },
+                React.createElement("div", { className: styles$6.error },
                     React.createElement(SvgIcon, { iconName: "lightbulb" }),
                     React.createElement("h3", null, helpTitle),
                     React.createElement("p", null, helpMessage))))));
 }
 
-var css_248z$4 = "";
-var styles$4 = {};
-styleInject(css_248z$4);
+var css_248z$5 = "";
+var styles$5 = {};
+styleInject(css_248z$5);
 
 class SliderCard {
     title;
@@ -571,25 +592,25 @@ class SliderCard {
 }
 function Slider({ cards }) {
     const [selected, setSelected] = useState(0);
-    return (React.createElement("div", { className: styles$4.container }, cards.map((card, index) => React.createElement("div", { key: index, className: [styles$4.card, selected == index ? styles$4.selected : styles$4.not_selected].join(" ") },
+    return (React.createElement("div", { className: styles$5.container }, cards.map((card, index) => React.createElement("div", { key: index, className: [styles$5.card, selected == index ? styles$5.selected : styles$5.not_selected].join(" ") },
         React.createElement("h1", null, card.title),
         React.createElement("p", null, card.description)))));
 }
 
-var css_248z$3 = ".styles-module_container__xRQNT {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 7px;\n  color: #6F6F6F;\n}\n.styles-module_container__xRQNT svg {\n  fill: #6F6F6F;\n}";
-var styles$3 = {"container":"styles-module_container__xRQNT"};
-styleInject(css_248z$3);
+var css_248z$4 = ".styles-module_container__xRQNT {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 7px;\n  color: #6F6F6F;\n}\n.styles-module_container__xRQNT svg {\n  fill: #6F6F6F;\n}";
+var styles$4 = {"container":"styles-module_container__xRQNT"};
+styleInject(css_248z$4);
 
 function StepBack({ iconName = "arrow_back", text = "Weitere Möglichkeiten" }) {
     return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: styles$3.container },
+        React.createElement("div", { className: styles$4.container },
             React.createElement(SvgIcon, { iconName: iconName }),
             text)));
 }
 
-var css_248z$2 = ".styles-module_container__jNs7m {\n  margin-top: 30px;\n}\n.styles-module_container__jNs7m h3 {\n  font-weight: 500;\n  font-size: 16px;\n}\n\n.styles-module_item_list__FxHkg.styles-module_has_children__Uu-8D {\n  border-top: 1px solid #D0D0D0;\n  border-bottom: 1px solid #D0D0D0;\n}\n\n.styles-module_item_list__FxHkg {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n  cursor: pointer;\n  padding: 8px 14px;\n  border-radius: 25px;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_default__SexGH:hover {\n  background: rgb(223, 223, 223);\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_red__KD3qJ:hover {\n  background: rgb(255, 199, 199);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV {\n  padding: 10px 20px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_moreText__-blXb {\n  flex: 1;\n  margin-bottom: 4px;\n  color: #0075FF;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_subtitle__DT5OF {\n  color: rgb(162, 162, 162);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_icon__Jy87z {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:nth-child(even) {\n  background: #F3F3F3;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:not(:last-child) {\n  border-bottom: 1px solid #D0D0D0;\n}";
-var styles$2 = {"container":"styles-module_container__jNs7m","item_list":"styles-module_item_list__FxHkg","has_children":"styles-module_has_children__Uu-8D","action":"styles-module_action__YYTok","default":"styles-module_default__SexGH","red":"styles-module_red__KD3qJ","item":"styles-module_item__sgyiV","moreText":"styles-module_moreText__-blXb","subtitle":"styles-module_subtitle__DT5OF","icon":"styles-module_icon__Jy87z"};
-styleInject(css_248z$2);
+var css_248z$3 = ".styles-module_container__jNs7m {\n  margin-top: 30px;\n}\n.styles-module_container__jNs7m h3 {\n  font-weight: 500;\n  font-size: 16px;\n}\n\n.styles-module_item_list__FxHkg.styles-module_has_children__Uu-8D {\n  border-top: 1px solid #D0D0D0;\n  border-bottom: 1px solid #D0D0D0;\n}\n\n.styles-module_item_list__FxHkg {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n  cursor: pointer;\n  padding: 8px 14px;\n  border-radius: 25px;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_default__SexGH:hover {\n  background: rgb(223, 223, 223);\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_red__KD3qJ:hover {\n  background: rgb(255, 199, 199);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV {\n  padding: 10px 20px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_moreText__-blXb {\n  flex: 1;\n  margin-bottom: 4px;\n  color: #0075FF;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_subtitle__DT5OF {\n  color: rgb(162, 162, 162);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_icon__Jy87z {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:nth-child(even) {\n  background: #F3F3F3;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:not(:last-child) {\n  border-bottom: 1px solid #D0D0D0;\n}";
+var styles$3 = {"container":"styles-module_container__jNs7m","item_list":"styles-module_item_list__FxHkg","has_children":"styles-module_has_children__Uu-8D","action":"styles-module_action__YYTok","default":"styles-module_default__SexGH","red":"styles-module_red__KD3qJ","item":"styles-module_item__sgyiV","moreText":"styles-module_moreText__-blXb","subtitle":"styles-module_subtitle__DT5OF","icon":"styles-module_icon__Jy87z"};
+styleInject(css_248z$3);
 
 var TableActionType;
 (function (TableActionType) {
@@ -623,23 +644,31 @@ class TableItemAction {
     }
 }
 function Table({ items, title = "Titel", actions = [], moreActions }) {
-    return (React.createElement("div", { className: styles$2.container },
+    return (React.createElement("div", { className: styles$3.container },
         React.createElement("h3", null, title),
-        React.createElement("ul", { className: `${styles$2.item_list} ${items.length > 0 ? styles$2.has_children : styles$2.no_children}` }, items.map((item, index) => React.createElement("li", { key: index, className: styles$2.item },
-            React.createElement("div", { className: styles$2.icon },
+        React.createElement("ul", { className: `${styles$3.item_list} ${items.length > 0 ? styles$3.has_children : styles$3.no_children}` }, items.map((item, index) => React.createElement("li", { key: index, className: styles$3.item },
+            React.createElement("div", { className: styles$3.icon },
                 React.createElement(SvgIcon, { iconName: item.iconName })),
-            React.createElement("div", { className: styles$2.title }, item.title),
-            React.createElement("div", { className: styles$2.moreText }, item.moreText),
-            React.createElement("div", { className: styles$2.subtitle }, item.subtitle),
+            React.createElement("div", { className: styles$3.title }, item.title),
+            React.createElement("div", { className: styles$3.moreText }, item.moreText),
+            React.createElement("div", { className: styles$3.subtitle }, item.subtitle),
             moreActions &&
-                moreActions.map((moreAction, index) => React.createElement("div", { className: styles$2.more_action, key: item.title + index }, moreAction(item.data, index))),
+                moreActions.map((moreAction, index) => React.createElement("div", { className: styles$3.more_action, key: item.title + index }, moreAction(item.data, index))),
             actions.length > 0 && actions.map((action, idx) => React.createElement("div", { key: idx, className: [
-                    styles$2.action,
-                    action.type == TableActionType.red && styles$2.red,
-                    action.type == TableActionType.default && styles$2.default,
+                    styles$3.action,
+                    action.type == TableActionType.red && styles$3.red,
+                    action.type == TableActionType.default && styles$3.default,
                 ].join(" "), onClick: (event) => action.onClick(event, item, index) },
                 React.createElement(SvgIcon, { iconName: action.iconName }),
                 action.title)))))));
+}
+
+var css_248z$2 = ".styles-module_container__Kl-lB {\n  display: flex;\n  flex-direction: row;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n\n.styles-module_tab__Veki- {\n  flex: 1;\n  border-radius: 42px;\n  border-bottom: 2px;\n  border-bottom-style: solid;\n  border-bottom-color: #F0F0F0;\n  background: #F0F0F0;\n  padding: 16px;\n  text-align: center;\n  cursor: pointer;\n  transition: all 0.2s ease-in-out;\n}\n.styles-module_tab__Veki-.styles-module_selected__geNE7 {\n  border-bottom-color: #0075FF;\n  background: #BFD5FF;\n  color: #005ec9;\n}";
+var styles$2 = {"container":"styles-module_container__Kl-lB","tab":"styles-module_tab__Veki-","selected":"styles-module_selected__geNE7"};
+styleInject(css_248z$2);
+
+function Tabs({ tabs = [], onSelect = () => { }, selected }) {
+    return (React.createElement("div", { className: styles$2.container }, tabs.map((tab) => React.createElement("div", { className: [styles$2.tab, tab.value == selected ? styles$2.selected : styles$2.not_selected].join(" "), key: tab.value, onClick: () => onSelect(tab.value) }, tab.title))));
 }
 
 var css_248z$1 = ".styles-module_container__ItBx0 {\n  display: flex;\n  flex-direction: row;\n  gap: 6px;\n  align-items: center;\n  color: grey;\n  padding: 5px 12px;\n  border-radius: 20px;\n}\n.styles-module_container__ItBx0:hover span {\n  background: linear-gradient(to top, #0075FF 30%, rgb(130, 169, 237) 70%, #0050ab 80%);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  text-fill-color: transparent;\n  background-size: auto 400%;\n  animation: styles-module_textShine__ELfW9 3s ease-in-out infinite alternate;\n}\n\n.styles-module_container__ItBx0 a {\n  display: flex;\n  flex-direction: row;\n  gap: 6px;\n  align-items: center;\n  color: grey;\n  padding: 5px 12px;\n  border-radius: 20px;\n  transition: 0.2s ease-in-out;\n}\n\n@keyframes styles-module_textShine__ELfW9 {\n  0% {\n    background-position: 0% 50%;\n  }\n  100% {\n    background-position: 100% 50%;\n  }\n}";
@@ -1043,4 +1072,4 @@ var ManagerPermission;
     ManagerPermission["file"] = "file";
 })(ManagerPermission || (ManagerPermission = {}));
 
-export { Accordeon, AuthButton, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, CourseAnnouncementAssetType, Dialog, FormButton, FormText, ForwardButton, Gap, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, ManagerPermission, OptionField, OptionFieldHorizontal, PrimaryButton, ProgressBar, RadioButtons, RadioOption, RedirectButton, S3FileCategory, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, TableActionType, TableItem, TableItemAction, TextWithIcon, UsageCard };
+export { Accordeon, AuthButton, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, CourseAnnouncementAssetType, Dialog, FormButton, FormText, ForwardButton, Gap, InputArea, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, ManagerPermission, OptionField, OptionFieldHorizontal, PrimaryButton, ProgressBar, RadioButtons, RadioOption, RedirectButton, S3FileCategory, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, TableActionType, TableItem, TableItemAction, Tabs, TextWithIcon, UsageCard };

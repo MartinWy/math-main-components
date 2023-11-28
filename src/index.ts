@@ -1,16 +1,15 @@
-export { Accordeon } from './components/Accordeon';
-export { AuthButton } from './components/AuthButton';
+export * from './components/Accordeon';
+export * from './components/AuthButton';
 export * from './components/CardButton';
 export * from './components/Checkbox';
 export * from './components/ChooseRole';
 export * from './components/CopyCode';
 export * from './components/Dialog';
-export { Dialog } from './components/Dialog';
 export * from './components/FormButton';
 export * from './components/FormText';
 export * from './components/ForwardButton';
 export * from './components/Gap';
-export { Gap } from './components/Gap';
+export * from './components/InputArea';
 export * from './components/InputMail';
 export * from './components/InputNames';
 export * from './components/InputNumber';
@@ -29,6 +28,7 @@ export * from './components/Slider';
 export * from './components/StepBack';
 export * from './components/SvgIcon';
 export * from './components/Table';
+export * from './components/Tabs';
 export * from './components/TextWithIcon';
 export * from './components/UsageCard';
 

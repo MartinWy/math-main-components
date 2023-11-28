@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1.5px solid #a8a8a8;
+    outline: none;
+    transition: 0.2s ease;
+    flex: 1;
+    min-height: 50px;
+    line-height: 1.7;
+
+    &:focus,
+    &:active {
+        border-color: #0075FF;
+        box-shadow: 0px 0px 3px 3px #0057FF40;
+    }
+
+    &.not_available,
+    &:invalid {
+        border-color: #e50000;
+        box-shadow: 0px 0px 3px 3px #ff000040;
+    }
+}
+
+
+/* animated title */
+
+.container {
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.label_text {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    transition: 0.3s ease;
+    font-size: 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    opacity: initial;
+    background: white;
+    color: grey;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+
+.input.with_title::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: grey;
+}
+
+.input.with_title:focus::placeholder {
+    opacity: 1;
+}
+
+
+.input:focus+.label .label_text,
+.input.valid+.label .label_text {
+    transform: translateY(-50%);
+    left: 15px;
+    font-size: 14px;
+    top: 0;
+    background: linear-gradient(to bottom, #fafafaf0, hsla(0, 0%, 100%, 0.951));
+    color: #0063d4;
+}
+
+.input.valid+.label .label_text {
+    color: #a8a8a8;
+}
