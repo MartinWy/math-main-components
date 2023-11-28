@@ -1,7 +1,8 @@
 import React, { ChangeEvent, ReactNode } from 'react';
-export declare function Checkbox({ text, name, defaultChecked, onClick, }: {
+export declare function Checkbox({ text, name, checked, defaultChecked, onChange, }: {
     text: ReactNode;
     name: string;
-    onClick?: (event: ChangeEvent<HTMLInputElement>) => void;
+    checked?: boolean;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
     defaultChecked?: boolean;
 }): React.JSX.Element;
