@@ -10,6 +10,7 @@ export interface Course {
     content: Object
     userId: string,
     user?: User,
+    active: boolean,
     organizationId: string
     organization: Organization
     courseParticipant: CourseParticipant[]

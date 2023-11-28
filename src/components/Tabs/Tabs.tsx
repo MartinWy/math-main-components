@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 
 
-export interface TabItem {
+interface TabItem {
     title: string
     value: string
 }
