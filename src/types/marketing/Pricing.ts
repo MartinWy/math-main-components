@@ -1,3 +1,4 @@
+import { PortableTextBlock } from "sanity"
 import { Product } from "../Product"
 
 /* Type from Sanit.io - math-main-sanity */
@@ -10,6 +11,7 @@ export interface Pricing {
     subtitle: string
     slogan: string
     recommended: boolean
+    features: PortableTextBlock[]
     buttonText: string
     product: Product
 }

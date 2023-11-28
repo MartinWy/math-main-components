@@ -1,3 +1,4 @@
+import { PortableTextBlock } from "sanity";
 import { Product } from "../Product";
 export interface Pricing {
     _id: string;
@@ -7,6 +8,7 @@ export interface Pricing {
     subtitle: string;
     slogan: string;
     recommended: boolean;
+    features: PortableTextBlock[];
     buttonText: string;
     product: Product;
 }
