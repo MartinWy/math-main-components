@@ -14,4 +14,8 @@ export interface WebsiteData {
     defaultOrganizationProduct: {
         _ref: string;
     };
+    testsEnabled: boolean;
+    moviesEnabled: boolean;
+    calculatorsEnabled: boolean;
+    materialsEnabled: boolean;
 }

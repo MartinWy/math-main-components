@@ -14,4 +14,8 @@ export interface WebsiteData {
     textBelowSchoolPricing: []
     defaultPersonalProduct: { _ref: string }
     defaultOrganizationProduct: { _ref: string }
+    testsEnabled: boolean
+    moviesEnabled: boolean
+    calculatorsEnabled: boolean
+    materialsEnabled: boolean
 }
