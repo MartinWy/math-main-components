@@ -2,6 +2,7 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
+import { PortableTextBlock } from "sanity"
 import { Ebook } from "./Ebook"
 import { ProductLimit } from "./ProductLimit"
 
@@ -10,7 +11,8 @@ export interface Product {
     title: string
     combinable: boolean
     enabled: boolean
-    description: any
+    type: "organizational" | "personal"
+    description: PortableTextBlock[]
     unitPriceEuro: number
     recurringInterval: 'weekly' | 'monthly' | 'yearly'
     trialPeriodDays: number
