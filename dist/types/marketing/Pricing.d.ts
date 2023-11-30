@@ -11,6 +11,8 @@ export interface Pricing {
     features: PortableTextBlock[];
     buttonText: string;
     product: Product;
+    enableMoreInfoLink: boolean;
+    moreInfoLink: string;
 }
 type PricingPosition = 'personal-left' | 'personal-right' | 'schools-left' | 'schools-right';
 export {};
