@@ -43,6 +43,7 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
+        color: var(--foreground-1);
 
         .moreText {
             flex: 1;
@@ -59,6 +60,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            color: var(--foreground-1)
         }
     }
 

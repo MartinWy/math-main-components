@@ -36,7 +36,7 @@
     }
 
     [type="radio"]:checked+label::before {
-        background-color: var(--primary-1);
+        background-color: var(--primary-2);
         border-color: var(--primary-1);
     }
 

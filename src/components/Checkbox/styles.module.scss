@@ -52,7 +52,7 @@
     }
 
     [type="checkbox"]:hover:not(:checked)+label::before {
-        background-color: var(--background-2);
+        background-color: var(--background-4);
         border-color: var(--background-2);
     }
 }
