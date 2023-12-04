@@ -42,7 +42,7 @@ export function SearchChips({
                     {item.title}
                 </div>
             )}
-            {showAll ?
+            {chipsVisible < chips.length && showAll ?
                 <div className={styles.show_all} onClick={() => setShowAll(false)}>
                     Weniger anzeigen
                 </div>
