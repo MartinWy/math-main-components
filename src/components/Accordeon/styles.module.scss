@@ -1,6 +1,6 @@
 .container {
     margin-top: 40px;
-    background: white;
+    background: var(--background-1);
     border-radius: 30px;
     transition: 0.2s ease-in-out;
 
@@ -9,8 +9,8 @@
         flex-direction: row;
         align-items: center;
         padding: 16px 20px;
-        color: grey;
-        background: #F1F1F1;
+        color: var(--foreground-3);
+        background: var(--background-2);
         border-radius: 30px;
         cursor: pointer;
         user-select: none;
@@ -32,7 +32,7 @@
         }
 
         &:hover {
-            background: #e2e2e2;
+            filter: brightness(0.95);
         }
     }
 

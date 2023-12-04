@@ -3,18 +3,18 @@
     flex-direction: row;
 
     .item:nth-child(1) {
-        background: #F0F0F0;
-        border-color: #F0F0F0;
+        background: var(--background-1);
+        border-color: var(--background-1);
     }
 
     .item:nth-child(2) {
-        background: #E0E0E0;
-        border-color: #E0E0E0;
+        background: var(--background-2);
+        border-color: var(--background-2);
     }
 
     .item:nth-child(3) {
-        background: #CBCBCB;
-        border-color: #CBCBCB;
+        background: var(--background-4);
+        border-color: var(--background-4);
     }
 
     .item:first-child {
@@ -39,8 +39,8 @@
 
 
     .item.selected {
-        background: #C6D4F8;
-        border-color: #0075FF;
-        color: #0075FF;
+        background: var(--background-4);
+        border-color: var(--primary-1);
+        color: var(--primary-1);
     }
 }

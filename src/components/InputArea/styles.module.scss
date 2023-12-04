@@ -8,7 +8,7 @@
     padding: 14px 20px;
     font-size: 16px;
     border-radius: 12px;
-    border: 1.5px solid #a8a8a8;
+    border: 1.5px solid var(--border-2);
     outline: none;
     transition: 0.2s ease;
     flex: 1;
@@ -17,13 +17,13 @@
 
     &:focus,
     &:active {
-        border-color: #0075FF;
+        border-color: var(--primary-1);
         box-shadow: 0px 0px 3px 3px #0057FF40;
     }
 
     &.not_available,
     &:invalid {
-        border-color: #e50000;
+        border-color: var(--red-1);
         box-shadow: 0px 0px 3px 3px #ff000040;
     }
 }
@@ -53,8 +53,8 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     opacity: initial;
-    background: white;
-    color: grey;
+    background: var(--background-1);
+    color: var(--foreground-3);
     padding-right: 8px;
     padding-left: 8px;
 }
@@ -63,7 +63,7 @@
 .input.with_title::placeholder {
     opacity: 0;
     transition: opacity 0.3s ease;
-    color: grey;
+    color: var(--foreground-3);
 }
 
 .input.with_title:focus::placeholder {
@@ -77,10 +77,10 @@
     left: 15px;
     font-size: 14px;
     top: 0;
-    background: linear-gradient(to bottom, #fafafaf0, hsla(0, 0%, 100%, 0.951));
-    color: #0063d4;
+    background: linear-gradient(to bottom, var(--background-2));
+    color: var(--primary-1);
 }
 
 .input.valid+.label .label_text {
-    color: #a8a8a8;
+    color: var(--foreground-3);
 }

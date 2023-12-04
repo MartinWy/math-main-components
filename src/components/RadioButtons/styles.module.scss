@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    color: grey;
+    color: var(--foreground-3);
     margin-bottom: 20px;
 
     [type="radio"] {
@@ -25,7 +25,7 @@
         width: 15px;
         height: 15px;
         border-radius: 20px;
-        border: 2px solid #a8a8a8;
+        border: 2px solid var(--border-2);
         display: block;
         content: "";
         float: left;
@@ -36,14 +36,12 @@
     }
 
     [type="radio"]:checked+label::before {
-        box-shadow: inset 0px 0px 0px 3px #fff;
-        background-color: #0075FF;
-        border-color: #0075FF;
+        background-color: var(--primary-1);
+        border-color: var(--primary-1);
     }
 
     [type="radio"]:hover:not(:checked)+label::before {
-        box-shadow: inset 0px 0px 0px 3px #fff;
-        background-color: #bdbdbd;
-        border-color: #bdbdbd;
+        background-color: var(--background-4);
+        border-color: var(--background-4);
     }
 }

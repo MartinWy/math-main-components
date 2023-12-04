@@ -1,6 +1,6 @@
 .card {
-    background: #F4F4F4;
-    border: 1px solid #B1B1B1;
+    background: var(--background-2);
+    border: 1px solid var(--border-2);
     border-radius: 18px;
     transition: 0.2s ease;
     padding: 18px 14px;
@@ -15,7 +15,7 @@
     padding-top: 30px;
 
     span {
-        color: grey;
+        color: var(--foreground-3);
     }
 
     &:hover {
@@ -26,7 +26,7 @@
 
     h2 {
         margin-top: 0;
-        color: grey;
+        color: var(--foreground-3);
         font-weight: 400;
         font-size: 18px;
     }

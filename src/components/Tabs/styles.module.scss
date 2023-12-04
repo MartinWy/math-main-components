@@ -10,17 +10,17 @@
     border-radius: 42px;
     border-bottom: 2px;
     border-bottom-style: solid;
-    border-bottom-color: #F0F0F0;
-    background: #F0F0F0;
+    border-bottom-color: var(--border-1);
+    background: var(--background-2);
     padding: 16px;
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
     &.selected {
-        border-bottom-color: #0075FF;
-        background: #BFD5FF;
-        color: #005ec9;
+        border-bottom-color: var(--primary-1);
+        background: var(--primary-2);
+        color: var(--primary-1);
 
     }
 }
