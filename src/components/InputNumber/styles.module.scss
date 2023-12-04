@@ -13,6 +13,7 @@
     transition: 0.2s ease;
     flex: 1;
     width: 100%;
+    background: var(--background-1);
 
 
     &:focus,
@@ -75,7 +76,7 @@
     transform: translateY(-150%);
     left: 15px;
     font-size: 14px;
-    background: linear-gradient(to bottom, var(--background-2));
+    background: var(--background-2);
     color: var(--primary-1);
 }
 

@@ -5,6 +5,7 @@
     border: 1.5px solid var(--border-2);
     outline: none;
     transition: 0.2s ease;
+    background: var(--background-1);
 
     &:focus,
     &:active {
@@ -70,7 +71,7 @@
     transform: translateY(-150%);
     left: 15px;
     font-size: 14px;
-    background: linear-gradient(to bottom, var(--background-2));
+    background: var(--background-2);
     color: #0063d4;
 }
 

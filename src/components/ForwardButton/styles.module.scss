@@ -17,5 +17,9 @@
         &:hover {
             background: var(--background-2);
         }
+
+        span {
+            color: var(--foreground-1);
+        }
     }
 }
