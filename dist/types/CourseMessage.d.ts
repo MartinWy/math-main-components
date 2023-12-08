@@ -8,4 +8,6 @@ export interface CourseMessage {
     courseId: string;
     message: string;
     createdAt: Date;
+    answerToMessage?: CourseMessage;
+    answers: CourseMessage[];
 }
