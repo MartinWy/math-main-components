@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.92",
+    "version": "0.0.94",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
@@ -44,7 +44,6 @@
         "clean": "rm -rf dist",
         "increment-version": "npm --no-git-tag-version version patch",
         "git-add-all": "git add .",
-        "publish": "npm publish --access public",
         "build": "npm run build:js && npm run build:types",
         "build:js": "rollup -c",
         "build:types": "tsc --emitDeclarationOnly --outDir dist"
