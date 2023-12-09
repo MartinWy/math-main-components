@@ -4,6 +4,7 @@
 
 import { PortableTextBlock } from "sanity"
 import { Category } from "./Category"
+import { Product } from "./Product"
 
 export interface Ebook {
     _id: string
@@ -22,4 +23,5 @@ export interface Ebook {
     description: PortableTextBlock[]
     shortDescription: string
     categories: Category[]
+    product?: Product
 }
