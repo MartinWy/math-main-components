@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.88",
+    "version": "0.0.89",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
@@ -10,7 +10,8 @@
     "types": "dist/index.d.ts",
     "pre-commit": [
         "build",
-        "npm --no-git-tag-version version patch"
+        "--no-git-tag-version version patch",
+        "publish --access public"
     ],
     "license": "MIT",
     "devDependencies": {
