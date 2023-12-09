@@ -51,6 +51,7 @@ export * from './types/CourseMessage';
 export * from './types/CourseParticipant';
 export * from './types/CoursePin';
 export * from './types/Ebook';
+export * from './types/Feedback';
 export * from './types/File';
 export * from './types/HelpData';
 export * from './types/LicenseKey';
