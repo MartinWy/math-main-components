@@ -46,16 +46,18 @@ export function Table<DataType>({
     items,
     title = "Titel",
     actions = [],
-    moreActions
+    moreActions,
+    marginTop = 30
 }: {
     items: TableItem<DataType>[],
     title: string,
     actions?: TableItemAction<DataType>[],
-    moreActions?: ((data: DataType, index: number) => ReactNode)[]
+    moreActions?: ((data: DataType, index: number) => ReactNode)[],
+    marginTop?: number
 }) {
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={{ marginTop: marginTop }}>
             <h3>{title}</h3>
             <ul className={`${styles.item_list} ${items.length > 0 ? styles.has_children : styles.no_children}`}>
                 {items.map((item, index) =>
