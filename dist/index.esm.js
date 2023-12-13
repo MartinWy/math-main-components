@@ -1017,7 +1017,7 @@ var CourseAnnouncementAssetType;
 (function (CourseAnnouncementAssetType) {
     CourseAnnouncementAssetType["file"] = "file";
     CourseAnnouncementAssetType["calculator"] = "calculator";
-    CourseAnnouncementAssetType["video"] = "video";
+    CourseAnnouncementAssetType["movie"] = "movie";
     CourseAnnouncementAssetType["material"] = "material";
     CourseAnnouncementAssetType["ebook"] = "ebook";
     CourseAnnouncementAssetType["test"] = "test";

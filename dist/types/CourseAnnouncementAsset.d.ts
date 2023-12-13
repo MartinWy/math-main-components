@@ -1,7 +1,7 @@
 export declare enum CourseAnnouncementAssetType {
     file = "file",
     calculator = "calculator",
-    video = "video",
+    movie = "movie",
     material = "material",
     ebook = "ebook",
     test = "test",

@@ -3,9 +3,10 @@
 export enum CourseAnnouncementAssetType {
     file = "file", // Public File link (cloudflare.com r2 bucket: 'course-assets')
     calculator = "calculator", // Calculator id (sanity.io)
-    video = "video", // Video id (mongodb)
-    material = "material", // Material id (mongodb)
-    ebook = "ebook", // Ebook id (mongodb)
+    movie = "movie", // Video id (sanity.io)
+    material = "material", // Material id (sanity.io)
+    ebook = "ebook", // Ebook id (sanity.io)
+
     test = "test", // Test id (mongodb)
     link = "link" // simple external link url
 }
