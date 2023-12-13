@@ -608,45 +608,14 @@ function StepBack({ iconName = "arrow_back", text = "Weitere Möglichkeiten" }) 
             text)));
 }
 
-var css_248z$3 = ".styles-module_container__jNs7m h3 {\n  font-weight: 500;\n  font-size: 16px;\n  color: var(--foreground-1);\n}\n\n.styles-module_item_list__FxHkg.styles-module_has_children__Uu-8D {\n  border-top: 1px solid var(--border-1);\n  border-bottom: 1px solid var(--border-1);\n}\n\n.styles-module_item_list__FxHkg {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n  cursor: pointer;\n  padding: 8px 14px;\n  border-radius: 25px;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_default__SexGH:hover {\n  background: var(--background-2);\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_red__KD3qJ:hover {\n  background: var(--red-2);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV {\n  padding: 10px 20px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: var(--foreground-1);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_moreText__-blXb {\n  flex: 1;\n  margin-bottom: 4px;\n  color: var(--primary-1);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_subtitle__DT5OF {\n  color: var(--foreground-3);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_icon__Jy87z {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  color: var(--foreground-1);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:nth-child(even) {\n  background: var(--background-2);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:not(:last-child) {\n  border-bottom: 1px solid var(--border-1);\n}";
-var styles$3 = {"container":"styles-module_container__jNs7m","item_list":"styles-module_item_list__FxHkg","has_children":"styles-module_has_children__Uu-8D","action":"styles-module_action__YYTok","default":"styles-module_default__SexGH","red":"styles-module_red__KD3qJ","item":"styles-module_item__sgyiV","moreText":"styles-module_moreText__-blXb","subtitle":"styles-module_subtitle__DT5OF","icon":"styles-module_icon__Jy87z"};
+var css_248z$3 = ".styles-module_container__jNs7m h3 {\n  font-weight: 500;\n  font-size: 16px;\n  color: var(--foreground-1);\n}\n\n.styles-module_item_list__FxHkg.styles-module_has_children__Uu-8D {\n  border-top: 1px solid var(--border-1);\n  border-bottom: 1px solid var(--border-1);\n}\n\n.styles-module_item_list__FxHkg {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n  cursor: pointer;\n  padding: 8px 14px;\n  border-radius: 25px;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_default__SexGH:hover {\n  background: var(--background-2);\n}\n.styles-module_item_list__FxHkg .styles-module_action__YYTok.styles-module_red__KD3qJ:hover {\n  background: var(--red-2);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV.styles-module_selected__iOu39 {\n  color: var(--primary-1) !important;\n  border-color: var(--primary-1);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV.styles-module_selected__iOu39 .styles-module_icon__Jy87z {\n  color: var(--primary-1) !important;\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV {\n  padding: 10px 20px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: var(--foreground-1);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_moreText__-blXb {\n  flex: 1;\n  margin-bottom: 4px;\n  color: var(--primary-1);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_subtitle__DT5OF {\n  color: var(--foreground-3);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV .styles-module_icon__Jy87z {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  color: var(--foreground-1);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:nth-child(even) {\n  background: var(--background-2);\n}\n.styles-module_item_list__FxHkg li.styles-module_item__sgyiV:not(:last-child) {\n  border-bottom: 1px solid var(--border-1);\n}";
+var styles$3 = {"container":"styles-module_container__jNs7m","item_list":"styles-module_item_list__FxHkg","has_children":"styles-module_has_children__Uu-8D","action":"styles-module_action__YYTok","default":"styles-module_default__SexGH","red":"styles-module_red__KD3qJ","item":"styles-module_item__sgyiV","selected":"styles-module_selected__iOu39","icon":"styles-module_icon__Jy87z","moreText":"styles-module_moreText__-blXb","subtitle":"styles-module_subtitle__DT5OF"};
 styleInject(css_248z$3);
 
-var TableActionType;
-(function (TableActionType) {
-    TableActionType[TableActionType["red"] = 0] = "red";
-    TableActionType[TableActionType["default"] = 1] = "default";
-})(TableActionType || (TableActionType = {}));
-class TableItem {
-    title;
-    subtitle;
-    moreText;
-    iconName;
-    data;
-    constructor(title, subtitle, moreText, iconName, data) {
-        this.title = title;
-        this.subtitle = subtitle;
-        this.moreText = moreText;
-        this.iconName = iconName;
-        this.data = data;
-    }
-}
-class TableItemAction {
-    title;
-    iconName;
-    onClick;
-    type = TableActionType.default;
-    constructor(title, iconName, type, onClick = () => { }) {
-        this.title = title;
-        this.iconName = iconName;
-        this.onClick = onClick;
-        this.type = type;
-    }
-}
-function Table({ items, title = "Titel", actions = [], moreActions, marginTop = 30 }) {
+function Table({ items, title = "Titel", actions = [], moreActions, selected, marginTop = 30 }) {
     return (React.createElement("div", { className: styles$3.container, style: { marginTop: marginTop } },
         React.createElement("h3", null, title),
-        React.createElement("ul", { className: `${styles$3.item_list} ${items.length > 0 ? styles$3.has_children : styles$3.no_children}` }, items.map((item, index) => React.createElement("li", { key: index, className: styles$3.item },
+        React.createElement("ul", { className: `${styles$3.item_list} ${items.length > 0 ? styles$3.has_children : styles$3.no_children}` }, items.map((item, index) => React.createElement("li", { key: index, className: [styles$3.item, selected == index ? styles$3.selected : styles$3.not_selected].join(" ") },
             React.createElement("div", { className: styles$3.icon },
                 React.createElement(SvgIcon, { iconName: item.iconName })),
             React.createElement("div", { className: styles$3.title }, item.title),
@@ -656,8 +625,8 @@ function Table({ items, title = "Titel", actions = [], moreActions, marginTop = 
                 moreActions.map((moreAction, index) => React.createElement("div", { className: styles$3.more_action, key: item.title + index }, moreAction(item.data, index))),
             actions.length > 0 && actions.map((action, idx) => React.createElement("div", { key: idx, className: [
                     styles$3.action,
-                    action.type == TableActionType.red && styles$3.red,
-                    action.type == TableActionType.default && styles$3.default,
+                    action.type === "red" && styles$3.red,
+                    action.type === "default" && styles$3.default,
                 ].join(" "), onClick: (event) => action.onClick(event, item, index) },
                 React.createElement(SvgIcon, { iconName: action.iconName }),
                 action.title)))))));
@@ -1072,4 +1041,4 @@ var ManagerPermission;
     ManagerPermission["file"] = "file";
 })(ManagerPermission || (ManagerPermission = {}));
 
-export { Accordeon, AuthButton, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, CourseAnnouncementAssetType, Dialog, FormButton, FormText, ForwardButton, Gap, InputArea, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, ManagerPermission, OptionField, OptionFieldHorizontal, PrimaryButton, ProgressBar, RadioButtons, RadioOption, RedirectButton, S3FileCategory, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, TableActionType, TableItem, TableItemAction, Tabs, TextWithIcon, UsageCard };
+export { Accordeon, AuthButton, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, CourseAnnouncementAssetType, Dialog, FormButton, FormText, ForwardButton, Gap, InputArea, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, ManagerPermission, OptionField, OptionFieldHorizontal, PrimaryButton, ProgressBar, RadioButtons, RadioOption, RedirectButton, S3FileCategory, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, Tabs, TextWithIcon, UsageCard };

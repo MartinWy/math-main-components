@@ -1,1 +1,1 @@
-export { Table, TableActionType, TableItem, TableItemAction } from './Table';
+export { Table, type TableActionType, type TableItem, type TableItemAction } from './Table';

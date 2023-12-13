@@ -35,6 +35,15 @@
         }
     }
 
+    li.item.selected {
+        color: var(--primary-1) !important;
+        border-color: var(--primary-1);
+
+        .icon {
+            color: var(--primary-1) !important;
+        }
+    }
+
     li.item {
         padding: 10px 20px;
         display: flex;
