@@ -3,7 +3,7 @@ export type SearchResult = {
     title: string;
     data: unknown;
 };
-export declare function Searchbar<Type extends SearchResult>({ placeholder, title, showNoResults, errorTitle, errorMessage, errorButton, helpTitle, helpMessage, errorAction, onInput, onClickResult, withButton, buttonText, suggestions, autoFocus, results }: {
+export declare function Searchbar<Type extends SearchResult>({ placeholder, title, showNoResults, errorTitle, errorMessage, errorButton, helpTitle, helpMessage, marginBottom, marginTop, errorAction, onInput, onClickResult, withButton, buttonText, suggestions, autoFocus, results }: {
     placeholder: string;
     title?: string;
     showNoResults?: boolean;
@@ -12,6 +12,8 @@ export declare function Searchbar<Type extends SearchResult>({ placeholder, titl
     errorButton?: string;
     helpTitle?: string;
     helpMessage?: string;
+    marginBottom?: number;
+    marginTop?: number;
     errorAction?: (event: MouseEvent<HTMLButtonElement>) => void;
     onInput?: (event: ChangeEvent<HTMLInputElement>) => void;
     onClickResult?: (event: MouseEvent<HTMLLIElement>, result: Type) => void;

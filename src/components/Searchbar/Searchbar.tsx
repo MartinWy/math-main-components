@@ -16,9 +16,11 @@ export function Searchbar<Type extends SearchResult>({
     errorButton = "",
     helpTitle = "",
     helpMessage = "",
-    errorAction = (event: MouseEvent<HTMLButtonElement>) => { },
-    onInput = (event: ChangeEvent<HTMLInputElement>) => { },
-    onClickResult = (event: MouseEvent<HTMLLIElement>, result: Type) => { },
+    marginBottom = 25,
+    marginTop = 30,
+    errorAction = () => { },
+    onInput = () => { },
+    onClickResult = () => { },
     withButton = false,
     buttonText = "Suchen",
     suggestions = [],
@@ -33,6 +35,8 @@ export function Searchbar<Type extends SearchResult>({
     errorButton?: string,
     helpTitle?: string,
     helpMessage?: string,
+    marginBottom?: number,
+    marginTop?: number,
     errorAction?: (event: MouseEvent<HTMLButtonElement>) => void,
     onInput?: (event: ChangeEvent<HTMLInputElement>) => void,
     onClickResult?: (event: MouseEvent<HTMLLIElement>, result: Type) => void,
@@ -75,7 +79,7 @@ export function Searchbar<Type extends SearchResult>({
 
     return (
         <>
-            <div className={styles.container}>
+            <div className={styles.container} style={{ marginTop: marginTop, marginBottom: marginBottom }}>
                 <div className={`${styles.form} ${inputFocused ? styles.focus : styles.not_focused}`}>
                     <input
                         onFocus={() => setFocused(true)}
