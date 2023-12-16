@@ -612,10 +612,10 @@ var css_248z$3 = ".styles-module_container__jNs7m h3 {\n  font-weight: 500;\n  f
 var styles$3 = {"container":"styles-module_container__jNs7m","item_list":"styles-module_item_list__FxHkg","has_children":"styles-module_has_children__Uu-8D","action":"styles-module_action__YYTok","default":"styles-module_default__SexGH","red":"styles-module_red__KD3qJ","item":"styles-module_item__sgyiV","selected":"styles-module_selected__iOu39","icon":"styles-module_icon__Jy87z","moreText":"styles-module_moreText__-blXb","subtitle":"styles-module_subtitle__DT5OF"};
 styleInject(css_248z$3);
 
-function Table({ items, title = "Titel", actions = [], moreActions, selected, marginTop = 30 }) {
+function Table({ items, title = "Titel", actions = [], moreActions, selected, style = "default", marginTop = 30 }) {
     return (React.createElement("div", { className: styles$3.container, style: { marginTop: marginTop } },
         React.createElement("h3", null, title),
-        React.createElement("ul", { className: `${styles$3.item_list} ${items.length > 0 ? styles$3.has_children : styles$3.no_children}` }, items.map((item, index) => React.createElement("li", { key: index, className: [styles$3.item, selected == index ? styles$3.selected : styles$3.not_selected].join(" ") },
+        React.createElement("ul", { className: `${styles$3.item_list} ${items.length > 0 ? styles$3.has_children : styles$3.no_children}` }, items.map((item, index) => React.createElement("li", { key: index, className: [styles$3.item, styles$3[style], selected == index ? styles$3.selected : styles$3.not_selected].join(" ") },
             React.createElement("div", { className: styles$3.icon },
                 React.createElement(SvgIcon, { iconName: item.iconName })),
             React.createElement("div", { className: styles$3.title }, item.title),

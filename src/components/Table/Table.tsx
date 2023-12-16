@@ -28,11 +28,13 @@ export function Table<DataType>({
     actions = [],
     moreActions,
     selected,
+    style = "default",
     marginTop = 30
 }: {
     items: TableItem<DataType>[],
     title: string,
     selected?: number,
+    style?: "default" | "blue",
     actions?: TableItemAction<DataType>[],
     moreActions?: ((data: DataType, index: number) => ReactNode)[],
     marginTop?: number
@@ -43,7 +45,7 @@ export function Table<DataType>({
             <h3>{title}</h3>
             <ul className={`${styles.item_list} ${items.length > 0 ? styles.has_children : styles.no_children}`}>
                 {items.map((item, index) =>
-                    <li key={index} className={[styles.item, selected == index ? styles.selected : styles.not_selected].join(" ")}>
+                    <li key={index} className={[styles.item, styles[style], selected == index ? styles.selected : styles.not_selected].join(" ")}>
                         <div className={styles.icon}>
                             <SvgIcon iconName={item.iconName} />
                         </div>
