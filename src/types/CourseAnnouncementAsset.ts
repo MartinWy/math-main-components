@@ -22,4 +22,5 @@ export interface CourseAnnouncementAsset {
     fileId?: string
     fileExpire?: Date
     fileSize?: number
+    createdAt: Date
 }
