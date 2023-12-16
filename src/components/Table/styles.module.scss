@@ -72,6 +72,16 @@
         }
     }
 
+    li.item.blue {
+        .title {
+            color: var(--blue-1) !important;
+        }
+
+        .icon {
+            color: var(--blue-1) !important;
+        }
+    }
+
     li.item:nth-child(even) {
         background: var(--background-2);
     }
