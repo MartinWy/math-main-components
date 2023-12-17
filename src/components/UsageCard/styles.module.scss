@@ -15,7 +15,7 @@
 
     &.loading {
         height: 95px;
-        background: var(--skeleton-animation-background);
+        background: linear-gradient(110deg, var(--border-1) 8%, var(--background-2) 18%, var(--border-1) 33%);
         background-size: 200% 100%;
         animation: 1.5s shine linear infinite;
     }
