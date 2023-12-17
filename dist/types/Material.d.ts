@@ -6,6 +6,7 @@ export interface Material {
     fileExpire?: string;
     fileUrl?: string;
     fileType: string;
+    fileCategory: string;
     description: string;
     previewImage: {
         asset: {
