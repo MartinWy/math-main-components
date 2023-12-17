@@ -15,6 +15,7 @@ export interface Calculator {
     }
     title: string;
     url: string;
+    shortDescription: string;
     description: PortableTextBlock[]
     categories: Category[]
 }
