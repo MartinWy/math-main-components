@@ -24,3 +24,23 @@
         color: var(--primary-1);
     }
 }
+
+@media (max-width: 750px) {
+    .container {
+        gap: 0px;
+    }
+
+    .tab {
+        border-radius: 0px;
+    }
+
+    .tab:first-child {
+        border-top-left-radius: 42px;
+        border-bottom-left-radius: 42px;
+    }
+
+    .tab:last-child {
+        border-top-right-radius: 42px;
+        border-bottom-right-radius: 42px;
+    }
+}
