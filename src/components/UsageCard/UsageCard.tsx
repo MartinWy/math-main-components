@@ -25,8 +25,8 @@ export function UsageCard({
             <div className={styles.graph}>
                 <PieChart
                     data={[
-                        { title: 'One', value: 1 - ratio, color: '#DFDFDF' },
-                        { title: 'Two', value: ratio + 0.05, color: '#0085FF' },
+                        { title: 'One', value: 1 - ratio, color: 'var(--background-4)' }, //#DFDFDF
+                        { title: 'Two', value: ratio + 0.05, color: 'var(--primary-1)' }, //#0085FF
                     ]}
                     lineWidth={15}
                     totalValue={1}

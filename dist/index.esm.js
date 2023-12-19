@@ -1008,8 +1008,8 @@ function UsageCard({ title, subtitle, ratio = 0, loading }) {
             React.createElement("p", null, subtitle)),
         React.createElement("div", { className: styles.graph },
             React.createElement(ReactMinimalPieChart, { data: [
-                    { title: 'One', value: 1 - ratio, color: '#DFDFDF' },
-                    { title: 'Two', value: ratio + 0.05, color: '#0085FF' },
+                    { title: 'One', value: 1 - ratio, color: 'var(--background-4)' },
+                    { title: 'Two', value: ratio + 0.05, color: 'var(--primary-1)' }, //#0085FF
                 ], lineWidth: 15, totalValue: 1 }))));
 }
 
