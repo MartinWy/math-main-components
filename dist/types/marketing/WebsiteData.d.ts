@@ -15,6 +15,7 @@ export interface WebsiteData {
         _ref: string;
     };
     discordInviteLink: string;
+    betaEnabled: boolean;
     testsEnabled: boolean;
     moviesEnabled: boolean;
     calculatorsEnabled: boolean;
