@@ -42,8 +42,6 @@ export * from './types/marketing/WebsiteData';
 
 export * from './types/Calculator';
 export * from './types/Category';
-export * from './types/Concept';
-export * from './types/Content';
 export * from './types/Course';
 export * from './types/CourseAnnouncement';
 export * from './types/CourseAnnouncementAsset';
@@ -60,11 +58,14 @@ export * from './types/Material';
 export * from './types/Movie';
 export * from './types/Organization';
 export * from './types/OrganizationMember';
-export * from './types/Page';
 export * from './types/Product';
 export * from './types/ProductLimit';
 export * from './types/Subscription';
 export * from './types/UploadSignature';
 export * from './types/Usage';
 export * from './types/User';
+export * from './types/marketing/Concept';
+export * from './types/marketing/Content';
 export * from './types/marketing/Faq';
+export * from './types/marketing/Page';
+

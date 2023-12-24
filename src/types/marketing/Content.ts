@@ -17,4 +17,10 @@ export interface ContentBucket {
     title: string
     description: string
     bucket: string
+    image: {
+        asset: {
+            _ref: string,
+            _type: string
+        }
+    }
 }
