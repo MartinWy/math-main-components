@@ -64,6 +64,7 @@ export * from './types/Subscription';
 export * from './types/UploadSignature';
 export * from './types/Usage';
 export * from './types/User';
+export * from './types/marketing/About';
 export * from './types/marketing/Concept';
 export * from './types/marketing/Content';
 export * from './types/marketing/Faq';
