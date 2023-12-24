@@ -10,6 +10,7 @@ export interface Content {
     subtitle: string
     iconName: string
     description: PortableTextBlock[]
+    isComingSoon: boolean
     contentBuckets: Array<ContentBucket>
 }
 
@@ -17,7 +18,7 @@ export interface ContentBucket {
     title: string
     description: string
     bucket: string
-    image: {
+    image?: {
         asset: {
             _ref: string,
             _type: string
