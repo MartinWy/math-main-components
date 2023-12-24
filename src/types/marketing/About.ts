@@ -11,6 +11,9 @@ export interface About {
 export interface Person {
     name: string;
     role: string;
+    linkedIn: string;
+    github: string;
+    website: string;
     image: {
         asset: {
             url: string;
