@@ -10,7 +10,12 @@ export interface News {
         current: string
     }
     date: string
-    image: string
+    image: {
+        asset: {
+            _ref: string;
+            _type: string;
+        };
+    };
     content: PortableTextBlock[]
     short: PortableTextBlock[]
     type: 'press' | 'update' | 'short'
