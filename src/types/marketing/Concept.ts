@@ -7,10 +7,4 @@ export interface Concept {
     subtitle: string
     description: string
     iconName: string
-    image?: {
-        asset: {
-            _ref: string,
-            _type: string
-        }
-    }
 }

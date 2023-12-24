@@ -5,4 +5,10 @@ export interface Feature {
     subtitle: string;
     iconName: string;
     description: string;
+    image?: {
+        asset: {
+            _ref: string;
+            _type: string;
+        };
+    };
 }
