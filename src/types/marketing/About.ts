@@ -14,9 +14,10 @@ export interface Person {
     linkedIn: string;
     github: string;
     website: string;
-    image: {
+    image?: {
         asset: {
-            url: string;
+            _ref: string;
+            _type: string
         }
     }
 }
