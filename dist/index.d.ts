@@ -66,4 +66,5 @@ export * from './types/marketing/About';
 export * from './types/marketing/Concept';
 export * from './types/marketing/Content';
 export * from './types/marketing/Faq';
+export * from './types/marketing/Home';
 export * from './types/marketing/Page';
