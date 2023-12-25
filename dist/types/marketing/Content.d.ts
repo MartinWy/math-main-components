@@ -7,7 +7,7 @@ export interface Content {
     iconName: string;
     description: PortableTextBlock[];
     isComingSoon: boolean;
-    contentBuckets: Array<ContentBucket>;
+    contentBuckets: ContentBucket[];
 }
 export interface ContentBucket {
     title: string;

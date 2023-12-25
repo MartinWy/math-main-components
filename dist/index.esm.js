@@ -516,7 +516,7 @@ function SearchChips({ items, onChange, chipsVisible = 9 }) {
         (showAll ? chips : chips.slice(0, chipsVisible)).map((item, index) => React.createElement("div", { key: index, onClick: (e) => onClick(item, index), className: [styles$7.chip, item.selected ? styles$7.selected : styles$7.not_selected].join(" ") },
             React.createElement(SvgIcon, { iconName: item.selected ? "close" : "filter_list", size: "20px" }),
             item.title)),
-        chipsVisible < chips.length && showAll ?
+        (chipsVisible < chips.length && showAll) ?
             React.createElement("div", { className: styles$7.show_all, onClick: () => setShowAll(false) }, "Weniger anzeigen")
             :
                 React.createElement("div", { className: styles$7.show_all, onClick: () => setShowAll(true) }, "Mehr anzeigen")));
