@@ -1,6 +1,6 @@
 
 
-export interface Manager {
+export type Manager = {
     id: string,
     username: string,
     firstName: string,
@@ -10,11 +10,4 @@ export interface Manager {
     updateAt: Date
 }
 
-export enum ManagerPermission {
-    content = "content",
-    subsription = "subscription",
-    manager = "manager",
-    license = "license",
-    file = "file",
-    feedback = "feedback"
-}
+export type ManagerPermission = "content" | "subscription" | "manager" | "license" | "file" | "feedback"

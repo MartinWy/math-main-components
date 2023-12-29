@@ -1040,16 +1040,6 @@ exports.S3FileCategory = void 0;
     S3FileCategory["default"] = "file";
 })(exports.S3FileCategory || (exports.S3FileCategory = {}));
 
-exports.ManagerPermission = void 0;
-(function (ManagerPermission) {
-    ManagerPermission["content"] = "content";
-    ManagerPermission["subsription"] = "subscription";
-    ManagerPermission["manager"] = "manager";
-    ManagerPermission["license"] = "license";
-    ManagerPermission["file"] = "file";
-    ManagerPermission["feedback"] = "feedback";
-})(exports.ManagerPermission || (exports.ManagerPermission = {}));
-
 exports.Accordeon = Accordeon;
 exports.AuthButton = AuthButton;
 exports.CardButton = CardButton;
