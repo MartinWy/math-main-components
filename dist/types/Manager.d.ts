@@ -12,5 +12,6 @@ export declare enum ManagerPermission {
     subsription = "subscription",
     manager = "manager",
     license = "license",
-    file = "file"
+    file = "file",
+    feedback = "feedback"
 }

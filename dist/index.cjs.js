@@ -1047,6 +1047,7 @@ exports.ManagerPermission = void 0;
     ManagerPermission["manager"] = "manager";
     ManagerPermission["license"] = "license";
     ManagerPermission["file"] = "file";
+    ManagerPermission["feedback"] = "feedback";
 })(exports.ManagerPermission || (exports.ManagerPermission = {}));
 
 exports.Accordeon = Accordeon;

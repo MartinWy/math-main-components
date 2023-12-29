@@ -16,4 +16,5 @@ export enum ManagerPermission {
     manager = "manager",
     license = "license",
     file = "file",
+    feedback = "feedback"
 }

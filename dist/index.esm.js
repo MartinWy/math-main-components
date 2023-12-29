@@ -1039,6 +1039,7 @@ var ManagerPermission;
     ManagerPermission["manager"] = "manager";
     ManagerPermission["license"] = "license";
     ManagerPermission["file"] = "file";
+    ManagerPermission["feedback"] = "feedback";
 })(ManagerPermission || (ManagerPermission = {}));
 
 export { Accordeon, AuthButton, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, CourseAnnouncementAssetType, Dialog, FormButton, FormText, ForwardButton, Gap, InputArea, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, ManagerPermission, OptionField, OptionFieldHorizontal, PrimaryButton, ProgressBar, RadioButtons, RadioOption, RedirectButton, S3FileCategory, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, Tabs, TextWithIcon, UsageCard };
