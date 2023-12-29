@@ -4,7 +4,7 @@ export interface Feedback {
     user: User;
     userId: number;
     message: string;
-    answers: object[];
+    answers: FeedbackAnswer[];
     createdAt: Date;
     updatedAt: Date;
 }
