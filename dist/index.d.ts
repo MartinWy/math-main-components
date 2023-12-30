@@ -1,5 +1,6 @@
 export * from './components/Accordeon';
 export * from './components/AuthButton';
+export * from './components/Button';
 export * from './components/CardButton';
 export * from './components/Checkbox';
 export * from './components/ChooseRole';
@@ -18,7 +19,6 @@ export * from './components/InputPin';
 export * from './components/InputText';
 export * from './components/OptionField';
 export * from './components/OptionFieldHorizontal';
-export * from './components/PrimaryButton';
 export * from './components/ProgressBar';
 export * from './components/RadioButtons';
 export * from './components/RedirectButton';

@@ -1,4 +1,4 @@
-import { PrimaryButton } from 'components/PrimaryButton'
+import { Button } from 'components/Button'
 import { SvgIcon } from 'components/SvgIcon'
 import React from 'react'
 import styles from './styles.module.scss'
@@ -21,7 +21,7 @@ export function EmptyCard({
             <SvgIcon size="60px" iconName={iconName} />
             <h1>{title}</h1>
             <p>{subtitle}</p>
-            {button && <PrimaryButton text={button} onClick={onClick} />}
+            {button && <Button text={button} onClick={onClick} />}
         </div>
     )
 }

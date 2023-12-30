@@ -1,5 +1,6 @@
 export * from './Accordeon';
 export * from './AuthButton';
+export * from './Button';
 export * from './CardButton';
 export * from './Checkbox';
 export * from './ChooseRole';
@@ -17,7 +18,6 @@ export * from './InputPin';
 export * from './InputText';
 export * from './OptionField';
 export * from './OptionFieldHorizontal';
-export * from './PrimaryButton';
 export * from './ProgressBar';
 export * from './RadioButtons';
 export * from './RedirectButton';

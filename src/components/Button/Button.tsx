@@ -3,7 +3,7 @@ import React, { MouseEvent } from 'react';
 import styles from './styles.module.scss';
 
 
-export function PrimaryButton({
+export function Button({
     text,
     iconName,
     iconFill = "white",
