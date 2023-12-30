@@ -21,7 +21,7 @@ export function EmptyCard({
             <SvgIcon size="60px" iconName={iconName} />
             <h1>{title}</h1>
             <p>{subtitle}</p>
-            {button && <Button text={button} onClick={onClick} />}
+            {button && <Button text={button} onClick={onClick} type="lightBlue" />}
         </div>
     )
 }
