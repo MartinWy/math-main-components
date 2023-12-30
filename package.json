@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.136",
+    "version": "0.0.139",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
@@ -11,7 +11,7 @@
     "pre-commit": [
         "build",
         "increment-version",
-        "git-add-all"
+        "git-add-dist"
     ],
     "license": "MIT",
     "devDependencies": {
