@@ -13,7 +13,7 @@ export type TableItemAction<DataType> = {
     onClick: (event: MouseEvent<HTMLDivElement>, item: TableItem<DataType>, index: number) => void;
     type: TableActionType;
 };
-export declare function Table<DataType>({ items, title, actions, moreActions, selected, style, marginTop }: {
+export declare function Table<DataType>({ items, title, actions, moreActions, selected, style, marginTop, emptyTitle, emptySubtitle, emptyIconName }: {
     items: TableItem<DataType>[];
     title: string;
     selected?: number;
@@ -21,4 +21,7 @@ export declare function Table<DataType>({ items, title, actions, moreActions, se
     actions?: TableItemAction<DataType>[];
     moreActions?: ((data: DataType, index: number) => ReactNode)[];
     marginTop?: number;
+    emptyTitle?: string;
+    emptySubtitle?: string;
+    emptyIconName?: string;
 }): React.JSX.Element;

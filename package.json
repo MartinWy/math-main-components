@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.132",
+    "version": "0.0.133",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
@@ -41,6 +41,7 @@
         "react-dom": "^18.2.0"
     },
     "scripts": {
+        "dev": "nodemon --watch src --exec \"npm run build && yalc push\" --ext ts,tsx,scss,js,jsx",
         "clean": "rm -rf dist",
         "increment-version": "npm --no-git-tag-version version patch",
         "git-add-all": "git add .",
@@ -50,6 +51,7 @@
     },
     "dependencies": {
         "@sanity/types": "^3.20.1",
+        "nodemon": "^3.0.2",
         "pre-commit": "^1.2.2",
         "sanity": "^3.20.1",
         "stripe": "^14.5.0"

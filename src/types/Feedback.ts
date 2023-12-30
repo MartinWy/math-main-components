@@ -9,6 +9,7 @@ export interface Feedback {
     answers: FeedbackAnswer[]
     createdAt: Date
     updatedAt: Date
+    hallo: string
 }
 
 export interface FeedbackAnswer {
