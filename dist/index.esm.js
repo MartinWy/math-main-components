@@ -624,9 +624,9 @@ var css_248z$3 = ".styles-module_container__jNs7m h3 {\n  font-weight: 500;\n  f
 var styles$3 = {"container":"styles-module_container__jNs7m","item_list":"styles-module_item_list__FxHkg","has_children":"styles-module_has_children__Uu-8D","action":"styles-module_action__YYTok","default":"styles-module_default__SexGH","red":"styles-module_red__KD3qJ","item":"styles-module_item__sgyiV","selected":"styles-module_selected__iOu39","icon":"styles-module_icon__Jy87z","moreText":"styles-module_moreText__-blXb","subtitle":"styles-module_subtitle__DT5OF","blue":"styles-module_blue__theVn","title":"styles-module_title__nIwzs"};
 styleInject(css_248z$3);
 
-function Table({ items, title = "Titel", actions = [], moreActions, selected, style = "default", marginTop = 30, emptyTitle = "Keine Daten", emptySubtitle = "Es sind keine Daten vorhanden.", emptyIconName = "manage_search" }) {
+function Table({ items, title = "Titel", actions = [], moreActions, selected, style = "default", marginTop = 30, emptyTitle = "Keine Daten", emptySubtitle = "Es sind keine Daten vorhanden.", emptyIconName = "manage_search", enableEmptyCard = true }) {
     return (React.createElement("div", { className: styles$3.container, style: { marginTop: marginTop } },
-        items.length == 0 &&
+        items.length == 0 && enableEmptyCard &&
             React.createElement(EmptyCard, { title: emptyTitle, subtitle: emptySubtitle, iconName: emptyIconName }),
         items.length > 0 &&
             React.createElement(React.Fragment, null,

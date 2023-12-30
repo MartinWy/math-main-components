@@ -33,7 +33,8 @@ export function Table<DataType>({
     marginTop = 30,
     emptyTitle = "Keine Daten",
     emptySubtitle = "Es sind keine Daten vorhanden.",
-    emptyIconName = "manage_search"
+    emptyIconName = "manage_search",
+    enableEmptyCard = true
 }: {
     items: TableItem<DataType>[],
     title: string,
@@ -44,13 +45,14 @@ export function Table<DataType>({
     marginTop?: number,
     emptyTitle?: string,
     emptySubtitle?: string,
-    emptyIconName?: string
+    emptyIconName?: string,
+    enableEmptyCard?: boolean
 }) {
 
     return (
         <div className={styles.container} style={{ marginTop: marginTop }}>
 
-            {items.length == 0 &&
+            {items.length == 0 && enableEmptyCard &&
                 <EmptyCard
                     title={emptyTitle}
                     subtitle={emptySubtitle}
