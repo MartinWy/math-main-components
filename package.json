@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.141",
+    "version": "0.0.144",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
@@ -11,7 +11,8 @@
     "pre-commit": [
         "build",
         "increment-version",
-        "git-add-dist"
+        "git-add-dist",
+        "git-add-package-json"
     ],
     "license": "MIT",
     "devDependencies": {
@@ -45,6 +46,7 @@
         "clean": "rm -rf dist",
         "increment-version": "npm --no-git-tag-version version patch",
         "git-add-dist": "git add dist",
+        "git-add-package-json": "git add package.json",
         "build": "npm run build:js && npm run build:types",
         "build:js": "rollup -c",
         "build:types": "tsc --emitDeclarationOnly --outDir dist"

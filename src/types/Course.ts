@@ -7,6 +7,7 @@ import { User } from "./User"
 export interface Course {
     id: string
     title: string
+    description: string
     content: Object
     userId: string,
     user?: User,
