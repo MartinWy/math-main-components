@@ -1,5 +1,5 @@
 import React, { MouseEvent } from 'react';
-export declare function PrimaryButton({ text, iconName, iconFill, type, onClick }: {
+export declare function Button({ text, iconName, iconFill, type, onClick }: {
     text?: string;
     iconName?: string;
     iconFill?: string;

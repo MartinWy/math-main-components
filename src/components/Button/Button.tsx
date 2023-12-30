@@ -2,6 +2,8 @@ import { SvgIcon } from 'components/SvgIcon';
 import React, { MouseEvent } from 'react';
 import styles from './styles.module.scss';
 
+type ButtonType = "blue" | "red" | "grey" | "lightBlue"
+
 
 export function Button({
     text,
@@ -13,7 +15,7 @@ export function Button({
     text?: string,
     iconName?: string,
     iconFill?: string,
-    type?: string,
+    type?: ButtonType,
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void
 }) {
 

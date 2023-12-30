@@ -3,7 +3,6 @@
 
     .button {
         padding: 10px 18px;
-        background: var(--primary-1);
         border-radius: 40px;
         cursor: pointer;
         display: flex;
@@ -11,9 +10,28 @@
         gap: 10px;
         font-size: 15px;
         font-weight: 400;
-        color: white;
         align-items: center;
         border: none;
+
+        &.blue {
+            background: var(--primary-1);
+            color: white;
+        }
+
+        &.lightBlue {
+            background: var(--primary-2);
+            color: var(--primary-1);
+        }
+
+        &.red {
+            background: var(--red-1);
+            color: white;
+        }
+
+        &.grey {
+            background: var(--background-1);
+            color: var(--foreground-2);
+        }
 
         &.onlyIcon {
             width: 44px;
@@ -25,16 +43,6 @@
             span {
                 font-size: 22px !important;
             }
-        }
-
-        &.red {
-            background: var(--red-1);
-            color: white;
-        }
-
-        &.grey {
-            background: var(--background-1);
-            color: var(--foreground-2);
         }
     }
 }

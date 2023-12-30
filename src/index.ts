@@ -6,6 +6,7 @@ export * from './components/Checkbox';
 export * from './components/ChooseRole';
 export * from './components/CopyCode';
 export * from './components/Dialog';
+export * from './components/EmptyCard';
 export * from './components/FormButton';
 export * from './components/FormText';
 export * from './components/ForwardButton';

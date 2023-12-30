@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.135",
+    "version": "0.0.136",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
@@ -44,7 +44,7 @@
         "dev": "nodemon --watch src --exec \"npm run build && yalc push\" --ext ts,tsx,scss,js,jsx",
         "clean": "rm -rf dist",
         "increment-version": "npm --no-git-tag-version version patch",
-        "git-add-all": "git add .",
+        "git-add-dist": "git add dist",
         "build": "npm run build:js && npm run build:types",
         "build:js": "rollup -c",
         "build:types": "tsc --emitDeclarationOnly --outDir dist"
