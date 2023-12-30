@@ -1,3 +1,4 @@
+import { EmptyCard } from 'components/EmptyCard';
 import { SvgIcon } from 'components/SvgIcon';
 import React, { MouseEvent, ReactNode } from 'react';
 import styles from './styles.module.scss';
@@ -50,11 +51,11 @@ export function Table<DataType>({
         <div className={styles.container} style={{ marginTop: marginTop }}>
 
             {items.length == 0 &&
-                <div className={styles.not_found_container}>
-                    <SvgIcon size="60px" iconName={emptyIconName} />
-                    <h1>{emptyTitle}</h1>
-                    <p>{emptySubtitle}</p>
-                </div>
+                <EmptyCard
+                    title={emptyTitle}
+                    subtitle={emptySubtitle}
+                    iconName={emptyIconName}
+                />
             }
 
             {items.length > 0 &&
