@@ -10,4 +10,14 @@ export type Home = {
     };
     helpTitle: string;
     helpDescription: PortableTextBlock[];
+    quote: string;
+    targetGroups: TargetGroup[];
+};
+export type TargetGroup = {
+    _key: string;
+    _type: string;
+    title: string;
+    description: string;
+    iconName: string;
+    buttonText: string;
 };
