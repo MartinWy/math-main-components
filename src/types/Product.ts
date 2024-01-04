@@ -4,9 +4,8 @@
 
 import { PortableTextBlock } from "sanity"
 import { Ebook } from "./Ebook"
-import { ProductLimit } from "./ProductLimit"
 
-export interface Product {
+export type Product = {
     _id: string
     title: string
     combinable: boolean
@@ -26,4 +25,16 @@ export interface Product {
     ebooks: Ebook[]
     stripePriceId: string
     stripeProductId: string
+}
+
+
+/* Type from Sanit.io - math-main-sanity */
+
+export type ProductLimit = {
+    _id: string
+    _type: string
+    _key: string
+    type: "maxAmountOfCourses" | "maxTestsPerDay" | "maxAmountOfTestPapers"
+    isUnlimited: boolean
+    limit: number
 }

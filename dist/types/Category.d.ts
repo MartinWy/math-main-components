@@ -1,4 +1,4 @@
-export interface Category {
+export type Category = {
     _id: string;
     title: string;
     isTopLevel: boolean;
@@ -9,4 +9,4 @@ export interface Category {
     hasPoster: boolean;
     childrenCategories: Category[];
     relatedCategories: Category[];
-}
+};

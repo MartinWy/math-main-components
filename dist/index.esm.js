@@ -1029,23 +1029,4 @@ function UsageCard({ title, subtitle, ratio = 0, loading }) {
                 ], lineWidth: 15, totalValue: 1 }))));
 }
 
-var CourseAnnouncementAssetType;
-(function (CourseAnnouncementAssetType) {
-    CourseAnnouncementAssetType["file"] = "file";
-    CourseAnnouncementAssetType["calculator"] = "calculator";
-    CourseAnnouncementAssetType["movie"] = "movie";
-    CourseAnnouncementAssetType["material"] = "material";
-    CourseAnnouncementAssetType["ebook"] = "ebook";
-    CourseAnnouncementAssetType["test"] = "test";
-    CourseAnnouncementAssetType["link"] = "link"; // simple external link url
-})(CourseAnnouncementAssetType || (CourseAnnouncementAssetType = {}));
-
-var S3FileCategory;
-(function (S3FileCategory) {
-    S3FileCategory["movies"] = "movies";
-    S3FileCategory["materials"] = "materials";
-    S3FileCategory["ebooks"] = "ebooks";
-    S3FileCategory["default"] = "file";
-})(S3FileCategory || (S3FileCategory = {}));
-
-export { Accordeon, AuthButton, Button, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, CourseAnnouncementAssetType, Dialog, EmptyCard, FormButton, FormText, ForwardButton, Gap, InputArea, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, OptionField, OptionFieldHorizontal, ProgressBar, RadioButtons, RadioOption, RedirectButton, S3FileCategory, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, Tabs, TextWithIcon, UsageCard };
+export { Accordeon, AuthButton, Button, CardButton, Checkbox, ChooseRole, ChooseRoleItem, CopyCode, Dialog, EmptyCard, FormButton, FormText, ForwardButton, Gap, InputArea, InputMail, InputNames, InputNumber, InputPassword, InputPin, InputText, OptionField, OptionFieldHorizontal, ProgressBar, RadioButtons, RadioOption, RedirectButton, SearchChip, SearchChips, Searchbar, Slider, SliderCard, StepBack, SvgIcon, Table, Tabs, TextWithIcon, UsageCard };

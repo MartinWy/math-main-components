@@ -1037,25 +1037,6 @@ function UsageCard({ title, subtitle, ratio = 0, loading }) {
                 ], lineWidth: 15, totalValue: 1 }))));
 }
 
-exports.CourseAnnouncementAssetType = void 0;
-(function (CourseAnnouncementAssetType) {
-    CourseAnnouncementAssetType["file"] = "file";
-    CourseAnnouncementAssetType["calculator"] = "calculator";
-    CourseAnnouncementAssetType["movie"] = "movie";
-    CourseAnnouncementAssetType["material"] = "material";
-    CourseAnnouncementAssetType["ebook"] = "ebook";
-    CourseAnnouncementAssetType["test"] = "test";
-    CourseAnnouncementAssetType["link"] = "link"; // simple external link url
-})(exports.CourseAnnouncementAssetType || (exports.CourseAnnouncementAssetType = {}));
-
-exports.S3FileCategory = void 0;
-(function (S3FileCategory) {
-    S3FileCategory["movies"] = "movies";
-    S3FileCategory["materials"] = "materials";
-    S3FileCategory["ebooks"] = "ebooks";
-    S3FileCategory["default"] = "file";
-})(exports.S3FileCategory || (exports.S3FileCategory = {}));
-
 exports.Accordeon = Accordeon;
 exports.AuthButton = AuthButton;
 exports.Button = Button;

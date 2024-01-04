@@ -1,5 +1,5 @@
 import { Product } from "./Product";
-export interface LicenseKey {
+export type LicenseKey = {
     id: string;
     product: Product;
     productId: string;
@@ -9,4 +9,4 @@ export interface LicenseKey {
     key: string;
     createdAt: string;
     redeemedOn: string;
-}
+};

@@ -3,7 +3,7 @@ import { Product } from "../Product"
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface Pricing {
+export type Pricing = {
     _id: string
     title: string
     position: PricingPosition

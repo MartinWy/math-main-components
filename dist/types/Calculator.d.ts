@@ -1,6 +1,6 @@
 import { PortableTextBlock } from "sanity";
 import { Category } from "./Category";
-export interface Calculator {
+export type Calculator = {
     _id: string;
     previewImage: {
         asset: {
@@ -13,4 +13,4 @@ export interface Calculator {
     shortDescription: string;
     description: PortableTextBlock[];
     categories: Category[];
-}
+};

@@ -1,4 +1,4 @@
-export interface Feature {
+export type Feature = {
     _id: string;
     priority: number;
     title: string;
@@ -11,4 +11,4 @@ export interface Feature {
             _type: string;
         };
     };
-}
+};

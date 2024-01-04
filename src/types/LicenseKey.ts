@@ -1,7 +1,7 @@
 import { Product } from "./Product"
 
 
-export interface LicenseKey {
+export type LicenseKey = {
     id: string
     product: Product
     productId: string

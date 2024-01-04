@@ -2,7 +2,7 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface BenefitForIndividuals {
+export type BenefitForIndividuals = {
     _id: string,
     priority: number,
     title: string,

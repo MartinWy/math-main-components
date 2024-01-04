@@ -1,7 +1,7 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface FooterLink {
+export type FooterLink = {
     _id: string
     title: string
     link: string

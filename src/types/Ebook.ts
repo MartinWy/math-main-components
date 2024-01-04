@@ -6,7 +6,7 @@ import { PortableTextBlock } from "sanity"
 import { Category } from "./Category"
 import { Product } from "./Product"
 
-export interface Ebook {
+export type Ebook = {
     _id: string
     title: string
     previewImage: {

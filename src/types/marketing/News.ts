@@ -2,7 +2,7 @@ import { PortableTextBlock } from "sanity"
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface News {
+export type News = {
     _id: string
     visible: boolean
     headline: string

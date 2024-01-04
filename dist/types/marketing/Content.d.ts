@@ -1,5 +1,5 @@
 import { PortableTextBlock } from "sanity";
-export interface Content {
+export type Content = {
     _id: string;
     priority: number;
     title: string;
@@ -8,8 +8,8 @@ export interface Content {
     description: PortableTextBlock[];
     isComingSoon: boolean;
     contentBuckets: ContentBucket[];
-}
-export interface ContentBucket {
+};
+export type ContentBucket = {
     title: string;
     description: string;
     bucket: string;
@@ -19,4 +19,4 @@ export interface ContentBucket {
             _type: string;
         };
     };
-}
+};

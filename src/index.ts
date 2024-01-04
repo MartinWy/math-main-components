@@ -1,3 +1,4 @@
+/* Components */
 export * from './components/Accordeon';
 export * from './components/AuthButton';
 export * from './components/Button';
@@ -33,34 +34,29 @@ export * from './components/Tabs';
 export * from './components/TextWithIcon';
 export * from './components/UsageCard';
 
+/* Marketing Types */
 export * from './types/marketing/BenefitForIndividuals';
 export * from './types/marketing/BenefitForSchools';
 export * from './types/marketing/Feature';
 export * from './types/marketing/FooterLink';
 export * from './types/marketing/News';
 export * from './types/marketing/Pricing';
-export * from './types/marketing/WebsiteData';
+export * from './types/marketing/Website';
 
+/* Types */
 export * from './types/Calculator';
 export * from './types/Category';
 export * from './types/Course';
-export * from './types/CourseAnnouncement';
-export * from './types/CourseAnnouncementAsset';
-export * from './types/CourseMessage';
-export * from './types/CourseParticipant';
-export * from './types/CoursePin';
 export * from './types/Ebook';
 export * from './types/Feedback';
-export * from './types/File';
 export * from './types/HelpData';
 export * from './types/LicenseKey';
 export * from './types/Manager';
 export * from './types/Material';
 export * from './types/Movie';
 export * from './types/Organization';
-export * from './types/OrganizationMember';
 export * from './types/Product';
-export * from './types/ProductLimit';
+export * from './types/S3File';
 export * from './types/Subscription';
 export * from './types/UploadSignature';
 export * from './types/Usage';
@@ -70,5 +66,5 @@ export * from './types/marketing/Concept';
 export * from './types/marketing/Content';
 export * from './types/marketing/Faq';
 export * from './types/marketing/Home';
-export * from './types/marketing/Page';
+export * from './types/marketing/StaticPage';
 

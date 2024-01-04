@@ -1,6 +1,6 @@
 import { PortableTextBlock } from "sanity";
 import { Category } from "./Category";
-export interface Movie {
+export type Movie = {
     _id: string;
     title: string;
     previewImage: {
@@ -17,4 +17,4 @@ export interface Movie {
     shortDescription: string;
     description: PortableTextBlock[];
     categories: Category[];
-}
+};

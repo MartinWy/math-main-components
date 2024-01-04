@@ -1,11 +1,13 @@
 
 
-export interface Log {
+export type Log = {
     id: string
     title: string
     message: string
     httpCode?: number
     stack?: string
-    application: "math-main-app" | "math-main-manager"
+    application: LogApplication
     createdAt: Date
 }
+
+export type LogApplication = "math-main-app" | "math-main-manager"

@@ -1,6 +1,6 @@
 import { PortableTextBlock } from "sanity";
 import { Product } from "../Product";
-export interface Pricing {
+export type Pricing = {
     _id: string;
     title: string;
     position: PricingPosition;
@@ -13,6 +13,6 @@ export interface Pricing {
     product: Product;
     enableMoreInfoLink: boolean;
     moreInfoLink: string;
-}
+};
 type PricingPosition = 'personal-left' | 'personal-right' | 'schools-left' | 'schools-right';
 export {};

@@ -4,7 +4,7 @@
 
 import { PortableTextBlock } from "sanity"
 
-export interface Faq {
+export type Faq = {
     _id: string
     priority: number
     question: string

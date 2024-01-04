@@ -1,8 +1,8 @@
-export interface BenefitForSchools {
+export type BenefitForSchools = {
     _id: string;
     priority: number;
     title: string;
     subtitle: string;
     iconName: string;
     description: string;
-}
+};

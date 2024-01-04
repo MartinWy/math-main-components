@@ -1,5 +1,5 @@
 import { PortableTextBlock } from "sanity";
-export interface Home {
+export type Home = {
     _id: string;
     _type: string;
     helpMockup?: {
@@ -10,4 +10,4 @@ export interface Home {
     };
     helpTitle: string;
     helpDescription: PortableTextBlock[];
-}
+};

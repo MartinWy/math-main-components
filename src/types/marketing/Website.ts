@@ -2,7 +2,7 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface WebsiteData {
+export type Website = {
     _id: string
     heroDescription: string
     heroTitle: string

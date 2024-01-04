@@ -2,7 +2,7 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface Feature {
+export type Feature = {
     _id: string
     priority: number
     title: string

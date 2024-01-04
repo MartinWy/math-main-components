@@ -1,7 +1,7 @@
 import { User } from "./User"
 
 
-export interface Feedback {
+export type Feedback = {
     id: string
     user: User
     userId: number
@@ -12,7 +12,7 @@ export interface Feedback {
     hallo: string
 }
 
-export interface FeedbackAnswer {
+export type FeedbackAnswer = {
     message: string
     createdAt: Date
 }

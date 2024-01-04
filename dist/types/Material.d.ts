@@ -1,5 +1,5 @@
 import { Category } from "./Category";
-export interface Material {
+export type Material = {
     _id: string;
     title: string;
     fileId: string;
@@ -16,4 +16,4 @@ export interface Material {
         };
     };
     categories: Category[];
-}
+};

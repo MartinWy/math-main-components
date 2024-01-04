@@ -1,5 +1,5 @@
 import { PortableTextBlock } from "sanity";
-export interface News {
+export type News = {
     _id: string;
     visible: boolean;
     headline: string;
@@ -16,4 +16,4 @@ export interface News {
     content: PortableTextBlock[];
     short: PortableTextBlock[];
     type: 'press' | 'update' | 'short';
-}
+};

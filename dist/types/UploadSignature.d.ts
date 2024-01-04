@@ -1,4 +1,4 @@
-export interface UploadSignature {
+export type UploadSignature = {
     signedUploadUrl: string;
     fileId: string;
-}
+};

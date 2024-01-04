@@ -2,7 +2,7 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface Category {
+export type Category = {
     _id: string
     title: string,
     isTopLevel: boolean,

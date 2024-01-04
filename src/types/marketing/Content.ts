@@ -3,7 +3,7 @@ import { PortableTextBlock } from "sanity"
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface Content {
+export type Content = {
     _id: string
     priority: number
     title: string
@@ -14,7 +14,7 @@ export interface Content {
     contentBuckets: ContentBucket[]
 }
 
-export interface ContentBucket {
+export type ContentBucket = {
     title: string
     description: string
     bucket: string

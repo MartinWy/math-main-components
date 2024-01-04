@@ -3,7 +3,7 @@ import { Category } from "./Category";
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface Material {
+export type Material = {
     _id: string
     title: string,
     fileId: string,

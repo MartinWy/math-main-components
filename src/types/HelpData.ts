@@ -1,7 +1,7 @@
 
 /* Type from Sanit.io - math-main-sanity */
 
-export interface HelpData {
+export type HelpData = {
     _id: string
     title: string
     content: any

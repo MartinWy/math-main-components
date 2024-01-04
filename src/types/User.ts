@@ -3,7 +3,7 @@ import { Organization } from "./Organization"
 
 
 
-export interface User {
+export type User = {
     id: string
     email: string
     username: string
@@ -14,7 +14,7 @@ export interface User {
     isPasswordEnabled: boolean
     emailVerified: boolean
     profileImageUrl: string
-    settings: Object
+    settings: UserSettings
     role: string
     courses: Course[]
     appNotifications: Object
@@ -25,4 +25,8 @@ export interface User {
     organization: Organization
     organizationId: string
     organizationRole: string
+}
+
+export type UserSettings = {
+    preferredLanguage: string
 }

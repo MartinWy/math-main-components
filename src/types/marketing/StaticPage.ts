@@ -1,7 +1,7 @@
 import { PortableTextBlock } from "sanity"
 
 
-export interface Page {
+export type StaticPage = {
     title: string
     slug: {
         current: string
