@@ -23,7 +23,12 @@ export function AuthButton({
 
     return (
         <div className={[styles.container, isVisible ? styles.visible : styles.hidden, ["arrow_forward"].includes(iconName) ? styles.rotate : null].join(" ")}>
-            <button type={type} className={`${styles.button} ${styles[theme]}`} onClick={onClick}>
+            <button
+                type={type}
+                className={`${styles.button} ${styles[theme]}`}
+                onClick={onClick}
+                id={id}
+            >
                 {text}
                 <SvgIcon iconName={iconName} />
             </button>

@@ -1,5 +1,6 @@
 import React from 'react';
-export declare function InputPassword({ placeholder, title, name, isVisible, width, minLength, autoComplete, forgotLink }: {
+export declare function InputPassword({ id, placeholder, title, name, isVisible, width, minLength, autoComplete, forgotLink }: {
+    id?: string;
     placeholder?: string;
     autoComplete?: string;
     title?: string;

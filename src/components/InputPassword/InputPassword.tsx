@@ -3,6 +3,7 @@ import React, { ChangeEvent, useState } from 'react'
 import styles from './styles.module.scss'
 
 export function InputPassword({
+    id,
     placeholder = "",
     title = "Passwort",
     name,
@@ -12,6 +13,7 @@ export function InputPassword({
     autoComplete,
     forgotLink = false
 }: {
+    id?: string,
     placeholder?: string,
     autoComplete?: string,
     title?: string,

@@ -1,5 +1,6 @@
 import React, { CSSProperties, MouseEvent } from 'react';
-export declare function FormButton({ text, style, iconName, type, background, onClick }: {
+export declare function FormButton({ id, text, style, iconName, type, background, onClick }: {
+    id?: string;
     text: string;
     style?: CSSProperties;
     iconName?: string;

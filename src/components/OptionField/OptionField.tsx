@@ -3,17 +3,19 @@ import React from 'react'
 import styles from './styles.module.scss'
 
 export function OptionField({
+    id,
     headline,
     description,
     iconName
 }: {
+    id?: string,
     headline: string,
     description: string,
     iconName?: string,
 }) {
     return (
         <>
-            <div className={styles.box}>
+            <div className={styles.box} id={id}>
                 <div className={styles.left_side}>
                     {iconName && <SvgIcon iconName={iconName} />}
                 </div>

@@ -2,6 +2,7 @@ import React, { ChangeEvent, useCallback, useState } from 'react';
 import styles from './styles.module.scss';
 
 export function InputText({
+    id,
     title,
     name,
     placeholder = "",
@@ -14,6 +15,7 @@ export function InputText({
     available = true,
     onInput = (event: ChangeEvent<HTMLInputElement>) => { }
 }: {
+    id?: string,
     title: string,
     name: string,
     placeholder?: string,
@@ -38,6 +40,7 @@ export function InputText({
                 <input
                     className={`${styles.input} ${title != undefined ? styles.with_title : styles.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles.valid : styles.not_valid} ${available ? styles.available : styles.not_available}`}
                     name={name}
+                    id={id}
                     type={type}
                     placeholder={placeholder}
                     ref={inputElement}

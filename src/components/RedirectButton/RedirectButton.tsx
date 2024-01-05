@@ -4,9 +4,11 @@ import styles from './styles.module.scss'
 
 
 export function RedirectButton({
+    id,
     type = "forward",
     onClick
 }: {
+    id?: string,
     type: "forward" | "back" | "middle",
     onClick?: any
 }) {
@@ -26,7 +28,7 @@ export function RedirectButton({
 
     return (
         <div className={[styles.container, styles[type]].join(" ")}>
-            <button onClick={onClickButton} className={styles.button}>
+            <button onClick={onClickButton} className={styles.button} id={id}>
                 <SvgIcon iconName={getIcon()} />
                 {["middle"].includes(type) &&
                     <span>Zurück</span>

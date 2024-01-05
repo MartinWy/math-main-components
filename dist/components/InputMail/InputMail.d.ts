@@ -1,5 +1,6 @@
 import React from 'react';
-export declare function InputMail({ placeholder, title, name, width, available }: {
+export declare function InputMail({ id, placeholder, title, name, width, available }: {
+    id: string;
     placeholder?: string;
     title?: string;
     name?: string;

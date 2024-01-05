@@ -28,7 +28,11 @@ export function Button({
 
     return (
         <div className={styles.container}>
-            <button className={[styles.button, styles[type], (text && !iconName) ? styles.onlyText : "", (!text && iconName) ? styles.onlyIcon : ""].join(" ")} onClick={onClickButton}>
+            <button
+                className={[styles.button, styles[type], (text && !iconName) ? styles.onlyText : "", (!text && iconName) ? styles.onlyIcon : ""].join(" ")}
+                onClick={onClickButton}
+                id={id}
+            >
                 {text}
                 {iconName && <SvgIcon iconName={iconName} fill={iconFill} />}
             </button>

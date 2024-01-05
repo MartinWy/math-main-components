@@ -59,7 +59,7 @@ styleInject(css_248z$u);
 
 function AuthButton({ id, text, type = "submit", theme = "primary", iconName = "arrow_forward", isVisible = true, onClick }) {
     return (React__default["default"].createElement("div", { className: [styles$u.container, isVisible ? styles$u.visible : styles$u.hidden, ["arrow_forward"].includes(iconName) ? styles$u.rotate : null].join(" ") },
-        React__default["default"].createElement("button", { type: type, className: `${styles$u.button} ${styles$u[theme]}`, onClick: onClick },
+        React__default["default"].createElement("button", { type: type, className: `${styles$u.button} ${styles$u[theme]}`, onClick: onClick, id: id },
             text,
             React__default["default"].createElement(SvgIcon, { iconName: iconName }))));
 }
@@ -75,7 +75,7 @@ function Button({ id, text, iconName, iconFill = "white", type = "blue", onClick
             onClick(event);
     }
     return (React__default["default"].createElement("div", { className: styles$t.container },
-        React__default["default"].createElement("button", { className: [styles$t.button, styles$t[type], (text && !iconName) ? styles$t.onlyText : "", (!text && iconName) ? styles$t.onlyIcon : ""].join(" "), onClick: onClickButton },
+        React__default["default"].createElement("button", { className: [styles$t.button, styles$t[type], (text && !iconName) ? styles$t.onlyText : "", (!text && iconName) ? styles$t.onlyIcon : ""].join(" "), onClick: onClickButton, id: id },
             text,
             iconName && React__default["default"].createElement(SvgIcon, { iconName: iconName, fill: iconFill }))));
 }
@@ -90,7 +90,7 @@ function CardButton({ id, title, iconName, onClick, }) {
         if (onClick)
             onClick(event);
     }
-    return (React__default["default"].createElement("div", { className: styles$s.card, onClick: onClickCard },
+    return (React__default["default"].createElement("div", { className: styles$s.card, onClick: onClickCard, id: id },
         React__default["default"].createElement(SvgIcon, { iconName: iconName, size: "32px" }),
         React__default["default"].createElement("h2", null, title)));
 }
@@ -99,9 +99,9 @@ var css_248z$r = ".styles-module_container__gCCnD {\n  margin-bottom: 20px;\n  w
 var styles$r = {"container":"styles-module_container__gCCnD"};
 styleInject(css_248z$r);
 
-function Checkbox({ text, name, checked, defaultChecked = false, onInput = () => { }, }) {
+function Checkbox({ id, text, name, checked, defaultChecked = false, onInput = () => { }, }) {
     return (React__default["default"].createElement("div", { className: styles$r.container },
-        React__default["default"].createElement("input", { type: "checkbox", onInput: onInput, name: name, id: name, checked: checked, defaultChecked: defaultChecked }),
+        React__default["default"].createElement("input", { type: "checkbox", onInput: onInput, name: name, checked: checked, defaultChecked: defaultChecked, id: id }),
         React__default["default"].createElement("label", { htmlFor: name }, text),
         React__default["default"].createElement(SvgIcon, { iconName: "done", size: "21px" })));
 }
@@ -182,9 +182,9 @@ var css_248z$m = ".styles-module_container__HOoBj {\n  margin-bottom: 30px;\n}\n
 var styles$m = {"container":"styles-module_container__HOoBj"};
 styleInject(css_248z$m);
 
-function FormButton({ text, style = {}, iconName = "", type = "submit", background = "#0075FF", onClick = () => { } }) {
+function FormButton({ id, text, style = {}, iconName = "", type = "submit", background = "#0075FF", onClick = () => { } }) {
     return (React__default["default"].createElement("div", { className: styles$m.container, style: style },
-        React__default["default"].createElement("button", { type: type, onClick: onClick, style: { background: background } },
+        React__default["default"].createElement("button", { type: type, onClick: onClick, style: { background: background }, id: id },
             text,
             iconName && React__default["default"].createElement(SvgIcon, { iconName: iconName, fill: "white" }))));
 }
@@ -222,7 +222,7 @@ var css_248z$j = ".styles-module_container__Jr7LQ {\n  display: flex;\n  width: 
 var styles$j = {"container":"styles-module_container__Jr7LQ","input":"styles-module_input__v-hUz","not_available":"styles-module_not_available__6xu3Y","label":"styles-module_label__SSsD3","label_text":"styles-module_label_text__EOAq5","with_title":"styles-module_with_title__HWcCH","valid":"styles-module_valid__6geu9"};
 styleInject(css_248z$j);
 
-function InputArea({ title, name, placeholder = "", defaultValue = "", autoFocus = false, width = "100%", height = "100px", available = true, onInput }) {
+function InputArea({ id, title, name, placeholder = "", defaultValue = "", autoFocus = false, width = "100%", height = "100px", available = true, onInput }) {
     const [value, setValue] = React.useState(defaultValue);
     const inputElement = React.useCallback((element) => {
         if (element && autoFocus)
@@ -230,7 +230,7 @@ function InputArea({ title, name, placeholder = "", defaultValue = "", autoFocus
     }, [autoFocus]);
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: styles$j.container, style: { width } },
-            React__default["default"].createElement("textarea", { className: `${styles$j.input} ${title != undefined ? styles$j.with_title : styles$j.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$j.valid : styles$j.not_valid} ${available ? styles$j.available : styles$j.not_available}`, name: name, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, style: { minHeight: height, maxHeight: height }, onInput: (event) => {
+            React__default["default"].createElement("textarea", { className: `${styles$j.input} ${title != undefined ? styles$j.with_title : styles$j.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$j.valid : styles$j.not_valid} ${available ? styles$j.available : styles$j.not_available}`, name: name, id: id, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, style: { minHeight: height, maxHeight: height }, onInput: (event) => {
                     setValue(event.target.value);
                     if (onInput)
                         onInput(event);
@@ -243,11 +243,11 @@ var css_248z$i = ".styles-module_input__-GKhx {\n  padding: 14px 20px;\n  font-s
 var styles$i = {"input":"styles-module_input__-GKhx","not_available":"styles-module_not_available__XD1kR","container":"styles-module_container__--4rV","label":"styles-module_label__mGzwP","label_text":"styles-module_label_text__d0eMb","with_title":"styles-module_with_title__CGOEs","valid":"styles-module_valid__uj8g-"};
 styleInject(css_248z$i);
 
-function InputMail({ placeholder = "E-Mail-Adresse", title = "E-Mail-Adresse", name = "email", width = "100%", available = true }) {
+function InputMail({ id, placeholder = "E-Mail-Adresse", title = "E-Mail-Adresse", name = "email", width = "100%", available = true }) {
     const [value, setValue] = React.useState("");
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: styles$i.container, style: { width: width } },
-            React__default["default"].createElement("input", { className: `${styles$i.input} ${title != undefined ? styles$i.with_title : styles$i.without_title} ${value.length > 0 ? styles$i.valid : styles$i.not_valid} ${available ? styles$i.available : styles$i.not_available}`, name: name, placeholder: placeholder, type: "email", onInput: (event) => setValue(event.target.value) }),
+            React__default["default"].createElement("input", { className: `${styles$i.input} ${title != undefined ? styles$i.with_title : styles$i.without_title} ${value.length > 0 ? styles$i.valid : styles$i.not_valid} ${available ? styles$i.available : styles$i.not_available}`, name: name, placeholder: placeholder, type: "email", onInput: (event) => setValue(event.target.value), id: id }),
             React__default["default"].createElement("label", { htmlFor: "text", className: styles$i.label },
                 React__default["default"].createElement("span", { className: styles$i.label_text }, title)))));
 }
@@ -304,7 +304,7 @@ var css_248z$f = "@keyframes styles-module_show__OLTZH {\n  from {\n    max-heig
 var styles$f = {"container":"styles-module_container__UdmOO","forgot_label":"styles-module_forgot_label__EeN6a","visible":"styles-module_visible__QROqh","hidden":"styles-module_hidden__hDKDO","input":"styles-module_input__sC2fP","hideButton":"styles-module_hideButton__83mRI","form":"styles-module_form__m866x","label":"styles-module_label__8PuaL","label_text":"styles-module_label_text__FwJ1F","with_title":"styles-module_with_title__dftgq","valid":"styles-module_valid__SM7w5","show":"styles-module_show__OLTZH","hide":"styles-module_hide__LAgaY"};
 styleInject(css_248z$f);
 
-function InputPassword({ placeholder = "", title = "Passwort", name, isVisible = true, width = "100%", minLength = 8, autoComplete, forgotLink = false }) {
+function InputPassword({ id, placeholder = "", title = "Passwort", name, isVisible = true, width = "100%", minLength = 8, autoComplete, forgotLink = false }) {
     const [value, setValue] = React.useState("");
     const [hidePassword, setHidePassword] = React.useState(true);
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
@@ -402,7 +402,7 @@ var css_248z$d = ".styles-module_container__zcXGF {\n  display: flex;\n  width: 
 var styles$d = {"container":"styles-module_container__zcXGF","input":"styles-module_input__Tpth8","not_available":"styles-module_not_available__CRXjB","label":"styles-module_label__appHO","label_text":"styles-module_label_text__-sKjY","with_title":"styles-module_with_title__L3eGj","valid":"styles-module_valid__zWcOz"};
 styleInject(css_248z$d);
 
-function InputText({ title, name, placeholder = "", defaultValue = "", autoFocus = false, type = "text", width = "100%", marginBottom, available = true, onInput = (event) => { } }) {
+function InputText({ id, title, name, placeholder = "", defaultValue = "", autoFocus = false, type = "text", width = "100%", marginBottom, available = true, onInput = (event) => { } }) {
     const [value, setValue] = React.useState(defaultValue);
     const inputElement = React.useCallback((element) => {
         if (element && autoFocus)
@@ -410,7 +410,7 @@ function InputText({ title, name, placeholder = "", defaultValue = "", autoFocus
     }, [autoFocus]);
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement("div", { className: styles$d.container, style: { width, marginBottom } },
-            React__default["default"].createElement("input", { className: `${styles$d.input} ${title != undefined ? styles$d.with_title : styles$d.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$d.valid : styles$d.not_valid} ${available ? styles$d.available : styles$d.not_available}`, name: name, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
+            React__default["default"].createElement("input", { className: `${styles$d.input} ${title != undefined ? styles$d.with_title : styles$d.without_title} ${value.length > 0 || defaultValue.length > 0 ? styles$d.valid : styles$d.not_valid} ${available ? styles$d.available : styles$d.not_available}`, name: name, id: id, type: type, placeholder: placeholder, ref: inputElement, defaultValue: defaultValue, onInput: (event) => {
                     setValue(event.target.value);
                     if (onInput)
                         onInput(event);
@@ -423,9 +423,9 @@ var css_248z$c = ".styles-module_box__Z0iod {\n  background: var(--background-2)
 var styles$c = {"box":"styles-module_box__Z0iod","left_side":"styles-module_left_side__8ObGs","right_side":"styles-module_right_side__Ypp0D"};
 styleInject(css_248z$c);
 
-function OptionField({ headline, description, iconName }) {
+function OptionField({ id, headline, description, iconName }) {
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
-        React__default["default"].createElement("div", { className: styles$c.box },
+        React__default["default"].createElement("div", { className: styles$c.box, id: id },
             React__default["default"].createElement("div", { className: styles$c.left_side }, iconName && React__default["default"].createElement(SvgIcon, { iconName: iconName })),
             React__default["default"].createElement("div", { className: styles$c.right_side },
                 React__default["default"].createElement("h4", null, headline),
@@ -458,7 +458,7 @@ function ProgressBar({ length, progress }) {
                 React__default["default"].createElement("div", { className: styles$a.progress, style: { width: `${progress / length * 100}%` } })))));
 }
 
-var css_248z$9 = ".styles-module_container__Grkzw {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  color: var(--foreground-3);\n  margin-bottom: 20px;\n}\n.styles-module_container__Grkzw [type=radio] {\n  position: relative;\n  left: 15px;\n  top: -4px;\n  z-index: 0;\n  appearance: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-left: -3.5px;\n}\n.styles-module_container__Grkzw [type=radio] + label {\n  position: absolute;\n  cursor: pointer;\n}\n.styles-module_container__Grkzw [type=radio] + label::before {\n  width: 15px;\n  height: 15px;\n  border-radius: 20px;\n  border: 2px solid var(--border-2);\n  display: block;\n  content: \"\";\n  float: left;\n  margin-right: 8px;\n  z-index: 5;\n  position: relative;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__Grkzw [type=radio]:checked + label::before {\n  background-color: var(--primary-2);\n  border-color: var(--primary-1);\n}\n.styles-module_container__Grkzw [type=radio]:hover:not(:checked) + label::before {\n  background-color: var(--background-4);\n  border-color: var(--background-4);\n}";
+var css_248z$9 = ".styles-module_container__Grkzw {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  color: var(--foreground-3);\n  margin-bottom: 20px;\n}\n.styles-module_container__Grkzw [type=radio] {\n  position: relative;\n  left: 15px;\n  top: -4px;\n  z-index: 0;\n  appearance: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-left: -3.5px;\n}\n.styles-module_container__Grkzw [type=radio] + label {\n  position: absolute;\n  cursor: pointer;\n}\n.styles-module_container__Grkzw [type=radio] + label::before {\n  width: 15px;\n  height: 15px;\n  border-radius: 20px;\n  border: 2px solid var(--border-2);\n  display: block;\n  content: \"\";\n  float: left;\n  margin-right: 8px;\n  z-index: 5;\n  position: relative;\n  transition: 0.2s ease-in-out;\n}\n.styles-module_container__Grkzw span {\n  position: absolute;\n  opacity: 1;\n  color: var(--background-2);\n  z-index: 100;\n  user-select: none;\n  pointer-events: none;\n  -webkit-user-select: none;\n  font-weight: 300;\n}\n.styles-module_container__Grkzw [type=radio]:checked + label::before {\n  background-color: var(--primary-2);\n  border-color: var(--primary-1);\n}\n.styles-module_container__Grkzw [type=radio]:hover:not(:checked) + label::before {\n  background-color: var(--background-4);\n  border-color: var(--background-4);\n}";
 var styles$9 = {"container":"styles-module_container__Grkzw"};
 styleInject(css_248z$9);
 
@@ -482,14 +482,15 @@ function RadioButtons({ options, group, selected, onClick, width = "100%" }) {
             React__default["default"].createElement("input", { type: "radio", id: option.name, name: group, value: option.name, onInput: onUpdateSelected, defaultChecked: true })
             :
                 React__default["default"].createElement("input", { type: "radio", id: option.name, name: group, value: option.name, onInput: onUpdateSelected }),
-        React__default["default"].createElement("label", { htmlFor: option.name }, option.text)))));
+        React__default["default"].createElement("label", { htmlFor: option.name }, option.text),
+        React__default["default"].createElement(SvgIcon, { iconName: "done", size: "21px" })))));
 }
 
 var css_248z$8 = ".styles-module_container__RhsQe {\n  margin-right: 8px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0 {\n  background: none;\n  padding: none;\n  border: none;\n  width: 40px;\n  height: 40px;\n  transition: 0.2s;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 20px;\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0 span {\n  color: var(--foreground-1);\n}\n.styles-module_container__RhsQe .styles-module_button__HuX-0:hover {\n  background: var(--background-1);\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0 {\n  flex-direction: row;\n  gap: 5px;\n}\n.styles-module_container__RhsQe.styles-module_middle__xg7RF .styles-module_button__HuX-0:hover {\n  background: none;\n}";
 var styles$8 = {"container":"styles-module_container__RhsQe","button":"styles-module_button__HuX-0","middle":"styles-module_middle__xg7RF"};
 styleInject(css_248z$8);
 
-function RedirectButton({ type = "forward", onClick }) {
+function RedirectButton({ id, type = "forward", onClick }) {
     function onClickButton(event) {
         event.preventDefault();
         if (onClick)
@@ -503,7 +504,7 @@ function RedirectButton({ type = "forward", onClick }) {
         }
     };
     return (React__default["default"].createElement("div", { className: [styles$8.container, styles$8[type]].join(" ") },
-        React__default["default"].createElement("button", { onClick: onClickButton, className: styles$8.button },
+        React__default["default"].createElement("button", { onClick: onClickButton, className: styles$8.button, id: id },
             React__default["default"].createElement(SvgIcon, { iconName: getIcon() }),
             ["middle"].includes(type) &&
                 React__default["default"].createElement("span", null, "Zur\u00FCck"))));

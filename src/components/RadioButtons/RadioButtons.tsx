@@ -1,3 +1,4 @@
+import { SvgIcon } from 'components/SvgIcon';
 import React, { ChangeEvent, useState } from 'react';
 import styles from './styles.module.scss';
 
@@ -43,6 +44,7 @@ export function RadioButtons({
                         <input type="radio" id={option.name} name={group} value={option.name} onInput={onUpdateSelected} />
                     }
                     <label htmlFor={option.name}>{option.text}</label>
+                    <SvgIcon iconName="done" size="21px" />
                 </div>
             )}
         </div>

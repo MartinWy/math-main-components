@@ -35,6 +35,17 @@
         transition: 0.2s ease-in-out;
     }
 
+    span {
+        position: absolute;
+        opacity: 1;
+        color: var(--background-2);
+        z-index: 100;
+        user-select: none;
+        pointer-events: none;
+        -webkit-user-select: none;
+        font-weight: 300;
+    }
+
     [type="radio"]:checked+label::before {
         background-color: var(--primary-2);
         border-color: var(--primary-1);

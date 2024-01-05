@@ -5,12 +5,14 @@ import styles from './styles.module.scss'
 
 
 export function Checkbox({
+    id,
     text,
     name,
     checked,
     defaultChecked = false,
     onInput = () => { },
 }: {
+    id?: string,
     text: ReactNode,
     name: string,
     checked?: boolean,
@@ -20,7 +22,7 @@ export function Checkbox({
 
     return (
         <div className={styles.container} >
-            <input type="checkbox" onInput={onInput} name={name} id={name} checked={checked} defaultChecked={defaultChecked} />
+            <input type="checkbox" onInput={onInput} name={name} checked={checked} defaultChecked={defaultChecked} id={id} />
             <label htmlFor={name}>{text}</label>
             <SvgIcon iconName="done" size="21px" />
         </div>

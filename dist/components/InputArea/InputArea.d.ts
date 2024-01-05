@@ -1,5 +1,6 @@
 import React, { ChangeEvent } from 'react';
-export declare function InputArea({ title, name, placeholder, defaultValue, autoFocus, width, height, available, onInput }: {
+export declare function InputArea({ id, title, name, placeholder, defaultValue, autoFocus, width, height, available, onInput }: {
+    id?: string;
     title: string;
     name: string;
     placeholder?: string;

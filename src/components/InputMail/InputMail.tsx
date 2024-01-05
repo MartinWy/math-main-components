@@ -2,12 +2,14 @@ import React, { ChangeEvent, useState } from 'react'
 import styles from './styles.module.scss'
 
 export function InputMail({
+    id,
     placeholder = "E-Mail-Adresse",
     title = "E-Mail-Adresse",
     name = "email",
     width = "100%",
     available = true
 }: {
+    id: string,
     placeholder?: string,
     title?: string,
     name?: string,
@@ -24,7 +26,9 @@ export function InputMail({
                     className={`${styles.input} ${title != undefined ? styles.with_title : styles.without_title} ${value.length > 0 ? styles.valid : styles.not_valid} ${available ? styles.available : styles.not_available}`}
                     name={name} placeholder={placeholder}
                     type="email"
-                    onInput={(event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value)} />
+                    onInput={(event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value)}
+                    id={id}
+                />
                 <label htmlFor="text" className={styles.label}>
                     <span className={styles.label_text}>
                         {title}

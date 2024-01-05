@@ -1,5 +1,6 @@
 import React from 'react';
-export declare function OptionField({ headline, description, iconName }: {
+export declare function OptionField({ id, headline, description, iconName }: {
+    id?: string;
     headline: string;
     description: string;
     iconName?: string;
