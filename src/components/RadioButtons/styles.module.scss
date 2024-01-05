@@ -54,7 +54,7 @@
     }
 
     [type="radio"]:checked~span {
-        color: var(--foreground-1);
+        color: var(--background-1);
     }
 
     [type="radio"]:checked+label::before {

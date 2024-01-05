@@ -1,6 +1,6 @@
 {
     "name": "math-main-components",
-    "version": "0.0.153",
+    "version": "0.0.154",
     "author": "Emilian Scheel",
     "files": [
         "dist/**/*"
