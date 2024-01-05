@@ -3,10 +3,12 @@ import React, { MouseEvent } from 'react'
 import styles from './styles.module.scss'
 
 export function CardButton({
+    id,
     title,
     iconName,
     onClick,
 }: {
+    id?: string,
     title: string,
     iconName: string,
     onClick?: (event: MouseEvent<HTMLDivElement>) => {}

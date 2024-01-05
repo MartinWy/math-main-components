@@ -6,12 +6,14 @@ type ButtonType = "blue" | "red" | "grey" | "lightBlue"
 
 
 export function Button({
+    id,
     text,
     iconName,
     iconFill = "white",
     type = "blue",
     onClick = () => { }
 }: {
+    id?: string,
     text?: string,
     iconName?: string,
     iconFill?: string,

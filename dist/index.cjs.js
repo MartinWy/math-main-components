@@ -57,7 +57,7 @@ var css_248z$u = ".styles-module_container__4978M {\n  max-width: 100%;\n  width
 var styles$u = {"container":"styles-module_container__4978M","visible":"styles-module_visible__uvQwq","hidden":"styles-module_hidden__Oruyx","rotate":"styles-module_rotate__mmYPQ","button":"styles-module_button__BWOOi","secondary":"styles-module_secondary__Eoik3"};
 styleInject(css_248z$u);
 
-function AuthButton({ text, type = "submit", theme = "primary", iconName = "arrow_forward", isVisible = true, onClick }) {
+function AuthButton({ id, text, type = "submit", theme = "primary", iconName = "arrow_forward", isVisible = true, onClick }) {
     return (React__default["default"].createElement("div", { className: [styles$u.container, isVisible ? styles$u.visible : styles$u.hidden, ["arrow_forward"].includes(iconName) ? styles$u.rotate : null].join(" ") },
         React__default["default"].createElement("button", { type: type, className: `${styles$u.button} ${styles$u[theme]}`, onClick: onClick },
             text,
@@ -68,7 +68,7 @@ var css_248z$t = ".styles-module_container__TP0rp {\n  max-width: 100%;\n}\n.sty
 var styles$t = {"container":"styles-module_container__TP0rp","button":"styles-module_button__Sh-fr","blue":"styles-module_blue__DRdbo","lightBlue":"styles-module_lightBlue__7EKfp","red":"styles-module_red__EhImH","grey":"styles-module_grey__kAVD1","onlyIcon":"styles-module_onlyIcon__bNVnI"};
 styleInject(css_248z$t);
 
-function Button({ text, iconName, iconFill = "white", type = "blue", onClick = () => { } }) {
+function Button({ id, text, iconName, iconFill = "white", type = "blue", onClick = () => { } }) {
     function onClickButton(event) {
         event.preventDefault();
         if (onClick)
@@ -84,7 +84,7 @@ var css_248z$s = ".styles-module_card__bOd85 {\n  background: var(--background-2
 var styles$s = {"card":"styles-module_card__bOd85"};
 styleInject(css_248z$s);
 
-function CardButton({ title, iconName, onClick, }) {
+function CardButton({ id, title, iconName, onClick, }) {
     function onClickCard(event) {
         event.preventDefault();
         if (onClick)

@@ -1,4 +1,4 @@
-export interface WebsiteData {
+export interface Website {
     _id: string;
     heroDescription: string;
     heroTitle: string;

@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 
 
 export function AuthButton({
+    id,
     text,
     type = "submit",
     theme = "primary",
@@ -11,6 +12,7 @@ export function AuthButton({
     isVisible = true,
     onClick
 }: {
+    id?: string,
     text: string | undefined,
     type?: 'submit' | 'reset' | 'button' | undefined,
     theme?: 'primary' | 'secondary' | undefined,
