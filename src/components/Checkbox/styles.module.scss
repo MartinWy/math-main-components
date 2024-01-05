@@ -35,15 +35,15 @@
         transition: 0.2s ease-in-out;
     }
 
-    span {
+    [type="checkbox"]~span {
         position: absolute;
         opacity: 1;
-        color: var(--background-2);
+        color: var(--primary-1);
         z-index: 100;
         user-select: none;
         pointer-events: none;
         -webkit-user-select: none;
-        font-weight: 300;
+        font-weight: 500;
     }
 
     [type="checkbox"]:checked+label::before {

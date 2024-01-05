@@ -21,10 +21,10 @@ export function Checkbox({
 }) {
 
     return (
-        <div className={styles.container} >
+        <div className={styles.container}>
             <input type="checkbox" onInput={onInput} name={name} checked={checked} defaultChecked={defaultChecked} id={id} />
             <label htmlFor={name}>{text}</label>
-            <SvgIcon iconName="done" size="21px" />
+            <SvgIcon iconName="done" size="20px" />
         </div>
     )
 }
