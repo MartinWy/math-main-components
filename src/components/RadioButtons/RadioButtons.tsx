@@ -44,7 +44,7 @@ export function RadioButtons({
                         <input type="radio" id={option.name} name={group} value={option.name} onInput={onUpdateSelected} />
                     }
                     <label htmlFor={option.name}>{option.text}</label>
-                    <SvgIcon iconName="done" size="20px" />
+                    <SvgIcon iconName="done" size="20px" className={styles.icon} />
                 </div>
             )}
         </div>
