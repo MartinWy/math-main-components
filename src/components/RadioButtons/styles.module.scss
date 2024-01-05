@@ -36,6 +36,10 @@
         transition: 0.2s ease-in-out;
     }
 
+    .option {
+        position: relative;
+    }
+
     [type="checkbox"]~span {
         position: absolute;
         opacity: 1;
@@ -50,7 +54,7 @@
     }
 
     [type="checkbox"]:checked~span {
-        color: var(--primary-1);
+        color: var(--primary-1) !important;
     }
 
     [type="radio"]:checked+label::before {
